@@ -1,5 +1,7 @@
-<h2>Sign up</h2>
-<% interests =  %>
+<div class="container" style="padding-top: 40px">
+  <div class="form-inputs container-form" style="height: 600px">
+      <h1 style="text-align: center;">Sign up</h1>
+
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
@@ -18,11 +20,13 @@
     <%= f.input :photo, as: :file, hint: "upload a profile image" %>
     <%= f.input :interest_list, label: "Add tags", hint: "Add your specialities, separated by commas" %>
     <%= f.input :interest_list, as: :check_boxes, collection: [ :interests ] %>
-  </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<% end %>
+          </div>
+          <div class="form-actions">
+            <%= f.button :submit, "Sign up" %>
+          </div>
+        <% end %>
 
-<%= render "devise/shared/links" %>
+        <%= render "devise/shared/links" %>
+    </div>
+</div>

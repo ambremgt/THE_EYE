@@ -23,7 +23,7 @@ matheus = User.new(first_name: "Matheus", last_name: "Bertelli", biography: "I'm
 matheus.photo.attach(io: URI.open("https://images.pexels.com/photos/3379937/pexels-photo-3379937.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"), filename: "matheus.png", content_type: 'image/png')
 matheus.save!
 
-kyle = User.new(first_name: "Kyle", last_name: "Loftus", biography: "Freelance filmmaker located in Los Angeles :)", email: "kyle@video.com", city: "Los Angeles, United States Of America", wallet: "50", speciality: "Trans-trav Drone ShotgunMic Documentary Landscapes Timelapse Go Pro", language: "English, Brazilian",  password: "123459", password_confirmation: "123459")
+kyle = User.new(first_name: "Kyle", last_name: "Loftus", biography: "Freelance filmmaker located in Los Angeles :) I am an interdisciplinary artist who has done installation, public art, media art and now animation.", email: "kyle@video.com", city: "Los Angeles, United States Of America", wallet: "50", speciality: "Trans-trav Drone ShotgunMic Documentary Landscapes Timelapse Go Pro", language: "English, Brazilian",  password: "123459", password_confirmation: "123459")
 kyle.photo.attach(io: URI.open("https://images.pexels.com/photos/2961521/pexels-photo-2961521.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"), filename: "kyle.png", content_type: 'image/png')
 kyle.save!
 
@@ -54,7 +54,6 @@ joseph.save!
 
 
 #Create 10 portfolioasset
-
 assetsMohamed = PortfolioAsset.new(user_id: mohamed.id)
 assetsMohamed.photos.attach(io: URI.open("https://images.pexels.com/photos/2608519/pexels-photo-2608519.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"), filename: "mohamedcard.png", content_type: 'image/png')
 assetsMohamed.save!

@@ -1,5 +1,5 @@
-<div class="navbar navbar-expand-lg navbar-light navbar-lewagon fixed-top">
-  <%= link_to "/", class: "navbar-brand text-white" do %>
+<div class="navbar navbar-expand-lg navbar-light navbar-lewagon">
+  <%= link_to "/", class: "navbar-brand" do %>
     <h1>CAMEA</h1>
     <% end %>
 
@@ -14,13 +14,13 @@
       <% if user_signed_in? %>
 
         <li class="nav-item">
-          <%= link_to "Home", "/", class: "nav-link  sr-only text-white" %></li>
+          <%= link_to "Home", "/", class: "nav-link  sr-only" %></li>
           <li class="nav-item">
-          <%= link_to "Dashboard", "/dashboard", class: "nav-link text-white" %></li>
+          <%= link_to "Dashboard", "/dashboard", class: "nav-link" %></li>
           <li class="nav-item">
-          <%= link_to "Add shotlist", "/shotlists/new", class: "nav-link text-white" %></li>
+          <%= link_to "Add shotlist", "/shotlists/new", class: "nav-link" %></li>
           <li class="nav-item">
-          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link text-white" %></li>
+          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %></li>
 
           <% if current_user.photo.attached? %>
           <li class="nav-item">
@@ -29,9 +29,9 @@
 
       <% else %>
         <li class="nav-item" style="margin-right: 20px;">
-          <%= link_to "Home", "/", class: "nav-link text-white" %></li>
+          <%= link_to "Home", "/", class: "nav-link" %></li>
           <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link text-white" %></li>
+          <%= link_to "Login", new_user_session_path, class: "nav-link" %></li>
           <li class="nav-item">
           <i class="far fa-user"></i>
         </li>
@@ -39,3 +39,4 @@
     </ul>
   </div>
 </div>
+

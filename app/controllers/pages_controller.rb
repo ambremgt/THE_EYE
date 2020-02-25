@@ -4,6 +4,10 @@ class PagesController < ApplicationController
   def home
   end
 
+  def dashboard
+  end
+
+
   def results
 
     if params[:query].present?
@@ -18,9 +22,10 @@ class PagesController < ApplicationController
   def tagged
     if params[:tag].present?
       @filmmakers = User.tagged_with(params[:tag])
-  else
+    else
     @filmmakers = User.all
+    end
   end
-  end
+
 
 end
