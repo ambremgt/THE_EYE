@@ -1,0 +1,10 @@
+
+<div class="filmmaker">
+
+  <% if current_user.photo.attached? %>
+
+    <%= cl_image_tag current_user.photo.key, height: 150, width: 150, crop: :fill %>
+
+  <% end %>
+
+</div>
