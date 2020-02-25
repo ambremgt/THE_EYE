@@ -12,7 +12,7 @@ User.destroy_all
 
 #Create 10 users
 mohamed = User.new(first_name: "Mohamed", last_name: "Almari", biography: "Hi, my names Mo. Im 22 years old from the bay area. My passion is cinema. I love shooting landscapes, seascapes, and architecture. Being able to capture the beauty of this world, and sharing that with you is my goal here. I have recently started to put my artwork to life by creating prints for people to purchase and enjoy. By doing this, I will be able to up my photography game and hopefully take better pictures for you and many people like you to enjoy.", email: "mohamed@video.com", city: "San Francisco, United States of America", wallet: "50", speciality: "Landscapes Seascapes Architecture Timelapse", language: "English",  password: "123456", password_confirmation: "123456")
-mohamed.photo.attach(io: URI.open("https://images.pexels.com/photos/1365703/pexels-photo-1365703.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"), filename: "mohamed.png", content_type: 'image/png')
+mohamed.photo.attach(io: URI.open("https://images.pexels.com/photos/1002406/pexels-photo-1002406.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"), filename: "mohamed.png", content_type: 'image/png')
 mohamed.save!
 
 sunyu = User.new(first_name: "Sunyu", last_name: "Kim", biography: "I am an interdisciplinary artist who has done installation, public art, media art and now animation. I am interested in documentary animation which uses cartoons and music to tell real stories.", email: "sunyu@video.com", city: "Seoul, South Korea", wallet: "50", speciality: "Macro StopMotion Architecture Timelapse", language: "English, Korean",  password: "123457", password_confirmation: "123457")
