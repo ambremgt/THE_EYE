@@ -23,6 +23,8 @@
                 required: true,
                 input_html: { autocomplete: "current-password" } %>
     <%= f.input :photo, as: :file, hint: "upload a profile image" %>
+    <%= f.input :interest_list, label: "Add tags", hint: "Add your interesets and specialities, separated by commas" %>
+
   </div>
 
   <div class="form-actions">

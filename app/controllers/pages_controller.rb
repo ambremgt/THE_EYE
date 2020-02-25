@@ -15,4 +15,12 @@ class PagesController < ApplicationController
 
   end
 
+  def tagged
+    if params[:tag].present?
+      @filmmakers = User.tagged_with(params[:tag])
+  else
+    @filmmakers = User.all
+  end
+  end
+
 end
