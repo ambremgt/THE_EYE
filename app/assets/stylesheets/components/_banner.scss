@@ -6,8 +6,9 @@ header {
   width: 100vw;
   overflow: hidden;
   background-size: cover;
-  clip-path: polygon(0% 0, 100% 0%, 100% 50%, 0 100%);
 }
+
+
 
 header video {
   position: absolute;
@@ -22,6 +23,7 @@ header video {
   -moz-transform: translateX(-50%) translateY(-50%);
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
+  clip-path: polygon(0% 0, 100% 0%, 100% 60%, 0 90%);
 }
 
 header .container {
