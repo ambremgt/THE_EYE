@@ -36,6 +36,9 @@ gem 'simple_form'
 
 gem 'cloudinary', '~> 1.12.0'
 
+gem 'acts-as-taggable-on', '~> 6.0'
+
+
 group :development, :test do  gem 'pry-byebug'
   gem 'pry-rails'
   gem 'dotenv-rails'
