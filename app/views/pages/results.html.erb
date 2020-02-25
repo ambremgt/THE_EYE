@@ -1,7 +1,22 @@
-<div class="container">
-  <div class="filmmakers">
+
+<div class="container mt-10">
+  <div class="row">
     <% @filmmakers.each do |filmmaker| %>
-      <%= filmmaker.first_name %> <%= filmmaker.last_name %>
+    <div class="col-4">
+      <div class="card-trip">
+        <% if filmmaker.portfolio_assets %>
+          <% filmmaker.portfolio_assets.each do |asset| %>
+            <% asset.photos.each do |photo| %>
+              <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+            <% end %>
+          <% end %>
+        <% end %>
+        <div class="card-trip-infos">
+          <div>
+            <h2><%= filmmaker.first_name %> <%= filmmaker.last_name %></h2>
+            <p><%= filmmaker.city %></p>
+          </div>
+        </div>
     <% end %>
   </div>
 </div>
