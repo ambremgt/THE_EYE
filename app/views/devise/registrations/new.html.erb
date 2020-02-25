@@ -1,5 +1,5 @@
 <h2>Sign up</h2>
-
+<% interests =  %>
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
@@ -17,7 +17,7 @@
                 input_html: { autocomplete: "new-password" } %>
     <%= f.input :photo, as: :file, hint: "upload a profile image" %>
     <%= f.input :interest_list, label: "Add tags", hint: "Add your specialities, separated by commas" %>
-
+    <%= f.input :interest_list, as: :check_boxes, collection: [ :interests ] %>
   </div>
 
   <div class="form-actions">
