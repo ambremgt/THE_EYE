@@ -16,7 +16,7 @@
         <li class="nav-item">
           <%= link_to "Home", "/", class: "nav-link btn" %>
           <%= link_to "Dashboard", "/dashboard", class: "nav-link btn" %>
-          <%= link_to "Add shotlist", "/shotlist", class: "nav-link btn" %>
+          <%= link_to "Add shotlist", "/shotlists/new", class: "nav-link btn" %>
           <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link btn" %>
 
           <% if current_user.photo.attached? %>

@@ -1,11 +1,5 @@
 Rails.application.routes.draw do
-  get 'collaborations/create'
-  get 'collaborations/destroy'
-  get 'shots/new'
-  get 'shots/create'
-  get 'shots/destroy'
-  get 'shotlists/new'
-  get 'shotlists/create'
+
   devise_for :users
   root to: 'pages#home'
   get '/dashboard', to: 'pages#dashboard'
