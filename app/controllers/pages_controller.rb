@@ -4,6 +4,10 @@ class PagesController < ApplicationController
   def home
   end
 
+  def dashboard
+  end
+
+
   def results
 
     if params[:query].present?
@@ -14,5 +18,6 @@ class PagesController < ApplicationController
     end
 
   end
+
 
 end
