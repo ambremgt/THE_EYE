@@ -32,4 +32,4 @@ class ShotlistsController < ApplicationController
     params.require(:shotlist).permit(:description, :title)
   end
 end
-end
+
