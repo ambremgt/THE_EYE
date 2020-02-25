@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <%= favicon_link_tag 'view.png'%>
     <title>TheEye</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -10,7 +11,13 @@
   </head>
 
   <body>
+    <% if params[:action] == "home" %>
     <%= render 'shared/navbar' %>
+    <% else %>
+    <%= render 'shared/navbar2' %>
+    <% end %>
+
+
     <%= render 'shared/flashes' %>
 
     <%= yield %>
