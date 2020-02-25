@@ -6,6 +6,7 @@ header {
   width: 100vw;
   overflow: hidden;
   background-size: cover;
+  clip-path: polygon(0% 0, 100% 0%, 100% 50%, 0 100%);
 }
 
 header video {
