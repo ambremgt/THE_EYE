@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+PortfolioAsset.destroy_all
 User.destroy_all
 
 
@@ -49,4 +50,49 @@ alireza.save!
 joseph = User.new(first_name: "Joseph", last_name: "Redfield", biography: "Photographer, filmmaker and tech reviewer from Montenegro.", email: "joseph@video.com", city: "Podgorica, Montenegro", wallet: "50", speciality: "Drone Trans-trav Urban Street Architecture City Mountains Nature Timelapse GoPro", language: "Monténégrin English",  password: "123406", password_confirmation: "123406")
 joseph.photo.attach(io: URI.open("https://images.pexels.com/photos/381843/pexels-photo-381843.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"), filename: "joseph.png", content_type: 'image/png')
 joseph.save!
+
+
+
+#Create 10 portfolioasset
+
+assetsMohamed = PortfolioAsset.new(user_id: mohamed.id)
+assetsMohamed.photos.attach(io: URI.open("https://images.pexels.com/photos/2608519/pexels-photo-2608519.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"), filename: "mohamedcard.png", content_type: 'image/png')
+assetsMohamed.save!
+
+assetsSunyu = PortfolioAsset.new(user_id: sunyu.id)
+assetsSunyu.photos.attach(io: URI.open("https://images.pexels.com/photos/3768221/pexels-photo-3768221.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"), filename: "sunyucard.png", content_type: 'image/png')
+assetsSunyu.save!
+
+assetsMatheus = PortfolioAsset.new(user_id: matheus.id)
+assetsMatheus.photos.attach(io: URI.open("https://images.pexels.com/photos/1540983/pexels-photo-1540983.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"), filename: "matheuscard.png", content_type: 'image/png')
+assetsMatheus.save!
+
+assetsKyle = PortfolioAsset.new(user_id: kyle.id)
+assetsKyle.photos.attach(io: URI.open("https://images.pexels.com/photos/2773498/pexels-photo-2773498.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"), filename: "kylecard.png", content_type: 'image/png')
+assetsKyle.save!
+
+assetsSeth = PortfolioAsset.new(user_id: seth.id)
+assetsSeth.photos.attach(io: URI.open("https://images.pexels.com/photos/2510425/pexels-photo-2510425.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"), filename: "sethcard.png", content_type: 'image/png')
+assetsSeth.save!
+
+assetsOlga = PortfolioAsset.new(user_id: olga.id)
+assetsOlga.photos.attach(io: URI.open("https://images.pexels.com/photos/1615824/pexels-photo-1615824.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"), filename: "olgacard.png", content_type: 'image/png')
+assetsOlga.save!
+
+assetsArchana = PortfolioAsset.new(user_id: archana.id)
+assetsArchana.photos.attach(io: URI.open("https://images.pexels.com/photos/947785/pexels-photo-947785.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"), filename: "archanacard.png", content_type: 'image/png')
+assetsArchana.save!
+
+assetsNuria = PortfolioAsset.new(user_id: nuria.id)
+assetsNuria.photos.attach(io: URI.open("https://images.pexels.com/photos/1545980/pexels-photo-1545980.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"), filename: "nuriacard.png", content_type: 'image/png')
+assetsNuria.save!
+
+assetsAlireza = PortfolioAsset.new(user_id: alireza.id)
+assetsAlireza.photos.attach(io: URI.open("https://images.pexels.com/photos/220417/pexels-photo-220417.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"), filename: "alirezacard.png", content_type: 'image/png')
+assetsAlireza.save!
+
+assetsJoseph = PortfolioAsset.new(user_id: joseph.id)
+assetsJoseph.photos.attach(io: URI.open("https://images.pexels.com/photos/68426/pexels-photo-68426.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"), filename: "josephcard.png", content_type: 'image/png')
+assetsJoseph.save!
+
 
