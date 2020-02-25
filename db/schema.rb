@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_24_174152) do
+ActiveRecord::Schema.define(version: 2020_02_25_104146) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,14 @@ ActiveRecord::Schema.define(version: 2020_02_24_174152) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["shot_id"], name: "index_collaborations_on_shot_id"
     t.index ["user_id"], name: "index_collaborations_on_user_id"
+  end
+
+  create_table "portfolio_assets", force: :cascade do |t|
+    t.string "video_url"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_portfolio_assets_on_user_id"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -58,6 +66,7 @@ ActiveRecord::Schema.define(version: 2020_02_24_174152) do
     t.integer "points"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "video_url"
     t.index ["shotlist_id"], name: "index_shots_on_shotlist_id"
   end
 
@@ -74,12 +83,15 @@ ActiveRecord::Schema.define(version: 2020_02_24_174152) do
     t.text "biography"
     t.string "city"
     t.integer "wallet", default: 50
+    t.string "speciality"
+    t.string "language"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "collaborations", "shots"
   add_foreign_key "collaborations", "users"
+  add_foreign_key "portfolio_assets", "users"
   add_foreign_key "reviews", "collaborations"
   add_foreign_key "reviews", "users"
   add_foreign_key "shotlists", "users"
