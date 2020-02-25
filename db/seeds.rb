@@ -54,7 +54,6 @@ joseph.save!
 
 
 #Create 10 portfolioasset
-
 assetsMohamed = PortfolioAsset.new(user_id: mohamed.id)
 assetsMohamed.photos.attach(io: URI.open("https://images.pexels.com/photos/2608519/pexels-photo-2608519.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"), filename: "mohamedcard.png", content_type: 'image/png')
 assetsMohamed.save!

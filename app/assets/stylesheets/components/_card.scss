@@ -3,13 +3,6 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  border-radius: 3px;
-  padding: 0px !important;
-  margin-bottom: 40px;
-    a {
-      color: #272828;
-      text-decoration: none;
-    }
 }
 
 .card-trip > img {
@@ -25,7 +18,7 @@
 }
 
 .card-trip p {
-  font-size: 20px;
+  font-size: 12px;
   opacity: .7;
   margin: 0;
 }
@@ -37,7 +30,6 @@
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
-  background-color: #fffefc;
 }
 
 .card-trip-infos .card-trip-user {
@@ -46,20 +38,3 @@
   top: -20px;
   width: 40px;
 }
-
-.card-link {
-  color: black;
-}
-
-
-.card-trip-review {
-      a {
-      color: grey;
-      text-decoration: none;
-    }
-}
-.card-trip a:hover {
-  color: #3179e2;
-}
-
-
