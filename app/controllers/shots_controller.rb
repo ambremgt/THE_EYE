@@ -33,5 +33,4 @@ class ShotsController < ApplicationController
     params.require(:shot).permit(:angle, :shot_size, :movement, :description, :equipment, :actors, :props, :notes, :video_url)
   end
 end
-end
 
