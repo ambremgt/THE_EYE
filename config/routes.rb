@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   #get '/tagged', to: "pages#tagged", as: :tagged
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
   resources :shotlists, only: [:show, :create, :new] do
     resources :shot, only: [:create, :new]
   end
@@ -16,4 +17,9 @@ Rails.application.routes.draw do
   resources :shotlists, only: [:destroy]
   resources :shots, only: [:destroy]
   resources :collaborations, only: [:destroy]
+
+  # messaging
+  resources :chatrooms, only: :show do
+    resources :messages, only: :create
+  end
 end
