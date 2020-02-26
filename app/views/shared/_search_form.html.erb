@@ -2,10 +2,30 @@
   <div class="search-form-control form-group">
     <%= form_tag results_path, method: :get do %>
       <%= text_field_tag :query,
-      params[:query], class: "form-control", placeholder: "Search speciality, city..." %>
+      params[:query], class: "form-control", placeholder: "Search by categories, city..." %>
       <%= submit_tag "Search", class: "btn btn-search" %>
+
       <% end %>
+
   </div>
+
+  <div style="display: flex">
+    <p style="margin-top: 3px;">Popular categories:</p>
+
+
+    <% @filmmakers.first(1).each do |filmmaker| %>
+
+        <% filmmaker.interest_list.each do |tag| %>
+          <%= link_to tag, results_path(tag: tag), class: "btn-tag" %>
+        <% end %>
+
+      <% end %>
+
+
+  </div>
+
+
+
 
 
 
