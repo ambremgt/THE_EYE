@@ -12,7 +12,7 @@
           <% end %>
         <div class="card-trip-infos">
           <div>
-            <h2><%= filmmaker.first_name %> <%= filmmaker.last_name %></h2>
+            <h2><%= link_to filmmaker.first_name, user_path(filmmaker) %> <%= filmmaker.last_name %></h2>
             <div style="display: flex;">
               <p class="fas fa-map-marker-alt"></p>
               <p style="margin-left: 10px;"><%= filmmaker.city %></p>
