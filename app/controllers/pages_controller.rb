@@ -26,6 +26,4 @@ class PagesController < ApplicationController
     @filmmakers = User.all
     end
   end
-
-
 end
