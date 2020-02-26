@@ -2,6 +2,7 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :home ]
 
   def home
+    @filmmakers = User.all
   end
 
   def dashboard
@@ -9,23 +10,14 @@ class PagesController < ApplicationController
 
 
   def results
+    @filmmakers = User.all
 
     if params[:query].present?
       sql_query = "city ILIKE :query OR biography ILIKE :query"
       @filmmakers = User.where(sql_query, query: "%#{params[:query]}%")
-    else
-      @filmmakers = User.all
-    end
-
-  end
-
-  def tagged
-    if params[:tag].present?
+    elsif params[:tag].present?
       @filmmakers = User.tagged_with(params[:tag])
-    else
-    @filmmakers = User.all
+
     end
   end
-
-
 end
