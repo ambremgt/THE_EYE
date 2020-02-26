@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-lg navbar-light navbar-lewagon fixed-top">
   <%= link_to "/", class: "navbar-brand text-white" do %>
-    <h1>CAMEA</h1>
+  <h1>camea</h1>
     <% end %>
 
 
@@ -14,7 +14,7 @@
       <% if user_signed_in? %>
 
         <li class="nav-item">
-          <%= link_to "Home", "/", class: "nav-link  sr-only text-white" %></li>
+          <%= link_to "Home", "/", class: "nav-link sr-only text-white" %></li>
           <li class="nav-item">
           <%= link_to "Dashboard", "/dashboard", class: "nav-link text-white" %></li>
           <li class="nav-item">
@@ -29,11 +29,9 @@
 
       <% else %>
         <li class="nav-item" style="margin-right: 20px;">
-          <%= link_to "Home", "/", class: "nav-link text-white" %></li>
+          <%= link_to "Find a filmmaker", "/", class: "btn nav-link-white" %></li>
           <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link text-white" %></li>
-          <li class="nav-item">
-          <i class="far fa-user"></i>
+          <%= link_to "Login", new_user_session_path, class: "btn nav-link-transparent" %></li>
         </li>
       <% end %>
     </ul>

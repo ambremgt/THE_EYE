@@ -1,14 +1,15 @@
+
+
 header {
   position: relative;
-  background-color: black;
+  background-color: #222123;
   height: 100vh;
   min-height: 25rem;
   width: 100vw;
   overflow: hidden;
   background-size: cover;
+  // clip-path: polygon(0% 0, 100% 0%, 100% 80%, 0 100%);
 }
-
-
 
 header video {
   position: absolute;
@@ -23,7 +24,6 @@ header video {
   -moz-transform: translateX(-50%) translateY(-50%);
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  clip-path: polygon(0% 0, 100% 0%, 100% 60%, 0 90%);
 }
 
 header .container {
@@ -42,11 +42,32 @@ header .overlay {
   z-index: 1;
 }
 
-@media (pointer: coarse) and (hover: none) {
-  header {
-    background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
-  }
-  header video {
-    display: none;
-  }
+// @media (pointer: coarse) and (hover: none) {
+//   header {
+//     background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+//   }
+//   header video {
+//     display: none;
+//   }
+// }
+
+
+header h1 {
+  font-family: 'Tajawal';
+  font-size: 90px;
+  font-weight: 600;
+}
+
+header h2 {
+  font-family: 'Roboto';
+  font-size: 50px;
+  font-weight: 800;
+}
+header p {
+  font-family: 'Tajawal';
+}
+
+header a {
+  font-family: 'Tajawal';
+  text-decoration: none;
 }
