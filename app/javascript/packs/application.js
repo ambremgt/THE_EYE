@@ -18,6 +18,7 @@ require("channels")
 import { initUpdateNavbarOnScroll } from '../components/navbar';
 import { multiForm} from '../components/multiform';
 // import { loadDynamicBannerText } from '../components/banner';
+
 document.addEventListener('turbolinks:load', () => {
   // Call your JS functions here
   initUpdateNavbarOnScroll();
