@@ -24,7 +24,7 @@
             </div>
             <% if filmmaker.interest_list.present?  %>
               <% filmmaker.interest_list.each do |tag| %>
-                <%= link_to tag, tagged_path(tag: tag) %>
+                <%= link_to tag, results_path(tag: tag), class: "btn-tag" %>
               <% end %>
             <% end %>
           </div>

@@ -1,5 +1,7 @@
 PortfolioAsset.destroy_all
 User.destroy_all
+ActsAsTaggableOn::Tag.destroy_all
+
 interest_list_items = ["Landscapes", "Seascapes", "Architecture", "Timelapse", "Macro", "StopMotion", "Architecture", "Timelapse", "Drone", "Trans-trav", "Urban", "Street", "Architecture", "City", "Mountains", "Nature", "Timelapse", "GoPro", "4KVideoCamera", "Sliders", "Drone", "Shotgun", "Documentary"]
 
 #Create 10 users
