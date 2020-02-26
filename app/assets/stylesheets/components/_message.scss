@@ -1,0 +1,28 @@
+
+.message-container {
+  border: 1px solid $gray-500;
+  border-radius: 5px;
+  padding: 12px 18px;
+  margin: 20px auto;
+  max-width: 400px;
+
+}
+
+.outgoing-msg {
+  margin-right: 0px;
+}
+.incoming-msg {
+  margin-left: 0px;
+
+}
+
+.author {
+  span {
+    font-style: normal;
+    font-weight: bold;
+  }
+
+  small {
+    color: $gray-500;
+  }
+}

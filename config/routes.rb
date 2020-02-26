@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   resources :users, only: [:show] do
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
   resources :shotlists, only: [:show, :create, :new] do
     resources :shot, only: [:create, :new]
   end
@@ -22,4 +23,9 @@ Rails.application.routes.draw do
   resources :shotlists, only: [:destroy]
   resources :shots, only: [:destroy]
   resources :collaborations, only: [:destroy]
+
+  # messaging
+  resources :chatrooms, only: [:create, :show] do
+    resources :messages, only: :create
+  end
 end
