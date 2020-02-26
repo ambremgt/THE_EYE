@@ -1,19 +1,38 @@
-<header>
-  <div class="overlay">
-  </div>
-<!--   <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-    <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">
-  </video> -->
-  <div class="container h-100">
-
-    <div class="d-flex h-100 text-center align-items-center">
-      <div class="w-100 text-white">
-        <h1 class="display-3"><span id="banner-typed-text"></span></h1>
-        <%= render 'shared/search_form' %>
-      </div>
-
+<div style="background-color: #4E4DCB">
+  <header>
+    <div class="overlay">
     </div>
 
-  </div>
-</header>
+    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+      <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">
+    </video>
 
+    <div class="container h-100">
+
+      <div class="d-flex h-100 align-items-center">
+        <div class="w-50 text-white" style="margin-bottom: 50px;">
+          <h1 style="float: left;"><span id="banner-typed-text"></span>camea</h1>
+          <h2 style="float: left; margin-bottom: 50px;">The first community of filmmakers.</h2>
+          <%= render 'shared/search_form' %>
+          <div style="display: flex">
+            <p style="margin-top: 3px;">Popular :</p>
+            <a href="#" class="btn-tag">Macro</a>
+            <a href="#" class="btn-tag">Stop Motion</a>
+            <a href="#" class="btn-tag">Time Lapse</a>
+            <a href="#" class="btn-tag">Landscape</a>
+          </div>
+        </div>
+
+<!--         <div class="w-50 text-white" style="margin-bottom: 50px;">
+          <div class="container" style="text-align: center; margin-left: 75px; margin-top: 30px;">
+            <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" style="width: 63%;">
+              <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div> -->
+
+
+      </div>
+    </div>
+  </header>
+</div>
