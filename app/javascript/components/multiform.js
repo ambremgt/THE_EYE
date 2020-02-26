@@ -1,6 +1,22 @@
   let currentTab = 0 ;
   let fieldset = document.querySelectorAll('fieldset') ;
 
+  const multiForm = () => {
+    if (currentTab < fieldset.length) {
+document.querySelector('#next').addEventListener('click', (event) => {
+  fieldset[currentTab].classList.add('d-none');
+  currentTab = currentTab + 1;
+  showTab(currentTab);
+  });
+
+document.querySelector('#prev').addEventListener('click', (event) => {
+  fieldset[currentTab].classList.add('d-none');
+  currentTab = currentTab - 1;
+  showTab(currentTab);
+});
+}
+}
+
 const showTab = () => {
     fieldset[currentTab].classList.remove('d-none');
 
@@ -39,20 +55,6 @@ const fixStepIndicator = (currentTab) => {
 
 
   // Otherwise, display the correct tab:
-  const multiForm = () => {
-    if (currentTab < fieldset.length) {
-document.querySelector('#next').addEventListener('click', (event) => {
-  fieldset[currentTab].classList.add('d-none');
-  currentTab = currentTab + 1;
-  showTab(currentTab);
-  });
 
-document.querySelector('#prev').addEventListener('click', (event) => {
-  fieldset[currentTab].classList.add('d-none');
-  currentTab = currentTab - 1;
-  showTab(currentTab);
-});
-}
-}
 
 export { multiForm };
