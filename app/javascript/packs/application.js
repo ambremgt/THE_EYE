@@ -26,6 +26,10 @@ document.addEventListener('turbolinks:load', () => {
   // loadDynamicBannerText();
 });
 
+import { video } from '../components/home';
+document.addEventListener('turbolinks:load', () => {
+  video();
+});
 
 // ----------------------------------------------------
 // Note(lewagon): ABOVE IS RAILS DEFAULT CONFIGURATION
