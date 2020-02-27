@@ -1,6 +1,6 @@
-const video = document.querySelector("video");
-if (window.matchMedia('(prefers-reduced-motion)').matches) {
-  video.removeAttribute("autoplay");
-  video.pause();
-}
- export { video };
+// const video = document.querySelector(".videoeffect");
+// if (window.matchMedia('(prefers-reduced-motion)').matches) {
+//   video.removeAttribute("autoplay");
+//   video.pause();
+// }
+//  export { video };

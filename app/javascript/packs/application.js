@@ -17,6 +17,7 @@ require("channels")
 // const imagePath = (name) => images(name, true)
 import { initUpdateNavbarOnScroll } from '../components/navbar';
 import { multiForm } from '../components/multiform';
+// import { video } from '../components/home';
 // import { loadDynamicBannerText } from '../components/banner';
 
 // document.addEventListener('turbolinks:load', () => {
@@ -25,8 +26,6 @@ import { multiForm } from '../components/multiform';
 //   multiForm();
 //   // loadDynamicBannerText();
 // });
-
-import { video } from '../components/home';
 document.addEventListener('turbolinks:load', () => {
   // video();
   initUpdateNavbarOnScroll();
