@@ -10,17 +10,17 @@
             <%= simple_form_for [@shotlist, @shot] do |f| %>
             <%= f.error_notification %>
 
-            <fieldset class="block">
-                <h2 class="fs-title">Technics</h2>
-                <h3 class="fs-subtitle">A little of technics</h3>
-                <%= f.input :angle, placeholder: "american, ..." , class: "inp" %>
-                <%= f.input :shot_size, as: :check_boxes, collection: ["XLS", "LS", "MLS", "MS", "MCU", "CU", "BCU", "ECU"] , class: "inp" %>
-                <%= f.input :movement, class: "inp" %>
+            <fieldset class="blocktoIt">
+                <h2 class="fs-title">This is important step</h2>
+                <h3 class="fs-subtitle">take your time</h3>
+                <%= f.input :angle, as: :check_boxes, collection: Shot::ANGLE, placeholder: "american, ..." , class: "inp" %>
+                <%= f.input :shot_size, as: :check_boxes, collection: Shot::SHOT_SIZE, class: "inp" %>
+                <%= f.input :movement, as: :check_boxes, collection: Shot::MOVEMENT, class: "inp" %>
                 <%= f.input :points, class: "inp" %>
             </fieldset>
 
 
-            <fieldset class="block d-none">
+            <fieldset class="blocktoIt d-none">
                 <h2 class="fs-title">Description</h2>
                 <h3 class="fs-subtitle">Give us more about your shot</h3>
                 <%= f.input :description, class: "inp" %>
@@ -30,7 +30,7 @@
             </fieldset>
 
 
-            <fieldset class="block d-none">
+            <fieldset class="blocktoIt d-none">
                 <h2 class="fs-title">Create your shotlist</h2>
                 <h3 class="fs-subtitle">feel great to finish</h3>
                 <%= f.input :notes, class: "inp" %>

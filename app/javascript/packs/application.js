@@ -16,19 +16,20 @@ require("channels")
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 import { initUpdateNavbarOnScroll } from '../components/navbar';
-import { multiForm} from '../components/multiform';
+import { multiForm } from '../components/multiform';
+// import { video } from '../components/home';
 // import { loadDynamicBannerText } from '../components/banner';
 
+// document.addEventListener('turbolinks:load', () => {
+//   // Call your JS functions here
+//   initUpdateNavbarOnScroll();
+//   multiForm();
+//   // loadDynamicBannerText();
+// });
 document.addEventListener('turbolinks:load', () => {
-  // Call your JS functions here
+  // video();
   initUpdateNavbarOnScroll();
   multiForm();
-  // loadDynamicBannerText();
-});
-
-import { video } from '../components/home';
-document.addEventListener('turbolinks:load', () => {
-  video();
 });
 
 // ----------------------------------------------------
