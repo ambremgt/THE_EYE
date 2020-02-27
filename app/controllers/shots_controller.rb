@@ -9,7 +9,7 @@ class ShotsController < ApplicationController
 
   def create
     @shot = Shot.new(shot_params)
-    @shotlist = Shotlist.find(params[:id])
+    @shotlist = Shotlist.find(params[:shotlist_id])
     @shot.shotlist = @shotlist
     if @shot.save
       redirect_to dashboard_path(@shotlist.user)
