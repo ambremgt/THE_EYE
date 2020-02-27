@@ -3,6 +3,7 @@
 
 
 const showTab = () => {
+
     fieldset[currentTab].classList.remove('d-none');
 
     if (currentTab == 0) {
@@ -21,7 +22,7 @@ const showTab = () => {
 
   fixStepIndicator(currentTab)
 }
-const fixStepIndicator = (currentTab) => {
+const fixStepIndicator = () => {
   // This function removes the "active" class of all steps...
   let i = currentTab ;
   let x = document.querySelectorAll('#progressbar > li');
