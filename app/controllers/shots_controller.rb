@@ -2,7 +2,8 @@ class ShotsController < ApplicationController
   before_action :set_shot, only: [:destroy]
   def new
     @shot = Shot.new
-    @shot.shotlist = Shotlist.find(params[:shotlist_id])
+    @shotlist = Shotlist.find(params[:shotlist_id])
+    @shot.shotlist = @shotlist
 
   end
 

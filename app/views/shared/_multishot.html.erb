@@ -2,24 +2,24 @@
     <div class="col-md-10 col-md-offset-3">
             <!-- progressbar -->
             <ul id="progressbar">
-                <li class="active">1st Step</li>
-                <li>2nd Step</li>
-                <li>Shot Setup</li>
+                <li class="active">begin</li>
+                <li>it's finish soon</li>
+                <li>Shot final Setup</li>
             </ul>
 
-            <%= simple_form_for(@shot) do |f| %>
+            <%= simple_form_for [@shotlist, @shot] do |f| %>
             <%= f.error_notification %>
-            <!-- fieldsets -->
+
             <fieldset class="block">
                 <h2 class="fs-title">Technics</h2>
                 <h3 class="fs-subtitle">A little of technics</h3>
-                <%= f.input :angle, placeholder: "american" , class: "inp" %>
-                <%= f.input :shot_size, as: :checkbox, collection: ["XLS", "LS", "MLS", "MS", "MCU", "CU", "BCU", "ECU"] , class: "inp" %>
+                <%= f.input :angle, placeholder: "american, ..." , class: "inp" %>
+                <%= f.input :shot_size, as: :check_boxes, collection: ["XLS", "LS", "MLS", "MS", "MCU", "CU", "BCU", "ECU"] , class: "inp" %>
                 <%= f.input :movement, class: "inp" %>
                 <%= f.input :points, class: "inp" %>
-
-
             </fieldset>
+
+
             <fieldset class="block d-none">
                 <h2 class="fs-title">Description</h2>
                 <h3 class="fs-subtitle">Give us more about your shot</h3>
@@ -27,17 +27,16 @@
                 <%= f.input :equipment, class: "inp" %>
                 <%= f.input :actors, class: "inp" %>
                 <%= f.input :props, class: "inp" %>
-
             </fieldset>
+
+
             <fieldset class="block d-none">
                 <h2 class="fs-title">Create your shotlist</h2>
                 <h3 class="fs-subtitle">feel great to finish</h3>
                 <%= f.input :notes, class: "inp" %>
-                <%= f.input :points, class: "inp" %>
-                <%= f.input :angle, class: "inp" %>
                 <%= f.input :video_url, class: "inp" %>
-
             </fieldset>
+
             <button type="button" id="prev" class="d-none btn btn-primary" >Previous</button>
             <button type="button" id="next" class="btn btn-warning">Next</button>
             <%= f.button :submit , id: "sub", class: "submit btn btn-warning d-none"%>
