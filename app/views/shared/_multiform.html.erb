@@ -1,0 +1,40 @@
+<!-- MultiStep Form -->
+<div class="row multiformcustom">
+    <div class="col-md-10 col-md-offset-3">
+            <!-- progressbar -->
+            <ul id="progressbar">
+                <li class="active">1st Step</li>
+                <li>2nd Step</li>
+                <li>Shotlist Setup</li>
+            </ul>
+
+            <%= simple_form_for(@shotlist) do |f| %>
+            <%= f.error_notification %>
+            <!-- fieldsets -->
+            <fieldset class="block">
+                <h2 class="fs-title">First step</h2>
+                <h3 class="fs-subtitle">All begin by a title</h3>
+                <%= f.input :title, class: "inp" %>
+
+            </fieldset>
+            <fieldset class="block d-none">
+                <h2 class="fs-title">Description</h2>
+                <h3 class="fs-subtitle">Give us more about your project</h3>
+                <%= f.input :description, class: "inp" %>
+
+            </fieldset>
+            <fieldset class="block d-none">
+                <h2 class="fs-title">Create your shotlist</h2>
+                <h3 class="fs-subtitle">feel great to finish</h3>
+
+            </fieldset>
+            <button type="button" id="prev" class="d-none btn btn-primary" >Previous</button>
+            <button type="button" id="next" class="btn btn-warning">Next</button>
+            <%= f.button :submit , id: "sub", class: "submit btn btn-warning d-none"%>
+            <% end %>
+
+        <!-- link to designify.me code snippets -->
+        <!-- /.link to designify.me code snippets -->
+    </div>
+</div>
+<!-- /.MultiStep Form -->

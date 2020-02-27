@@ -6,6 +6,7 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
+    <div class="block-1">
     <%= f.input :email,
                 required: true,
                 autofocus: true,
@@ -17,6 +18,9 @@
     <%= f.input :password_confirmation,
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
+    <span class='next'>Next</span>
+    </div>
+    <div class='block-2 d-none '>
     <%= f.input :photo, as: :file, hint: "upload a profile image" %>
 
           </div>
@@ -24,7 +28,15 @@
             <%= f.button :submit, "Sign up" %>
           </div>
         <% end %>
+    </div>
 
         <%= render "devise/shared/links" %>
     </div>
 </div>
+
+<script>
+  document.querySelector('.next').addEventListener('click', (event) => {
+    document.querySelector('.block-1').classList.add('d-none');
+    document.querySelector('.block-2').classList.remove('d-none');
+  })
+</script>
