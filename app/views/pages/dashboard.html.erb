@@ -1,9 +1,140 @@
-<h1>Dashbooooarrd</h1>
-<hr>
+
 <% @user.shotlists.each  do |shotlist|%>
 <h2><%=shotlist.title%></h2>
 <p><%=shotlist.description%></p>
-<br>
-<button class="btn btn-warning"><%= link_to "create a shot", new_shotlist_shot_path(shotlist)  %></button>
+<a class="btn btn-warning"><%= link_to "create a shot", new_shotlist_shot_path(shotlist)  %></a>
  <% end %>
- <hr>
+
+
+<div style="margin-top:80px;">
+  <ul class="nav nav-tabs" style="text-decoration: none;">
+    <li class="active"><a data-toggle="tab" href="#profile">MY PROFILE</a></li>
+    <li><a data-toggle="tab" href="#collaboration">MY COLLABORATIONS</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="profile" class="tab-pane active">
+
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(https://images.pexels.com/photos/22185/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)">
+        <div style="text-align: center;">
+          <h1>Hi <%= current_user.first_name %></h1>
+          <p>welcome back to your dashboard!</p>
+          <% if current_user.photo.present? %>
+            <%= cl_image_tag current_user.photo.key, height: 70, width: 70, crop: :fill, class: "card-trip-user avatar-bordered" %>
+          <% end %>
+        </div>
+      </div>
+
+<div class="container" style="margin-top: 50px;">
+
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="row dashboard-box">
+
+              <div class="col-lg-12">
+                  <p><%= current_user.first_name %> <%= current_user.last_name %></p>
+                  <p>Filmmaker</p>
+                  <div style="display: flex; text-align: center;">
+                    <p class="fas fa-map-marker-alt"></p>
+                    <p style="margin-left: 10px;"><%= current_user.city %></p>
+                  </div>
+                  <p>Credits: <%= current_user.wallet %></p>
+              </div>
+            </div>
+
+            <div class="row dashboard-box">
+              <div class="col-lg-6 dashboard-img">
+                <% if current_user.portfolio_assets %>
+                <% current_user.portfolio_assets.each do |asset| %>
+                  <% asset.photos.each do |photo| %>
+                    <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+                  <% end %>
+                <% end %>
+              <% end %>
+              </div>
+
+              <div class="col-lg-6 dashboard-img">
+               <% if current_user.interest_list.present?  %>
+                  <% current_user.interest_list.each do |tag| %>
+                    <%= link_to tag, results_path(tag: tag), class: "btn-tag" %>
+                  <% end %>
+                <% end %>
+              </div>
+
+            </div>
+            </div>
+            <div class="col-lg-4 dashboard-box">
+                <p><%= current_user.biography %></p>
+            </div>
+        </div>
+      </div>
+
+</div>
+
+
+
+
+
+
+    <div id="collaboration" class="tab-pane">
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(https://images.pexels.com/photos/243757/pexels-photo-243757.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)">
+        <h1>Your Collaborations</h1>
+      </div>
+
+       <div class="container" style="margin-top: 50px;">
+
+          <div class="row">
+          <div class="col-lg-8">
+            <div class="row dashboard-box">
+
+              <div class="col-lg-12">
+                  <p><%= current_user.first_name %> <%= current_user.last_name %></p>
+                  <p>Filmmaker</p>
+                  <div style="display: flex; text-align: center;">
+                    <p class="fas fa-map-marker-alt"></p>
+                    <p style="margin-left: 10px;"><%= current_user.city %></p>
+                  </div>
+                  <p>Credits: <%= current_user.wallet %></p>
+              </div>
+            </div>
+
+            <div class="row dashboard-box">
+              <div class="col-lg-6 dashboard-img">
+                <% if current_user.portfolio_assets %>
+                <% current_user.portfolio_assets.each do |asset| %>
+                  <% asset.photos.each do |photo| %>
+                    <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+                  <% end %>
+                <% end %>
+              <% end %>
+              </div>
+
+              <div class="col-lg-6 dashboard-img">
+               <% if current_user.interest_list.present?  %>
+                  <% current_user.interest_list.each do |tag| %>
+                    <%= link_to tag, results_path(tag: tag), class: "btn-tag" %>
+                  <% end %>
+                <% end %>
+              </div>
+
+            </div>
+            </div>
+            <div class="col-lg-4 dashboard-box">
+                <p><%= current_user.biography %></p>
+            </div>
+        </div>
+      </div>
+
+      </div>
+
+          </div>
+        </div>
+      </div>
+  </div>
+
+
+    </div>
+    </div>
+  </div>
+</div>
+

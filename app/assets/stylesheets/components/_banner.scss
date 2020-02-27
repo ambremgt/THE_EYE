@@ -52,6 +52,8 @@
 // // }
 
 
+// _______ banner home page
+
 @font-face {
   font-family: Biko;
   src:url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/biko-black.woff");
@@ -89,4 +91,38 @@ svg > rect {
     -webkit-mask: url(#mask);
     mask: url(#mask);
 }
+
+// _____banner dashboard
+
+.banner-index {
+  background-image: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.4));
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  padding-top: 15vh;
+  text-align: justify;
+  max-height: 700px;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+
+.banner-index h1 {
+  margin: 0;
+  color: white;
+  font-size: 52px;
+  font-weight: 700;
+  font-family: 'poppins';
+  margin-left: 50px;
+}
+
+.banner-index p {
+  margin: 0;
+  color: white;
+  font-size: 25px;
+  font-weight: 400;
+  font-family: 'poppins';
+  margin-left: 50px;
+}
+
 
