@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   resources :shotlists, only: [:show, :create, :new] do
-    resources :shot, only: [:create, :new]
+    resources :shots, only: [:create, :new]
   end
   resources :shots, only: [] do
     resources :collaborations, only: [:create]

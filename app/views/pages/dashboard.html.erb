@@ -1,1 +1,9 @@
 <h1>Dashbooooarrd</h1>
+<hr>
+<% @user.shotlists.each  do |shotlist|%>
+<h2><%=shotlist.title%></h2>
+<p><%=shotlist.description%></p>
+<br>
+<button class="btn btn-warning"><%= link_to "create a shot", new_shotlist_shot_path(shotlist)  %></button>
+ <% end %>
+ <hr>
