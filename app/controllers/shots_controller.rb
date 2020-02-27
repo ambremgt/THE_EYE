@@ -2,7 +2,7 @@ class ShotsController < ApplicationController
   before_action :set_shot, only: [:destroy]
   def new
     @shot = Shot.new
-    @shot.user = current_user
+    @shot.shotlist = Shotlist.find(params[:shotlist_id])
 
   end
 
