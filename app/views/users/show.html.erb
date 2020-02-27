@@ -10,7 +10,11 @@
         <p style="margin-left: 10px;"><%= @filmmaker.city %></p>
       </div>
       <div style="display: flex;">
-        <a href="" class="experience">New</a>
+        <%= simple_form_for @chatroom do |form| %>
+          <%= form.submit "contact", class: 'experience' %>
+          <%= form.hidden "contact", class: 'experience' %>
+        <% end %>
+
         <div style="display: flex; margin-left: 30px;">
           <p class="fas fa-star" style="color: #ffc31e; margin-top: 3px;"></p>
           <p style="margin-left: 7px;">4,7</p>
@@ -60,7 +64,6 @@
   <h1>My collaborations</h1>
   <img src="" alt="">
 </div>
-
 
 
 
