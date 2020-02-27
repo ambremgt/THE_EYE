@@ -32,7 +32,6 @@ const fixStepIndicator = (currentTab) => {
 const multiForm = () => {
   let currentTab = 0 ;
   let fieldset = document.querySelectorAll('.blocktoIt') ;
-  console.log(fieldset);
     if (currentTab < fieldset.length) {
       document.querySelector('#next').addEventListener('click', (event) => {
         fieldset[currentTab].classList.add('d-none');
