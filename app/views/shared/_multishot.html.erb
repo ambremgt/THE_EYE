@@ -13,9 +13,16 @@
             <fieldset class="blocktoIt">
                 <h2 class="fs-title">This is important step</h2>
                 <h3 class="fs-subtitle">take your time</h3>
-                <%= f.input :angle, as: :check_boxes, collection: Shot::ANGLE, placeholder: "american, ..." , class: "inp" %>
-                <%= f.input :shot_size, as: :check_boxes, collection: Shot::SHOT_SIZE, class: "inp" %>
-                <%= f.input :movement, as: :check_boxes, collection: Shot::MOVEMENT, class: "inp" %>
+                <div class="category-choices">
+                <%= f.input :angle, as: :check_boxes, collection: Shot::ANGLE, placeholder: "american, ..." , class: "inp category-choice" %>
+
+                </div>
+                <div class="category-choices">
+                <%= f.input :shot_size, as: :check_boxes, collection: Shot::SHOT_SIZE, class: "inp category-choice" %>
+              </div>
+                <div class="category-choices">
+                <%= f.input :movement, as: :check_boxes, collection: Shot::MOVEMENT, class: "inp category-choice" %>
+              </div>
                 <%= f.input :points, class: "inp" %>
             </fieldset>
 
