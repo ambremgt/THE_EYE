@@ -11,7 +11,7 @@ class ShotlistsController < ApplicationController
     @shotlist = Shotlist.new(shotlist_params)
     @shotlist.user = current_user
     if @shotlist.save
-      redirect_to dashboard_path
+      redirect_to new_shotlist_shot_path(@shotlist)
     else
       render :new
     end
