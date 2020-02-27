@@ -1,8 +1,4 @@
-  let currentTab = 0 ;
-  let fieldset = document.querySelectorAll('fieldset') ;
-
-
-const showTab = () => {
+const showTab = (currentTab, fieldset) => {
 
     fieldset[currentTab].classList.remove('d-none');
 
@@ -22,11 +18,11 @@ const showTab = () => {
 
   fixStepIndicator(currentTab)
 }
-const fixStepIndicator = () => {
+const fixStepIndicator = (currentTab) => {
   // This function removes the "active" class of all steps...
   let i = currentTab ;
   let x = document.querySelectorAll('#progressbar > li');
-  for (i = currentTab; i < x.length; i++) {
+  for (i = 0; i < x.length; i++) {
     x[i].classList.remove('active');
   }
   //... and adds the "active" class to the current step:
@@ -34,20 +30,25 @@ const fixStepIndicator = () => {
 }
 
 const multiForm = () => {
+  let currentTab = 0 ;
+  let fieldset = document.querySelectorAll('.blocktoIt') ;
+  console.log(fieldset);
     if (currentTab < fieldset.length) {
-document.querySelector('#next').addEventListener('click', (event) => {
-  fieldset[currentTab].classList.add('d-none');
-  currentTab = currentTab + 1;
-  showTab(currentTab);
+      document.querySelector('#next').addEventListener('click', (event) => {
+        fieldset[currentTab].classList.add('d-none');
+        currentTab = currentTab + 1;
+        showTab(currentTab, fieldset);
   });
 
 document.querySelector('#prev').addEventListener('click', (event) => {
   fieldset[currentTab].classList.add('d-none');
   currentTab = currentTab - 1;
-  showTab(currentTab);
+  showTab(currentTab, fieldset);
 });
 }
 }
+
+
 
 
 
