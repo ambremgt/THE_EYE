@@ -11,8 +11,8 @@
       </div>
       <div style="display: flex;">
         <%= simple_form_for @chatroom do |form| %>
+          <%= form.input_field :receiver_id, as: :hidden, value: @filmmaker.id %>
           <%= form.submit "contact", class: 'experience' %>
-          <%= form.hidden "contact", class: 'experience' %>
         <% end %>
 
         <div style="display: flex; margin-left: 30px;">
