@@ -11,11 +11,11 @@
             <%= f.error_notification %>
 
             <fieldset class="blocktoIt">
-                <h2 class="fs-title">Technics</h2>
-                <h3 class="fs-subtitle">A little of technics</h3>
-                <%= f.input :angle, placeholder: "american, ..." , class: "inp" %>
-                <%= f.input :shot_size, as: :check_boxes, collection: ["XLS", "LS", "MLS", "MS", "MCU", "CU", "BCU", "ECU"] , class: "inp" %>
-                <%= f.input :movement, class: "inp" %>
+                <h2 class="fs-title">This is important step</h2>
+                <h3 class="fs-subtitle">take your time</h3>
+                <%= f.input :angle, as: :check_boxes, collection: Shot::ANGLE, placeholder: "american, ..." , class: "inp" %>
+                <%= f.input :shot_size, as: :check_boxes, collection: Shot::SHOT_SIZE, class: "inp" %>
+                <%= f.input :movement, as: :check_boxes, collection: Shot::MOVEMENT, class: "inp" %>
                 <%= f.input :points, class: "inp" %>
             </fieldset>
 
