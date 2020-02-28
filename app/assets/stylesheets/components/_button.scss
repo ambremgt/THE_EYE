@@ -73,7 +73,6 @@
   border-radius: 4px;
   text-decoration: none;
 }
-
 .btn-tag:hover {
   opacity: 1;
   text-decoration: none;
@@ -82,3 +81,25 @@
   transition: 0.4s;
 }
 
+.btn-tag-result {
+  color: #727272;
+  padding: 11px;
+  background: transparent;
+  border: solid 1px #727272;
+  -webkit-transition: background 0.3s ease;
+  transition: background 0.3s ease;
+  text-align: center;
+  font-size: 13px;
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 25px;
+  border-radius: 25px;
+  text-decoration: none;
+}
+.btn-tag-result:hover {
+  opacity: 1;
+  text-decoration: none;
+  color: black;
+  border: solid 1px black;
+  transition: 0.4s;
+}

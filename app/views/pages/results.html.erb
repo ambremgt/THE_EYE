@@ -1,40 +1,58 @@
 
-<div class="container mt-10" style="margin-top: 100px">
-  <div class="row">
-    <% @filmmakers.each do |filmmaker| %>
-    <div class="col-4">
-      <div class="card-trip">
-        <% if filmmaker.portfolio_assets %>
-          <% filmmaker.portfolio_assets.each do |asset| %>
-            <% asset.photos.each do |photo| %>
-              <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-            <% end %>
-          <% end %>
-        <div class="card-trip-infos">
-          <div>
-            <h2><%= link_to filmmaker.first_name, user_path(filmmaker) %> <%= filmmaker.last_name %></h2>
-            <div style="display: flex;">
-              <p class="fas fa-map-marker-alt"></p>
-              <p style="margin-left: 10px;"><%= filmmaker.city %></p>
-            </div>
-            <p><%= filmmaker.biography.split(' ').slice(0,16).join(' ')%></p>
-            <div style="display: flex;">
-              <p class="fas fa-star" style="color: #ffc31e; margin-top: 3px;"></p>
-              <p style="margin-left: 7px;">4,7</p>
-            </div>
-            <% if filmmaker.interest_list.present?  %>
-              <% filmmaker.interest_list.each do |tag| %>
-                <%= link_to tag, results_path(tag: tag), class: "btn-tag" %>
-              <% end %>
-            <% end %>
-          </div>
-          <% if filmmaker.photo.present? %>
-            <%= cl_image_tag filmmaker.photo.key, height: 40, width: 30, crop: :fill, class: "card-trip-user avatar-bordered" %>
-          <% end %>
-        </div>
-        <% end %>
-      </div>
-    </div>
+
+  <div class="container mt-10" style="margin-top: 100px">
+    <h2 style="margin-bottom: 40px;">Results for "<%= :query,
+      params[:query] %>"</h2>
+    <div style="display: flex">
+
+    <div style="margin-top: 3px; margin-bottom: 40px">
+    <% @filmmakers.first(2).each do |filmmaker| %>
+      <% filmmaker.interest_list.each do |tag| %>
+        <%= link_to tag, results_path(tag: tag), class: "btn-tag-result" %>
+      <% end %>
     <% end %>
+
+    </div>
+
   </div>
-</div>
+    <div class="row">
+      <% @filmmakers.each do |filmmaker| %>
+      <div class="col-4">
+          <div class="card-trip">
+            <% if filmmaker.portfolio_assets %>
+              <% filmmaker.portfolio_assets.each do |asset| %>
+                <% asset.photos.each do |photo| %>
+                  <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+                <% end %>
+              <% end %>
+            <div class="card-trip-infos">
+              <div>
+                <h2><%= link_to filmmaker.first_name, user_path(filmmaker) %> <%= filmmaker.last_name %></h2>
+                <div style="display: flex;margin-bottom: 5px">
+                  <p class="fas fa-map-marker-alt"></p>
+                  <p style="margin-left: 10px;"><%= filmmaker.city %></p>
+                </div>
+                <p><%= filmmaker.biography.split(' ').slice(0,13).join(' ')%></p>
+                <div style="display: flex; margin-bottom: 10px">
+                  <p class="fas fa-star" style="color: #ffc31e; margin-top: 3px;"></p>
+                  <p style="margin-left: 7px;">4,7</p>
+                </div>
+                <div style="text-align: center;">
+                <% if filmmaker.interest_list.present?  %>
+                  <% filmmaker.interest_list.first(2).each do |tag| %>
+                    <%= link_to tag, results_path(tag: tag), class: "btn-tag" %>
+                  <% end %>
+                <% end %>
+                </div>
+              </div>
+              <% if filmmaker.photo.present? %>
+                <%= cl_image_tag filmmaker.photo.key, height: 40, width: 30, crop: :fill, class: "card-trip-user avatar-bordered" %>
+              <% end %>
+            </div>
+            <% end %>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+

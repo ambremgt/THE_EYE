@@ -1,8 +1,10 @@
 PortfolioAsset.destroy_all
+Shot.destroy_all
 Shotlist.destroy_all
 
 Message.destroy_all
 Chatroom.destroy_all
+ActsAsTaggableOn::Tag.destroy_all
 
 User.destroy_all
 
@@ -81,7 +83,7 @@ seth.save!
 olga = User.new(
                 first_name: "Olga",
                 last_name: "Kravets",
-                biography: "Olga Kravets is a documentary filmmaker, photographer and multimedia producer @ Noor Images. She focuses on long-term projects covering human rights and conflict. She was a winner of the Prix Bayeux-Calvados for War Correspondents in 2014, Magnum Emergency Foundation grant recipient in 2013 and a winner of the PDN Photo Annual in 2012. She is the author of Grozny: Nine Cities (Dewi Lewis Publishing, 2018). She lives in Paris and works primarily in the Caucasus, Balkans, and Middle East.",
+                biography: "Olga Kravets is a documentary filmmaker, photographer and multimedia producer. She focuses on long-term projects covering human rights and conflict. She was a winner of the Prix Bayeux-Calvados for War Correspondents in 2014, Magnum Emergency Foundation grant recipient in 2013 and a winner of the PDN Photo Annual in 2012. She is the author of Grozny: Nine Cities (Dewi Lewis Publishing, 2018). She lives in Paris and works primarily in the Caucasus, Balkans, and Middle East.",
                 email: "olga@video.com",
                 city: "Paris, France",
                 wallet: "50",
