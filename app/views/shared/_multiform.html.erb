@@ -1,48 +1,52 @@
 <!-- MultiStep Form -->
-<div class="row">
+<div class="row align-items-center">
   <div class="col bg-dark text-white text-center">
-<h1>La creme de la creme</h1>
-<p>:) :) :) troll ;) :) :)</p>
+<h1>camea</h1>
+<hr>
 <img  class="blocktoPic" height="600" src="https://project-submission.client.cremedelacreme.io/static/media/celine.1db21b0f.png" alt="creme">
-<img  class="blocktoPic d-none" height="500" width="200" src="https://avatars2.githubusercontent.com/u/56646293?v=4" alt="Manu">
-<img  class="blocktoPic d-none" height="500" width="200" src="https://avatars0.githubusercontent.com/u/59559442?v=4" alt="Dodo">
-<p>Il faut reload la page pour que le js du form fomctionne, je fix ca demain</p>
+<img  class="blocktoPic d-none animated bounceInUp" height="600" width="200" src="https://avatars2.githubusercontent.com/u/56646293?v=4" alt="Manu">
+<img  class="blocktoPic d-none" height="600" width="200" src="https://avatars0.githubusercontent.com/u/59559442?v=4" alt="Dodo">
+<p>Nice people for cool colaboration</p>
 </div>
-<div class="col-md-8 col-md-offset-3 mt-5">
+<div class="col-md-8 col-md-offset-3">
 
-<div class="row multiformcustom">
+<div class="row multiformcustom align-items-center">
 
-    <div class="fullform col-md-10 col-md-offset-3">
+    <div class="fullform col-md-10 col-md-offset-3 position-absolute">
             <!-- progressbar -->
-            <ul id="progressbar">
-                <li class="active">1st Step</li>
-                <li>2nd Step</li>
-                <li>Shotlist Setup</li>
+            <ul id="progressbar" class="position-relative">
+                <li class="active">Camea</li>
+                <li>Project Title</li>
+                <li>Project Description</li>
             </ul>
 
             <%= simple_form_for(@shotlist) do |f| %>
             <%= f.error_notification %>
             <!-- fieldsets -->
-            <fieldset class="blocktoIt">
-                <h2 class="fs-title">First step</h2>
-                <h3 class="fs-subtitle">All begin by a title</h3>
-                <%= f.input :title, class: "inp" %>
+            <hr>
+             <fieldset class="blocktoIt position-relative">
+              <br>
+                <h2 class="fs-title animated pulse infinite">Are you ready for Camea's World?</h2>
+                <br>
+                <h3 class="fs-subtitle">CLICK NEXT</h3>
 
             </fieldset>
-            <fieldset class="blocktoIt d-none">
-                <h2 class="fs-title">Description</h2>
-                <h3 class="fs-subtitle">Give us more about your project</h3>
-                <%= f.input :description, class: "inp" %>
+            <fieldset class="blocktoIt position-relative d-none">
+                <h2 class="fs-title animated bounceInDown">First a nice Title</h2>
+                <h3 class="fs-subtitle">Wayne's World seems a cool title, isn't it?</h3>
+                <%= f.input :title, placeholder: 'Reservoir Dogs, Godfather, ...', class: "inp" %>
 
             </fieldset>
-            <fieldset class="blocktoIt d-none">
-                <h2 class="fs-title">Create your shotlist</h2>
-                <h3 class="fs-subtitle">feel great to finish</h3>
+            <fieldset class="blocktoIt position-relative d-none">
+                <h2 class="fs-title animated bounceInDown"> Add a Description</h2>
+                <h3 class="fs-subtitle">It's party time excellent</h3>
+                <%= f.input :description, placeholder: 'A movie with a cool man...ue', class: "inp" %>
 
             </fieldset>
+            <hr>
             <button type="button" id="prev" class="d-none btn btn-primary" >Previous</button>
             <button type="button" id="next" class="btn btn-warning">Next</button>
-            <%= f.button :submit , id: "sub", class: "submit btn btn-warning d-none"%>
+            <%= f.button :submit ,"Add a SHOT", id: "sub", class: "submit btn btn-warning d-none"%>
             <% end %>
 
         <!-- link to designify.me code snippets -->
