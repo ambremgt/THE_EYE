@@ -12,7 +12,20 @@
       <%= simple_form_for [ @chatroom, @message ] do |f| %>
         <%= f.input :content, label: false, placeholder: "Message ##{@chatroom.name}" %>
       <% end %>
+
+      <div class="dropdown show">
+  <a class="btn btn-warning dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Attach project
+  </a>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+     <% @current_user.shotlists.each do |shotlist| %>
+        <%= link_to shotlist.title, shotlist_path(shotlist), class: "shotlist-link" %>
+      <% end %>
+  </div>
+</div>
     </div>
+
   </div>
 
  <div class="chatroom-sidebar">

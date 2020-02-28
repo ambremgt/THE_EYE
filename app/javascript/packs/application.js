@@ -19,6 +19,8 @@ import { initUpdateNavbarOnScroll } from '../components/navbar';
 import { initUpdateFooterOnScroll } from '../components/footer';
 import { multiForm } from '../components/multiform';
 import { activeCheck } from '../components/checkbox';
+import { attachment } from '../components/attachment';
+
 // import { video } from '../components/home';
 // import { loadDynamicBannerText } from '../components/banner';
 
@@ -32,6 +34,7 @@ document.addEventListener('turbolinks:load', () => {
   // video();
   initUpdateNavbarOnScroll();
   initUpdateFooterOnScroll();
+  attachment();
   activeCheck();
   if (document.querySelector('.blocktoIt')) {
     multiForm();
