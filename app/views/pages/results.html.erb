@@ -17,11 +17,13 @@
               <p class="fas fa-map-marker-alt"></p>
               <p style="margin-left: 10px;"><%= filmmaker.city %></p>
             </div>
-            <p><%= filmmaker.biography.split(' ').slice(0,16).join(' ')%></p>
-            <div style="display: flex;">
-              <p class="fas fa-star" style="color: #ffc31e; margin-top: 3px;"></p>
-              <p style="margin-left: 7px;">4,7</p>
-            </div>
+            <% if filmmaker.biography.present?  %>
+              <p><%= filmmaker.biography.split(' ').slice(0,16).join(' ')%></p>
+              <div style="display: flex;">
+                <p class="fas fa-star" style="color: #ffc31e; margin-top: 3px;"></p>
+                <p style="margin-left: 7px;">4,7</p>
+              </div>
+            <% end %>
             <% if filmmaker.interest_list.present?  %>
               <% filmmaker.interest_list.each do |tag| %>
                 <%= link_to tag, results_path(tag: tag), class: "btn-tag" %>
