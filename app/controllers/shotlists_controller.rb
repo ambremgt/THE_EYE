@@ -1,5 +1,5 @@
 class ShotlistsController < ApplicationController
-  before_action :set_shotlist, only: [:destroy]
+  before_action :set_shotlist, only: [:show, :destroy]
 
   def new
     @shotlist = Shotlist.new
@@ -15,6 +15,9 @@ class ShotlistsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
   end
 
   def destroy
