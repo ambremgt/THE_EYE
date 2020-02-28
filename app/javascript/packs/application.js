@@ -30,7 +30,9 @@ import { activeCheck } from '../components/checkbox';
 document.addEventListener('turbolinks:load', () => {
   // video();
   initUpdateNavbarOnScroll();
-  multiForm();
+  if (document.querySelector('.blocktoIt')) {
+    multiForm();
+  }
   activeCheck();
 
 });
