@@ -1,5 +1,4 @@
 <div class="chatroom">
-  <div>
     <div id="messages" data-chatroom-id="<%= @chatroom.id %>">
       <% @chatroom.messages.each do |message| %>
         <%= render "messages/message", message: message %>
@@ -10,4 +9,3 @@
       <%= f.input :content, label: false, placeholder: "Message ##{@chatroom.name}" %>
     <% end %>
   </div>
-</div>
