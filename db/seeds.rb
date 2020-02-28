@@ -1,6 +1,7 @@
 PortfolioAsset.destroy_all
-Shotlist.destroy_all
+Shot.destroy_all
 
+Shotlist.destroy_all
 Message.destroy_all
 Chatroom.destroy_all
 ActsAsTaggableOn::Tag.destroy_all
