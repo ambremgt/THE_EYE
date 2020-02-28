@@ -1,11 +1,33 @@
-<div class="chatroom">
+<div class="chatroom container">
+
+  <div class="chatroom-main">
+
     <div id="messages" data-chatroom-id="<%= @chatroom.id %>">
       <% @chatroom.messages.each do |message| %>
         <%= render "messages/message", message: message %>
       <% end %>
     </div>
 
-    <%= simple_form_for [ @chatroom, @message ] do |f| %>
-      <%= f.input :content, label: false, placeholder: "Message ##{@chatroom.name}" %>
-    <% end %>
+    <div class="chat-bottom">
+      <%= simple_form_for [ @chatroom, @message ] do |f| %>
+        <%= f.input :content, label: false, placeholder: "Message ##{@chatroom.name}" %>
+      <% end %>
+    </div>
   </div>
+
+ <div class="chatroom-sidebar">
+  <% other_chatter = current_user.other_chatter?(@chatroom) %>
+    <% if other_chatter.photo.present? %>
+      <%= cl_image_tag other_chatter.photo.key, height: 120, width: 120, crop: :fill, class: "avatar-huge sidebar-avatar" %>
+    <% end %>
+    <h3><%= other_chatter.first_name %> <%= other_chatter.last_name %></h3>
+    <p><%= other_chatter.city %></p>
+    <% other_chatter.interest_list.each do |interest| %>
+      <small><%= interest %></small>
+    <% end %>
+ </div>
+
+</div>
+
+
+
