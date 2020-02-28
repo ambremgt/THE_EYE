@@ -6,7 +6,9 @@ if (userContainer) {
 
   consumer.subscriptions.create({ channel: "UserChannel", id: id }, {
     received(data) {
-      document.getElementById('notif-counter').innerText = data.notif_counter
+      window.location.reload();
+      //document.getElementById('notif-counter').insertAdjacentHTML('beforeend',
+      //`<span class="msg-number">${data.notif_counter}</span>`)
       // console.log(data.notif_counter)
       // console.log(data); // called when data is broadcast in the cable
     },
