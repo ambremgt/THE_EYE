@@ -38,6 +38,8 @@ gem 'cloudinary', '~> 1.12.0'
 
 gem 'acts-as-taggable-on', '~> 6.0'
 
+gem 'animate.css-rails', '~> 3.2'
+
 
 group :development, :test do  gem 'pry-byebug'
   gem 'pry-rails'

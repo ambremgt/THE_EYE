@@ -1,3 +1,14 @@
+<div class="row">
+  <div class="col bg-dark text-white text-center">
+<h1>La creme de la creme</h1>
+<p>:) :) :) troll ;) :) :)</p>
+<img  class="blocktoPic" height="600" src="https://project-submission.client.cremedelacreme.io/static/media/celine.1db21b0f.png" alt="creme">
+<img  class="blocktoPic d-none" height="300" width="250" src="https://avatars2.githubusercontent.com/u/56646293?v=4" alt="Manu">
+<img  class="blocktoPic d-none" height="300" width="250" src="https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1578337746/sdzz2wptyo4m7dq7d34b.jpg" alt="Sovana">
+<p>Il faut reload la page pour que le js du form fomctionne, je fix ca demain</p>
+</div>
+<div class="col-md-8 col-md-offset-3 mt-5">
+
 <div class="row multiformcustom">
     <div class="col-md-10 col-md-offset-3">
             <!-- progressbar -->
@@ -13,12 +24,105 @@
             <fieldset class="blocktoIt">
                 <h2 class="fs-title">This is important step</h2>
                 <h3 class="fs-subtitle">take your time</h3>
-                <%= f.input :angle, as: :check_boxes, collection: Shot::ANGLE, placeholder: "american, ..." , class: "inp" %>
-                <%= f.input :shot_size, as: :check_boxes, collection: Shot::SHOT_SIZE, class: "inp" %>
-                <%= f.input :movement, as: :check_boxes, collection: Shot::MOVEMENT, class: "inp" %>
+
+                <fieldset class="form-group check_boxes optional shot_angle">
+                  <legend class="col-form-label pt-0">Angle</legend>
+                  <input type="hidden" name="shot[angle][]" value="">
+                  <div class="category-choices">
+                    <div class="row d-flex justify-content-between">
+
+
+                      <input class="form-check-input check_boxes optional" type="checkbox" value="Eye level" name="shot[angle][]" id="shot_angle_eye_level" hidden>
+                      <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shot_angle_eye_level">Eye level</label>
+
+
+                      <input class="form-check-input check_boxes optional" type="checkbox" value="Low angle" name="shot[angle][]" id="shot_angle_low_angle" hidden>
+                      <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shot_angle_low_angle">Low angle</label>
+
+
+                      <input class="form-check-input check_boxes optional" type="checkbox" value="High angle" name="shot[angle][]" id="shot_angle_high_angle" hidden>
+                      <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shot_angle_high_angle">High angle</label>
+
+
+
+                      <input class="form-check-input check_boxes optional" type="checkbox" value="Dutch angle" name="shot[angle][]" id="shot_angle_dutch_angle" hidden>
+                      <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shot_angle_dutch_angle">Dutch angle</label>
+
+
+                      <input class="form-check-input check_boxes optional" type="checkbox" value="Over-the-Shoulder" name="shot[angle][]" id="shot_angle_over-the-shoulder" hidden>
+                      <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shot_angle_over-the-shoulder">Over-the-Shoulder</label>
+
+                  </div>
+                    </div>
+                    <hr>
+                </fieldset>
+
+                <fieldset class="form-group check_boxes optional shot_shot_size">
+                  <legend class="col-form-label pt-0">Shot size</legend>
+                  <input type="hidden" name="shot[shot_size][]" value="">
+                  <div class="category-choices">
+                    <div class="row d-flex justify-content-between">
+
+                      <input class="form-check-input check_boxes optional" type="checkbox" value="Close-up" name="shot[shot_size][]" id="shot_shot_size_close-up" hidden>
+                      <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shot_shot_size_close-up">Close-up</label>
+
+
+                      <input class="form-check-input check_boxes optional" type="checkbox" value="Long shot" name="shot[shot_size][]" id="shot_shot_size_long_shot" hidden>
+                      <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shot_shot_size_long_shot">Long shot</label>
+
+
+                      <input class="form-check-input check_boxes optional" type="checkbox" value="Medium shot" name="shot[shot_size][]" id="shot_shot_size_medium_shot" hidden>
+                      <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shot_shot_size_medium_shot">Medium shot</label>
+
+
+                      <input class="form-check-input check_boxes optional" type="checkbox" value="point-of-view shot" name="shot[shot_size][]" id="shot_shot_size_point-of-view_shot" hidden>
+                      <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shot_shot_size_point-of-view_shot">point-of-view shot</label>
+
+                  </div>
+                </div>
+                <hr>
+                </fieldset>
+
+                <fieldset class="form-group check_boxes optional shot_movement">
+                  <legend class="col-form-label pt-0">Movement</legend>
+                  <div class="category-choices">
+                    <div class="row d-flex justify-content-between">
+                    <input type="hidden" name="shot[movement][]" value="">
+
+                      <input class="form-check-input check_boxes optional" type="checkbox" value="Pan/tilt" name="shot[movement][]" id="shot_movement_pantilt" hidden>
+                      <label class="category-choice col-md- 3form-check-label collection_check_boxes" for="shot_movement_pantilt">Pan/tilt</label>
+
+
+                      <input class="form-check-input check_boxes optional" type="checkbox" value="Crane shot" name="shot[movement][]" id="shot_movement_crane_shot" hidden>
+                      <label class="category-choice col-md-3 form-check-label collection_check_boxes" for="shot_movement_crane_shot">Crane shot</label>
+
+
+                      <input class="form-check-input check_boxes optional" type="checkbox" value="Zoom" name="shot[movement][]" id="shot_movement_zoom" hidden>
+                      <label class="category-choice col-md-3 form-check-label collection_check_boxes" for="shot_movement_zoom">Zoom</label>
+                    </div>
+                    <div class="row d-flex justify-content-between">
+                      <input class="form-check-input check_boxes optional" type="checkbox" value="Random motion" name="shot[movement][]" id="shot_movement_random_motion" hidden>
+                      <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shot_movement_random_motion">Random motion</label>
+
+
+                      <input class="form-check-input check_boxes optional" type="checkbox" value="360-degree motion" name="shot[movement][]" id="shot_movement_360-degree_motion" hidden>
+                      <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shot_movement_360-degree_motion">360-degree motion</label>
+
+
+                      <input class="form-check-input check_boxes optional" type="checkbox" value="Compound motion" name="shot[movement][]" id="shot_movement_compound_motion" hidden>
+                      <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shot_movement_compound_motion">Compound motion</label>
+
+
+                      <input class="form-check-input check_boxes optional" type="checkbox" value="Dolly zoom" name="shot[movement][]" id="shot_movement_dolly_zoom" hidden>
+                      <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shot_movement_dolly_zoom">Dolly zoom</label>
+                     </div>
+                  </div>
+
+                <hr>
+                </fieldset>
+
                 <%= f.input :points, class: "inp" %>
             </fieldset>
-
 
             <fieldset class="blocktoIt d-none">
                 <h2 class="fs-title">Description</h2>
@@ -28,7 +132,6 @@
                 <%= f.input :actors, class: "inp" %>
                 <%= f.input :props, class: "inp" %>
             </fieldset>
-
 
             <fieldset class="blocktoIt d-none">
                 <h2 class="fs-title">Create your shotlist</h2>
@@ -41,7 +144,10 @@
             <button type="button" id="next" class="btn btn-warning">Next</button>
             <%= f.button :submit , id: "sub", class: "submit btn btn-warning d-none"%>
             <% end %>
+            </div>
 
 
     </div>
+</div>
+</div>
 </div>

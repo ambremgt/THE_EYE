@@ -17,6 +17,7 @@ require("channels")
 // const imagePath = (name) => images(name, true)
 import { initUpdateNavbarOnScroll } from '../components/navbar';
 import { multiForm } from '../components/multiform';
+import { activeCheck } from '../components/checkbox';
 // import { video } from '../components/home';
 // import { loadDynamicBannerText } from '../components/banner';
 
@@ -30,6 +31,8 @@ document.addEventListener('turbolinks:load', () => {
   // video();
   initUpdateNavbarOnScroll();
   multiForm();
+  activeCheck();
+
 });
 
 // ----------------------------------------------------
