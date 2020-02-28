@@ -11,4 +11,26 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  def unread_messages_hash
+    @chatrooms = Chatroom.all
+    total_messages = Hash.new
+
+    @chatrooms.each do |chatroom|
+       total_messages[chatroom.id] = chatroom.messages.where.not(user: self).where(read: false).count
+    end
+
+    return total_messages
+  end
+
+  def other_chatter?(chatroom)
+    if chatroom.receiver_id == self.id
+      User.find(chatroom.sender_id) if chatroom.sender_id.present?
+    else
+      User.find(chatroom.receiver_id) if chatroom.receiver_id.present?
+    end
+  end
+
 end
+
+
+ # @chatroom.messages.where.not(user: @receiving_user).where(read: false).count # Create a method to count unread messages for each chatroom

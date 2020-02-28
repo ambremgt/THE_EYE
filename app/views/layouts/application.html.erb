@@ -11,7 +11,7 @@
   </head>
 
   <body>
-    <% if params[:action] == "home" %>
+    <% if (params[:action] == "home") || (params[:action] == "new")  %>
     <%= render 'shared/navbar' %>
     <% else %>
     <%= render 'shared/navbar2' %>
