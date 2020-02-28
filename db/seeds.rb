@@ -1,7 +1,7 @@
 PortfolioAsset.destroy_all
 Shot.destroy_all
-
 Shotlist.destroy_all
+
 Message.destroy_all
 Chatroom.destroy_all
 ActsAsTaggableOn::Tag.destroy_all
@@ -83,7 +83,7 @@ seth.save!
 olga = User.new(
                 first_name: "Olga",
                 last_name: "Kravets",
-                biography: "Olga Kravets is a documentary filmmaker, photographer and multimedia producer @ Noor Images. She focuses on long-term projects covering human rights and conflict. She was a winner of the Prix Bayeux-Calvados for War Correspondents in 2014, Magnum Emergency Foundation grant recipient in 2013 and a winner of the PDN Photo Annual in 2012. She is the author of Grozny: Nine Cities (Dewi Lewis Publishing, 2018). She lives in Paris and works primarily in the Caucasus, Balkans, and Middle East.",
+                biography: "Olga Kravets is a documentary filmmaker, photographer and multimedia producer. She focuses on long-term projects covering human rights and conflict. She was a winner of the Prix Bayeux-Calvados for War Correspondents in 2014, Magnum Emergency Foundation grant recipient in 2013 and a winner of the PDN Photo Annual in 2012. She is the author of Grozny: Nine Cities (Dewi Lewis Publishing, 2018). She lives in Paris and works primarily in the Caucasus, Balkans, and Middle East.",
                 email: "olga@video.com",
                 city: "Paris, France",
                 wallet: "50",
@@ -148,11 +148,46 @@ joseph = User.new(
                 password: "123406", password_confirmation: "123406")
 joseph.photo.attach(io: URI.open("https://images.pexels.com/photos/381843/pexels-photo-381843.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"), filename: "joseph.png", content_type: 'image/png')
 joseph.interest_list.add(["Trans-trav", "Urban", "Street", "Architecture", "City"])
-
-
 joseph.save!
 
+samuel = User.new(
+                    first_name: "Samuel",
+                    last_name: "Collins",
+                    biography: "Hi, my names Samuel. Im 22 years old from the bay area. My passion is cinema. I love shooting landscapes, seascapes, and architecture. Being able to capture the beauty of this world, and sharing that with you is my goal here. I have recently started to put my artwork to life by creating prints for people to purchase and enjoy. By doing this, I will be able to up my photography game and hopefully take better pictures for you and many people like you to enjoy.",
+                    email: "samuel@video.com",
+                    city: "San Francisco, United States of America",
+                    wallet: "50", language: "English",
+                    password: "111111", password_confirmation: "111111"
+                  )
+samuel.photo.attach(io: URI.open("https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"), filename: "samuel.png", content_type: 'image/png')
+samuel.interest_list.add(["Landscapes", "Urban", "Architecture", "Timelapse"])
+samuel.save!
 
+agathe = User.new(
+                    first_name: "Agathe",
+                    last_name: "Dollee",
+                    biography: "I'm a documentarian and video journalist based in San P. I've been working to produce high-quality video for the past seven years focusing on conflict and social movements. My work has taken me across the globe including the Middle East, Africa, Latin America, Europe, and all over the US. I like to find stories not yet told, and at the very least exploring new dimensions. The subjects must have social relevancy and not only draw attention to the subject, but also highlight how those affected are responding, reacting, and challenging their conditions. I don't like to sensationalize a story. I seek to analyze its roots and look at the broader implications of whatever conflict I may be addressing. I believe that video is one the most effective and dynamic mediums to transmit information, and I attempt to utilize it to its full potential. I'm proud of what I've produced and am anxious to pursue new opportunities to create new works with Storyhunter.",
+                    email: "agathe@video.com",
+                    city: "San Francisco, United States of America",
+                    wallet: "50", language: "English",
+                    password: "111112", password_confirmation: "111112"
+                  )
+agathe.photo.attach(io: URI.open("https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"), filename: "samuel.png", content_type: 'image/png')
+agathe.interest_list.add(["Landscapes", "Urban", "Architecture", "Timelapse"])
+agathe.save!
+
+arthur = User.new(
+                    first_name: "Arthur",
+                    last_name: "Dollee",
+                    biography: "Hi, my names Arthur. Im 22 years old from the bay area. My passion is cinema. I love shooting landscapes, seascapes, and architecture. Being able to capture the beauty of this world, and sharing that with you is my goal here. I have recently started to put my artwork to life by creating prints for people to purchase and enjoy. By doing this, I will be able to up my photography game and hopefully take better pictures for you and many people like you to enjoy.",
+                    email: "arthur@video.com",
+                    city: "San Francisco, United States of America",
+                    wallet: "50", language: "English",
+                    password: "111113", password_confirmation: "111113"
+                  )
+arthur.photo.attach(io: URI.open("https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"), filename: "samuel.png", content_type: 'image/png')
+arthur.interest_list.add(["Landscapes", "Urban", "Architecture", "Timelapse"])
+arthur.save!
 
 #Create 10 portfolioasset
 assetsMohamed = PortfolioAsset.new(user_id: mohamed.id)
@@ -195,6 +230,17 @@ assetsJoseph = PortfolioAsset.new(user_id: joseph.id)
 assetsJoseph.photos.attach(io: URI.open("https://images.pexels.com/photos/68426/pexels-photo-68426.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"), filename: "josephcard.png", content_type: 'image/png')
 assetsJoseph.save!
 
+assetsSamuel = PortfolioAsset.new(user_id: samuel.id)
+assetsSamuel.photos.attach(io: URI.open("https://images.pexels.com/photos/305086/pexels-photo-305086.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"), filename: "samuelcard.png", content_type: 'image/png')
+assetsSamuel.save!
+
+assetsAgathe = PortfolioAsset.new(user_id: agathe.id)
+assetsAgathe.photos.attach(io: URI.open("https://images.pexels.com/photos/1264210/pexels-photo-1264210.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"), filename: "agathecard.png", content_type: 'image/png')
+assetsAgathe.save!
+
+assetsArthur = PortfolioAsset.new(user_id: arthur.id)
+assetsArthur.photos.attach(io: URI.open("https://images.pexels.com/photos/2726126/pexels-photo-2726126.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"), filename: "arthurcard.png", content_type: 'image/png')
+assetsArthur.save!
 #Create tags
 
 
