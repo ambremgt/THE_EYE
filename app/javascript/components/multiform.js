@@ -1,6 +1,7 @@
-const showTab = (currentTab, fieldset) => {
+const showTab = (currentTab, fieldset, fieldset_2) => {
 
     fieldset[currentTab].classList.remove('d-none');
+    fieldset_2[currentTab].classList.remove('d-none');
 
     if (currentTab == 0) {
     document.querySelector('#prev').classList.add('d-none');
@@ -14,6 +15,7 @@ const showTab = (currentTab, fieldset) => {
     document.querySelector('#next').classList.remove('d-none');
     document.querySelector('#sub').classList.add('d-none');
   };
+
   // ... and run a function that displays the correct step indicator:
 
   fixStepIndicator(currentTab)
@@ -32,20 +34,44 @@ const fixStepIndicator = (currentTab) => {
 const multiForm = () => {
   let currentTab = 0 ;
   let fieldset = document.querySelectorAll('.blocktoIt') ;
+  let fieldset_2 = document.querySelectorAll('.blocktoPic') ;
     if (currentTab < fieldset.length) {
       document.querySelector('#next').addEventListener('click', (event) => {
         fieldset[currentTab].classList.add('d-none');
+        console.log(fieldset_2);
+        fieldset_2[currentTab].classList.add('d-none');
+
+    //     fieldset[currentTab].classList.add('animated', 'fadeOutLeft');
+    //     fieldset[currentTab].addEventListener('animationend', (event)  => {
+    // fieldset[currentTab].classList.remove('animated', 'fadeOutLeft')
+    // });
         currentTab = currentTab + 1;
-        showTab(currentTab, fieldset);
+        showTab(currentTab, fieldset, fieldset_2);
+
+  //       fieldset[currentTab].classList.add('animated', 'fadeInRight')
+  // fieldset[currentTab].addEventListener('animationend', (event) => {
+  //   fieldset[currentTab].classList.remove('animated', 'fadeInRight')
+  // });
+
   });
+    }
 
 document.querySelector('#prev').addEventListener('click', (event) => {
   fieldset[currentTab].classList.add('d-none');
+  fieldset_2[currentTab].classList.add('d-none');
+
+//   fieldset[currentTab].classList.add('animated', 'fadeOutRight')
+//   fieldset[currentTab].addEventListener('animationend', (event) => {
+//     fieldset[currentTab].classList.remove('animated', 'fadeOutRight')
+// });
   currentTab = currentTab - 1;
-  showTab(currentTab, fieldset);
+  showTab(currentTab, fieldset, fieldset_2);
+//   fieldset[currentTab].classList.add('animated', 'fadeInRight');
+//         fieldset[currentTab].addEventListener('animationend', (event) => {
+//           fieldset[currentTab].classList.remove('animated', 'fadeInRight')
+// });
 });
 }
-}
 
 
 
@@ -55,7 +81,5 @@ document.querySelector('#prev').addEventListener('click', (event) => {
 
 
 
-  // Otherwise, display the correct tab:
-
-
+  // Otherwise, display the correct tab
 export { multiForm };
