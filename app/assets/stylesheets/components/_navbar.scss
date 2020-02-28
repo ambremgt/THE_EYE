@@ -114,3 +114,12 @@
   transition: 0.5s;
   border: solid 1px black;
 }
+
+#dashboard-link {
+  position: relative;
+  #notif-counter {
+    position: absolute;
+    top: 0;
+  }
+}
+

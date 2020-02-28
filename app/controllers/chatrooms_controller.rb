@@ -13,8 +13,10 @@ class ChatroomsController < ApplicationController
   end
 
   def show
+    current_user.unread_messages_hash
     @chatroom = Chatroom.find(params[:id])
     @message = Message.new
+    @chatroom.messages.where.not(user: current_user).each{ |message| message.update(read: true)}
   end
 
 
