@@ -1,76 +1,115 @@
-<div>
   <ul class="nav nav-tabs" style="text-decoration: none;">
-    <li class="active"><a data-toggle="tab" href="#profile" style="font-weight:500; color: white;">MY PROFILE</a></li>
-    <li><a data-toggle="tab" href="#collaboration" style="font-weight:500; color: white;">MY COLLABORATIONS</a></li>
+    <li class="active"><a class="btn btn-dashboard" data-toggle="tab" href="#profile" style="font-weight:500; color: white;">My profile</a></li>
+    <li><a data-toggle="tab" class="btn btn-dashboard" href="#collaboration" style="font-weight:500; color: white;">My collaborations</a></li>
   </ul>
 
   <div class="tab-content">
     <div id="profile" class="tab-pane active">
-
       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(https://images.pexels.com/photos/22185/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)">
         <div style="text-align: center;">
-          <h1>Hi <%= current_user.first_name %></h1>
-          <p>welcome back to your dashboard!</p>
-          <% if current_user.photo.present? %>
-            <%= cl_image_tag current_user.photo.key, height: 70, width: 70, crop: :fill, class: "card-trip-user avatar-bordered" %>
-          <% end %>
+          <h1>Hi <%= current_user.first_name %>,</h1>
+          <h3>Welcome back</h3>
         </div>
       </div>
 
-<div class="container" style="margin-top: 50px;">
-
+      <div class="container dashboard" style="margin-top: 30px;">
         <div class="row">
-          <div class="col-lg-8">
-            <div class="row dashboard-box">
-
-              <div class="col-lg-12">
-                  <p><%= current_user.first_name %> <%= current_user.last_name %></p>
-                  <p>Filmmaker</p>
-                  <div style="display: flex; text-align: center;">
-                    <p class="fas fa-map-marker-alt"></p>
-                    <p style="margin-left: 10px;"><%= current_user.city %></p>
-                  </div>
-                  <p>Credits: <%= current_user.wallet %></p>
-              </div>
-            </div>
-
-            <div class="row dashboard-box">
-              <div class="col-lg-6 dashboard-img">
-                <% if current_user.portfolio_assets %>
+          <div class="col-lg-4">
+             <p style="margin-left: 14px;"> <% if current_user.portfolio_assets %>
                 <% current_user.portfolio_assets.each do |asset| %>
                   <% asset.photos.each do |photo| %>
-                    <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+                    <%= cl_image_tag photo.key, height: 300, width: 250, crop: :fill %>
                   <% end %>
                 <% end %>
-              <% end %>
-              </div>
-
-              <div class="col-lg-6 dashboard-img">
-               <% if current_user.interest_list.present?  %>
-                  <% current_user.interest_list.each do |tag| %>
-                    <%= link_to tag, results_path(tag: tag), class: "btn-tag" %>
-                  <% end %>
-                <% end %>
-              </div>
-
-            </div>
-            </div>
-            <div class="col-lg-4 dashboard-box">
-                <p><%= current_user.biography %></p>
-            </div>
+              <% end %></p>
+          </div>
+          <div class="col-lg-8 dashboard-box">
+              <i class="fas fa-book-open" style="color: #0cd2f9; position: absolute; top: 32px; left: 23px;"></i>
+              <h3 style="margin-left: 25px;">Your biography</h3>
+              <hr>
+            <p><%= current_user.biography %></p>
+          </div>
         </div>
       </div>
-</div>
+
+      <div class="container dashboard" style="margin-top: 30px;">
+        <div class="row">
+
+          <div class="col-lg-4 dashboard-box" style="background-color: #f5e6c8">
+            <i class="fas fa-user-edit" style="color: #545352; position: absolute; top: 30px; left: 20px;"></i>
+            <h3 style="margin-left: 20px;">Information</h3>
+            <hr>
+            <h3><%= current_user.first_name %> <%= current_user.last_name %></h3>
+            <p>Filmmaker</p>
+            <p class="fas fa-map-marker-alt" style="color: #545352; position: absolute; top: 178px;left: 17px;"></p>
+            <p style="margin-left: 10px; font-style: italic;"><%= current_user.city %></p>
+            <img style="width:300px; position: absolute; bottom: 30px;" src="https://cdn.dribbble.com/users/1601802/screenshots/6510697/dribbble-gif.gif" alt="">
+          </div>
+
+          <div class="col-lg-3 dashboard-interest">
+            <div class="center" style="margin-bottom: 50px;">
+              <i class="fas fa-heart" style="color: red; position: absolute; top: 31px; left: 50px;"></i>
+              <h3>Your interests</h3>
+              <hr>
+            </div>
+              <div style="text-align: center;">
+                <ul><% if current_user.interest_list.present?  %>
+                  <% current_user.interest_list.each do |tag| %>
+                    <li><%= link_to tag, results_path(tag: tag), class: "btn-interest" %></li>
+                  <% end %>
+                <% end %></ul>
+              </div>
+          </div>
+            <div class="col-lg-4 dashboard-box" style="background-color: #ff4c54;">
+              <img style="width:300px; position: absolute;bottom: 45px;" src="https://cdn.dribbble.com/users/493580/screenshots/9836409/media/7f4aa9eec8d1c4f23f4dabb17826b0bf.gif" alt="">
+              <i class="fas fa-user-friends" style="color: white; position: absolute; top: 30px; left: 20px;"></i>
+              <h3 style="color: white; margin-left: 20px;">Communauty</h3>
+              <hr style="background: white;">
+              <p style="color: white;"><%= current_user.wallet %> Total Credits</p>
+              <i class="fas fa-money-bill-wave" style="position: absolute;top: 92px;left: 300px;color: white;"></i>
+              <p style="color: white;">Number of collaborations:  5</p>
+              <i class="fas fa-video" style="position: absolute;top: 136px;left: 300px;color: white;"></i>
+              <p style="color: white;">Rating: 4,6</p>
+              <i class="fas fa-star" style="position: absolute;top: 177px;left: 300px;color: white;"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="container dashboard" style="margin-top: 30px; margin-bottom: 50px;">
+        <div class="row">
+          <div class="col-lg-4 dashboard-box">
+            <div style="text-align: center;">
+              <h3>Languages</h3>
+              <hr>
+              <div style="display: flex;padding-left: 30px;">
+                <ul>
+                  <li>English</li>
+                  <li>Spanish</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 dashboard-box">
+            <h3 style="text-align: center;">Social</h3>
+            <hr>
+              <i class="fab fa-facebook" style="position: relative;top: 11px;left: 250px;"></i>
+              <i class="fab fa-instagram" style="position: relative;top: 11px;left: 142px;"></i>
+              <i class="fab fa-vimeo-v" style="position: relative;top: 11px;left: 40px;"></i>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
 
     <div id="collaboration" class="tab-pane" >
       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(https://images.pexels.com/photos/243757/pexels-photo-243757.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)">
         <h1>My Collaborations</h1>
+        <p><%= current_user.first_name %></p>
+        <p>Number of collaborations: <p style="font-weight: 500;">5</p> </p>
       </div>
 
-       <div class="container" style="margin-top: 50px;">
-
+       <div class="container dashboard" style="margin-top: 50px;">
         <div class="row">
           <div class="col-lg-8">
             <div class="row dashboard-box">
@@ -95,4 +134,5 @@
     </div>
   </div>
 </div>
+
 
