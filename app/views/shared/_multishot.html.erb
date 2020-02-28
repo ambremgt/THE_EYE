@@ -6,15 +6,15 @@
     </div>
     <div class="blocktoPic d-none">
       <p>Thomas is a fluent filmmaker in Bengladesh. He create's cool webapp as well</p>
-      <img  height="600" width="200" src=https://avatars1.githubusercontent.com/u/57214511?v=4 alt="Thomas">
+      <img  height="600" width="400" src=https://avatars1.githubusercontent.com/u/57214511?v=4 alt="Thomas">
     </div>
-    <div class="blocktoPic d-none">
-      <p>Awesome Manu is the best filmaker for trans/trav shots around the world</p>
-      <img height="600" width="200" src="https://avatars2.githubusercontent.com/u/56646293?v=4" alt="Manu">
+    <div class="blocktoPic d-none animated bounceInUp">
+      <p class="animated bounceIndown">Awesome Manu is the best filmaker for trans/trav shots around the world</p>
+      <img height="600" width="400" src="https://avatars2.githubusercontent.com/u/56646293?v=4" alt="Manu">
     </div>
     <div class="blocktoPic d-none">
       <p>Estelle is the first camea's specialist in Timelapse. She loves creates disruptive innovation</p>
-      <img height="600" width="200" src="https://avatars3.githubusercontent.com/u/55833764?v=4" alt="Estelle">
+      <img height="600" width="400" src="https://avatars3.githubusercontent.com/u/55833764?v=4" alt="Estelle">
     </div>
   </div>
 <div class="col-md-8 col-md-offset-3 mt-5">
@@ -33,15 +33,15 @@
             <%= f.error_notification %>
 
              <fieldset class="blocktoIt position-relative">
-              <h2 class="fs-title">This is important step</h2>
+              <h2 class="fs-title animated bounceInDown">This is important step</h2>
                 <h3 class="fs-subtitle">take your time</h3>
               <%= f.input :description, class: "inp" %>
                 <%= f.input :equipment, class: "inp" %>
                 </fieldset>
 
             <fieldset class="blocktoIt position-relative d-none">
-                <h2 class="fs-title">This is important step</h2>
-                <h3 class="fs-subtitle">take your time</h3>
+                <h2 class="fs-title animated bounceInDown">Do you have better to do?</h2>
+                <h3 class="fs-subtitle">I don't think so</h3>
 
 
 
@@ -73,7 +73,7 @@
                 </fieldset>
 
                 <fieldset class="blocktoIt position-relative d-none">
-                <h2 class="fs-title">This is important step</h2>
+                <h2 class="fs-title animated bounceInDown">It's a litlle bit Long,no</h2>
                 <h3 class="fs-subtitle">take your time</h3>
 
                 <fieldset class="form-group check_boxes optional shot_movement">
@@ -114,8 +114,8 @@
                 </fieldset>
 
             <fieldset class="blocktoIt position-relative d-none">
-                <h2 class="fs-title">Description</h2>
-                <h3 class="fs-subtitle">Give us more about your shot</h3>
+                <h2 class="fs-title animated bounceInDown">Last step</h2>
+                <h3 class="fs-subtitle">Enter in CAMEAAAAAMEA</h3>
                 <fieldset class="form-group check_boxes optional shot_angle">
                   <legend class="col-form-label pt-0">Angle</legend>
                   <input type="hidden" name="shot[angle][]" value="">
@@ -151,9 +151,9 @@
 
 
             <hr>
-            <button type="button" id="prev" class="d-none btn btn-primary" >Previous</button>
-            <button type="button" id="next" class="btn btn-warning">Next</button>
-            <%= f.button :submit , id: "sub", class: "submit btn btn-warning d-none"%>
+            <button type="button" id="prev" class="d-none btn btn-outline-dark btn-lg" >Previous</button>
+            <button type="button" id="next" class="btn btn-dark btn-lg">Next</button>
+            <%= f.button :submit , id: "sub", class: "submit btn btn-warning btn-lg d-none"%>
             <% end %>
             </div>
 
