@@ -2,21 +2,17 @@
   <div class="container mt-10" style="margin-top: 100px">
     <h2 style="margin-bottom: 40px;">Results for "<%= params[:query] %>"</h2>
     <div style="display: flex">
-
     <div style="margin-top: 3px; margin-bottom: 40px">
     <% @filmmakers.first(2).each do |filmmaker| %>
       <% filmmaker.interest_list.each do |tag| %>
         <%= link_to tag, results_path(tag: tag), class: "btn-tag-result" %>
       <% end %>
     <% end %>
-
     </div>
-
   </div>
     <div class="row">
       <% @filmmakers.each do |filmmaker| %>
       <div class="col-4">
-
         <div class="linkcard">
         <%= link_to user_path(filmmaker) do %>
           <div class="card-trip">
@@ -53,7 +49,6 @@
             <% end %>
         </div>
       </div>
-
       <% end %>
       </div>
       <% end %>
