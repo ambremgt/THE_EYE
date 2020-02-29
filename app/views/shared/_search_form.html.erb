@@ -1,28 +1,22 @@
 
-  <div class="search-form-control form-group">
+  <div class="search-form-control form-group search w-50">
+  <h2 style="float: left; margin-bottom: 12px;">The first community of filmmakers.</h2>
     <%= form_tag results_path, method: :get do %>
       <%= text_field_tag :query,
       params[:query], class: "form-control", placeholder: "Search by categories, city..." %>
-      <%= submit_tag "Search", class: "btn btn-search animated bounce slower delay-5s" %>
+      <%= submit_tag "Search", class: "btn btn-search slower delay-5s" %>
+    <% end %>
 
-      <% end %>
-
-  </div>
-
-  <div style="display: flex">
-    <p style="margin-top: 3px;">Popular categories:</p>
-
-
+  <div style="display: flex; margin-top: 10px;">
+    <p>Popular categories:</p>
     <% @filmmakers.first(1).each do |filmmaker| %>
-
-        <% filmmaker.interest_list.each do |tag| %>
-          <%= link_to tag, results_path(tag: tag), class: "btn-tag" %>
-        <% end %>
-
+      <% filmmaker.interest_list.each do |tag| %>
+        <%= link_to tag, results_path(tag: tag), class: "btn-tag" %>
       <% end %>
-
-
+    <% end %>
   </div>
+
+</div>
 
 
 

@@ -4,14 +4,14 @@
 
 .search-form-control .btn {
   position: absolute;
-  bottom: 1px;
+  bottom: 52px;
   right: -115px;
 }
 
 .search-form-control .form-control {
   height: 3.5rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  border: 1px solid #E7E7E7;
+  box-shadow: 2px 6px 14px #f1f1f1;
+  border: solid 1px #77767614;
   font-family: 'Poppins';
 }
 
@@ -21,16 +21,10 @@
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
-.container-search {
-  position: absolute;
-  bottom: -5px;
-}
-
 .search {
-  margin-bottom: 50px;
-  position: absolute;
-  left: 131px;
-  bottom: -28px;
+  position: relative;
+  top: -230px;
+  left: 130px;
 }
 
 .search h2 {
@@ -41,5 +35,3 @@
 .search p {
   font-family: 'Poppins';
 }
-
-
