@@ -34,8 +34,11 @@ document.addEventListener('turbolinks:load', () => {
   // video();
   initUpdateNavbarOnScroll();
   initUpdateFooterOnScroll();
-  attachShotlist();
-  activeCheck();
+
+  if (document.querySelector('.shotlist-link')) {
+    attachShotlist();
+    activeCheck();
+  }
   if (document.querySelector('.blocktoIt')) {
     multiForm();
   }
