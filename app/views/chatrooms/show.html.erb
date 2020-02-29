@@ -8,7 +8,7 @@
       <% end %>
     </div>
 
-    <div class="chat-bottom">
+    <div class="chatroom-bottom">
 
       <%= simple_form_for [ @chatroom, @message ] do |f| %>
         <%= f.input :content, label: false, placeholder: "Message ##{@chatroom.name}" %>
@@ -16,7 +16,7 @@
 
       <% if current_user.shotlists.present? %>
         <div class="dropdown show">
-          <a class="btn btn-warning dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="btn btn-info btn-attach dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Share project
           </a>
 
@@ -27,9 +27,7 @@
         </div>
       </div>
       <% else %>
-
-          <%= link_to("create project", new_shotlist_path(@shotlist) , class: "btn btn-warning") %>
-
+          <%= link_to("create project", new_shotlist_path(@shotlist) , class: "btn btn-info btn-attach") %>
       <% end %>
     </div>
 
@@ -40,7 +38,10 @@
     <% if other_chatter.photo.present? %>
       <%= cl_image_tag other_chatter.photo.key, height: 120, width: 120, crop: :fill, class: "avatar-huge sidebar-avatar" %>
     <% end %>
-    <h3><%= other_chatter.first_name %> <%= other_chatter.last_name %></h3>
+    <h5>
+      <%= link_to(user_path(other_chatter)) do %>
+        <%= other_chatter.first_name %> <%= other_chatter.last_name %></h5>
+      <% end %>
     <p><%= other_chatter.city %></p>
     <% other_chatter.interest_list.each do |interest| %>
       <small><%= interest %></small>
