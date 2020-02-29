@@ -3,8 +3,7 @@ const attachShotlist = () => {
   shotlistLink.addEventListener('click', (data) => {
     data.preventDefault()
     const msgInput = document.querySelector('#message_content');
-    msgInput.value = data.link
-    console.log(data.link)
+    msgInput.value = data.target
     //document.getElementById('notif-counter').insertAdjacentHTML('beforeend',
       //`<span class="msg-number">${data.notif_counter}</span>`)
   })
