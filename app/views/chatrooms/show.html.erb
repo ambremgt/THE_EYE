@@ -1,4 +1,4 @@
-<div class="chatroom container">
+<div class="chatroom container" style="margin-top: 100px">
 
   <div class="chatroom-main">
 
@@ -12,6 +12,7 @@
     <div class="chatroom-input">
       <%= simple_form_for [ @chatroom, @message ], class: "form-inline" do |f| %>
         <%= f.input :content, label: false %>
+
         <%= f.button :submit, "send", class: "btn btn-secondary form-group btn-send" %>
       <% end %>
 
