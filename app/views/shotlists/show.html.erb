@@ -1,9 +1,12 @@
+<% content_for :meta_title, "#{@shotlist.title}" %>
+<% content_for :meta_description, @shotlist.description %>
+
 <div class="container dashboard" style="margin-top: 50px;">
         <div class="row">
           <div class="col-lg-4 dashboard-projet">
             <h3 class="center"><%= @shotlist.title %></h3>
           </div>
-          <div class="col-lg-4 dashboard-box">
+          <div class="col-lg-8 dashboard-box">
             <h3 class="center">Shot details</h3>
             <hr>
             <% @shotlist.shots.each do |shot| %>
@@ -11,7 +14,6 @@
               <p>Shot size:  <%= shot.shot_size %></p>
               <p>Movement: <%= shot.movement %> </p>
               <p>Description: <%= shot.description %></p>
-
             <% end %>
 
           </div>
