@@ -76,7 +76,7 @@
 
 
 
-// buttons
+// buttons NAVBAR 1
 
 .navbar-light .navbar-nav .nav-link-transparent {
   color: black;
@@ -98,32 +98,11 @@
   border: solid 1px #429ea5;
 }
 
-.navbar-light .navbar-nav .nav-link-blue {
-  color: white;
-  background-color: #429ea5;
-  font-weight: 400;
-  font-size: 13px;
-  padding-right: 25px;
-  padding-left: 25px;
-  padding-top: 7px;
-  padding-bottom: 7px;
-  margin: 10px;
-  border-radius: 3px;
-  border: solid 1px #429ea5;
-}
 
-
-.navbar-light .navbar-nav .nav-link-blue:hover {
-  background-color: transparent;
-  color: black;
-  transition: 0.5s;
-  border: solid 1px black;
-}
-
-
+// BUTTONS NAVBAR 2
 
 .navbar-light .navbar-nav .btn-navbar2-transparent {
-  color: black;
+  color: #eaebf2;
   font-weight: 400;
   font-size: 13px;
   padding-right: 25px;
@@ -132,7 +111,7 @@
   padding-bottom: 7px;
   margin: 10px;
   border-radius: 3px;
-  border: solid 1px black;
+  border: solid 1px #eaebf2;
 }
 
 .navbar-light .navbar-nav .btn-navbar2-transparent:hover {
@@ -143,30 +122,39 @@
 }
 
 
-.navbar-lewagon-white {
-  background-color: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
-
+//icon
 
 .nav-icon {
   color: black;
   margin: 0.8em;
 }
 
-#user-channel {
-  margin-right: 20px;
-  // #notif-counter .bell-counter
+.nav-icon:hover {
+  color: #5464f7;
+  transition: 0.5s;
 }
 
-#notif-counter .fa-bell:hover{
-  color:#429ea5;
+.nav2-icon {
+  color: #eaebf2;
+  margin: 0.8em;
+}
+
+.nav2-icon:hover {
+  color: #5464f7;
+  transition: 0.5s;
+}
+
+
+
+#user-channel {
+  margin-right: 20px;
 }
 
 
 #notif-counter {
   color: black;
   position: relative;
+  margin-left: 18px;
   .msg-number {
     position: absolute;
     background: red;
@@ -181,4 +169,11 @@
     top: 7px;
     left: 9px;
   }
+}
+
+
+// JS
+.navbar-lewagon-white {
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
