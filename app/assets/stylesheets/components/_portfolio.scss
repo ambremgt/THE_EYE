@@ -1,60 +1,80 @@
-.container-portfolio {
-  padding: 40px;
-  background-size: cover;
-  background: linear-gradient(75deg,#22263D 0,#342441 25%,#342441 80%,#22263D 100%);
-  margin-top: 0;
-  margin-bottom: 50px;
-  color:black;
-  height:60vh;
+
+// .container-portfolio {
+//   padding: 40px;
+//   background-size: cover;
+//   background: linear-gradient(75deg,#22263D 0,#342441 25%,#342441 80%,#22263D 100%);
+//   margin-top: 0;
+//   margin-bottom: 50px;
+//   color:black;
+//   height:60vh;
+// }
+
+// .container-details {
+//   background-color: white;
+//   padding: 50px;
+//   border-radius: 5px;
+//   width: 50%;
+//   margin: auto;
+// }
+
+// .container-details h2 {
+//   color: #444444;
+
+.header-portfolio {
+  width: 100%;
+  display: block;
+  background-color: #bad0b8;
+  background-image: -webkit-linear-gradient(right, #312fab, #331133);
+  background-image: -moz-linear-gradient(right, #312fab, #331133);
+  background-image: -o-linear-gradient(right, #312fab, #331133);
+  background-image: -ms-linear-gradient(right, #312fab, #331133);
+  background-image: linear-gradient(right, #312fab, #331133);
 }
 
-.container-details {
+.contact {
+  margin-top: 25px;
+  display: flex;
+}
+
+.portfolio-img {
+  border-radius: 7px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.inner-content {
+  position: relative;
+  width: 95%;
+  margin: 0 auto;
+  padding-top: 120px;
+  display: flex;
+  position: relative;
+  top: 10vh;
+}
+
+.container-portfolio{
   background-color: white;
-  padding: 50px;
-  border-radius: 5px;
-  width: 50%;
-  margin: auto;
-}
-
-.container-details h2 {
-  color: #444444;
-}
-
-.container-details p {
-  color: #6d6c6d;
-}
-
-
-.experience {
-  background-color: #5464f7;
-  padding-right: 18px;
-  padding-left: 18px;
-  padding-top: 7px;
-  padding-bottom: 3px;
-  color: white;
-  border-radius: 5px;
-}
-
-.container-photo {
-  margin: auto;
-}
-
-.name {
-  background-color: white;
-  position: absolute;
-  right: 211px;
-  top: 324px;
-  padding: 20px
-}
-
-.container-description {
-  color:black;
-  background-color: white;
-  padding: 42px;
   border-radius: 8px;
-  box-shadow: 7px 13px 5px #ececec;
-  margin: 20px;
+  box-shadow: -4px 1px 20px rgba(150, 149, 149, 0.2);
+  margin-top: 30px;
+  margin-left: 35px;
+  margin-right: 10px;
+  padding: 40px;
 }
+
+
+// .container-description {
+//   color:black;
+
+.container-interest {
+
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: -4px 1px 20px rgba(150, 149, 149, 0.2);
+  margin-top: 30px;
+  padding: 40px;
+  margin: 23px;
+}
+
 
 .collab {
   color:black;

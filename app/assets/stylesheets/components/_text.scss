@@ -1,5 +1,4 @@
 body {
-  font-family: 'Poppins';
   background-color: #f7f7f7;
   font-family: 'Poppins';
   background-color:black;
@@ -13,6 +12,10 @@ h1 {
   font-weight: 600;
 }
 
+h2 {
+  font-weight: 600;
+}
+
 .title {
   padding: 40px;
   text-align: center;
@@ -21,6 +24,10 @@ h1 {
 .center {
   text-align: center;
 }
-.btn{
+.btn {
   font-family: 'Poppins';
+}
+
+p {
+  font-family: 'Quicksand';
 }
