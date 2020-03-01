@@ -35,6 +35,7 @@
   border: 1px solid #0F60C4;
 }
 
+
 .btn-gradient:hover {
   background: linear-gradient(#147EFF, #0F67DA);
   color: white;
@@ -53,7 +54,6 @@
   height: 2.8rem;
   vertical-align:  center;
   width: 8rem;
-
 }
 
 .btn-search:hover {
@@ -85,6 +85,9 @@
   transition: 0.4s;
 }
 
+
+
+// page results
 .btn-tag-result {
   color: #727272;
   padding: 11px;
@@ -105,5 +108,42 @@
   text-decoration: none;
   color: black;
   border: solid 1px black;
+  transition: 0.4s;
+}
+
+
+.btn-contact {
+  background-color: #242424;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-weight: 500;
+  letter-spacing: .5px;
+  margin-right: 20px;
+  color: white;
+  border: solid 1px #242424;
+}
+
+.btn-contact:hover {
+  background-color: transparent;
+  color: #242424;
+  text-decoration: none;
+  border: solid 1px #242424;
+  transition: 0.4s;
+}
+
+.btn-share {
+  background-color: #ededed;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-weight: 500;
+  letter-spacing: .5px;
+  margin-right: 20px;
+  color: #242424;
+}
+
+.btn-share:hover {
+  background-color: #242424;
+  color: white;
+  text-decoration: none;
   transition: 0.4s;
 }

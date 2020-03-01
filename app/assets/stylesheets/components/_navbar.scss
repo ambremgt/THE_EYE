@@ -27,7 +27,6 @@
 }
 
 .navbar {
-  height: 6rem;
   color : #757575;
   font-weight: 300;
 }
@@ -75,10 +74,14 @@
   transition-duration: 0.4s;
 }
 
+
+
+// buttons
+
 .navbar-light .navbar-nav .nav-link-transparent {
   color: black;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 13px;
   padding-right: 25px;
   padding-left: 25px;
   padding-top: 7px;
@@ -99,7 +102,7 @@
   color: white;
   background-color: #429ea5;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 13px;
   padding-right: 25px;
   padding-left: 25px;
   padding-top: 7px;
@@ -122,7 +125,7 @@
 .navbar-light .navbar-nav .btn-navbar2-transparent {
   color: black;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 13px;
   padding-right: 25px;
   padding-left: 25px;
   padding-top: 7px;
@@ -145,17 +148,15 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-
-#user-channel {
-  margin-right: 20px;
+.nav-icon {
+  color: black;
+  margin: 0.8em;
 }
+
+
 #notif-counter {
   color: black;
   position: relative;
-  .bell-counter {
-    font-size: 24px;
-    line-height: 2;
-  }
   .msg-number {
     position: absolute;
     background: black;
