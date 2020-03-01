@@ -2,8 +2,10 @@
   padding: 40px;
   background-size: cover;
   background: linear-gradient(75deg,#22263D 0,#342441 25%,#342441 80%,#22263D 100%);
-  margin-top: 50px;
+  margin-top: 0;
   margin-bottom: 50px;
+  color:black;
+  height:60vh;
 }
 
 .container-details {
@@ -46,6 +48,7 @@
 }
 
 .container-description {
+  color:black;
   background-color: white;
   padding: 42px;
   border-radius: 8px;
@@ -54,6 +57,7 @@
 }
 
 .collab {
+  color:black;
   background-color: white;
   text-align: left;
   margin: 20px;

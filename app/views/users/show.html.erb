@@ -11,7 +11,7 @@
       <div style="display: flex;">
         <%= simple_form_for @chatroom do |form| %>
           <%= form.input_field :receiver_id, as: :hidden, value: @filmmaker.id %>
-          <%= form.submit "Contact filmmaker", class: 'btn btn-search' %>
+          <%= form.submit "Contact", class: 'btn btn-search' %>
         <% end %>
 
         <div style="display: flex; margin-left: 30px;">
@@ -36,7 +36,7 @@
   </div>
 </div>
 
-<div style="display: flex; margin-bottom: 50px;">
+<div style="display: flex; margin-bottom: 50px color:black;">
   <div class="row">
     <div class="col-4">
       <div class="container-description" style="height: 100%">
