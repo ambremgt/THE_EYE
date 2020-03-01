@@ -148,9 +148,19 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
+
 .nav-icon {
   color: black;
   margin: 0.8em;
+}
+
+#user-channel {
+  margin-right: 20px;
+  // #notif-counter .bell-counter
+}
+
+#notif-counter .fa-bell:hover{
+  color:#429ea5;
 }
 
 
@@ -159,7 +169,7 @@
   position: relative;
   .msg-number {
     position: absolute;
-    background: black;
+    background: red;
     border-radius: 50%;
     width: 15px;
     height: 15PX;
