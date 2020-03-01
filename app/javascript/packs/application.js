@@ -22,7 +22,7 @@ import { activeCheck } from '../components/checkbox';
 import { attachment } from '../components/attachment';
 
 // import { video } from '../components/home';
-// import { loadDynamicBannerText } from '../components/banner';
+import { loadDynamicBannerText } from '../components/banner';
 
 // document.addEventListener('turbolinks:load', () => {
 //   // Call your JS functions here
@@ -34,11 +34,18 @@ document.addEventListener('turbolinks:load', () => {
   // video();
   initUpdateNavbarOnScroll();
   initUpdateFooterOnScroll();
-  if (document.querySelector('.shotlist-link')) {attachment();
+
+  if (document.querySelector('.shotlist-link')) {
+    attachment();
+  }
+  if (document.querySelector('.category-choice')) {
   activeCheck();
   }
   if (document.querySelector('.blocktoIt')) {
     multiForm();
+  }
+  if (document.querySelector('#banner-typed-text')) {
+    loadDynamicBannerText();
   }
 
 

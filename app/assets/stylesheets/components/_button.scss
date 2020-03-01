@@ -42,21 +42,25 @@
 
 
 .btn-search {
-  background: #5464f7;
-  border: solid 1px #5464f7;
+  background: #429ea5;
+  border: solid 1px #429ea5;
+  font-weight:300;
   color: white;
-  padding: 14px;
-  padding-right: 20px;
-  padding-left: 20px;
-  font-weight: 400;
-  border-radius: 4px;
+  padding: 5px;
+  padding-right: 15px;
+  padding-left: 15px;
+  border-radius: 2px;
+  height: 2.8rem;
+  vertical-align:  center;
+  width: 8rem;
+
 }
 
 .btn-search:hover {
   transition: 0.4s;
   background: transparent;
-  border: solid 1px black;
-  color: black;
+  border: solid 0.5px #6b6b6b;
+  color: #6b6b6b;
 }
 
 .btn-tag {
