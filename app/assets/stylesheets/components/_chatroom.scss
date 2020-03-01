@@ -13,11 +13,45 @@
     margin-bottom: 0;
   }
 }
+.invisible-text {
+  color: rgba(0,0,0,0);
+}
+.chatroom-input {
+  .shotlist-dropdown {
+      border: 1px solid rgba(0, 0, 0, 0);
+      float: right;
+      .btn-attach {
+        color: #727272;
+        padding: 11px;
+        background: transparent;
+        -webkit-transition: background 0.3s ease;
+        transition: background 0.3s ease;
+        text-align: center;
+        font-size: 16px;
+        margin-left: 20px;
+        margin-right: 20px;
+        height: 25px;
+        border-radius: 5px;
+        text-decoration: none;
+      }
+      .shotlist-dropdown-list {
+        list-style: none;
+        padding: 10px 25px;
+        width: 230px;
+        height: auto;
 
+        a {
+          text-decoration: none;
+          color: #727272;
+        } a:hover {
+          opacity: 0.7
+        }
+      }
+  }
+}
 .new_message {
   display: flex;
   justify-content: space-between;
-
   padding: 1rem;
   border-top: 1px solid $gray-200;
 
@@ -31,12 +65,15 @@
     .message_content {
     margin-bottom: 5px;
     flex-grow: 3;
+    position: relative;
   }
   .attachment-input {
-  margin-bottom: 5px;
-  flex-grow: 3;
-  position: absolute;
-  background-color: white;
+
+    margin-bottom: 5px;
+    position: absolute;
+    bottom: 1px;
+    background-color: white;
+
     }
 }
 #messages {

@@ -4,12 +4,12 @@ const attachShotlist = () => {
     data.preventDefault()
     const msgInput = document.querySelector('#message_content');
     msgInput.value = data.target
+    msgInput.classList.add("invisible-text")
+    const newMessage = document.querySelector('#new_message');
+    msgInput.insertAdjacentHTML('afterend',
+      `
+        <div class="attachment-input btn-tag">${data.target.innerText}</div>
 
-    msgInput.insertAdjacentHTML('beforebegin',
-      `<div class="attachment-input">
-        <p>${data.target.innerText}</p>
-        <input class="form-control" value="SEND" type="submit" name="message[content]" id="message_content">
-      </div>
 
       `)
     //document.getElementById('notif-counter').insertAdjacentHTML('beforeend',
