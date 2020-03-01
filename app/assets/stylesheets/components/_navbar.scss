@@ -148,6 +148,11 @@
 
 #user-channel {
   margin-right: 20px;
+  // #notif-counter .bell-counter
+}
+#notif-counter .fa-bell:hover{
+  color:#429ea5;
+
 }
 #notif-counter {
   color: black;
@@ -158,7 +163,7 @@
   }
   .msg-number {
     position: absolute;
-    background: black;
+    background: red;
     border-radius: 50%;
     width: 15px;
     height: 15PX;
