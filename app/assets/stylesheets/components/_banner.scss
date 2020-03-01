@@ -53,10 +53,7 @@
 
 
 // _______ banner home pag
-body {
-  background-color:white;
 
-}
 
 @font-face {
   font-family: Biko;
@@ -68,7 +65,7 @@ header {
   height: 100vh;
   margin: none;
   position: relative;
-  background-color:white
+  background-color:black;
 }
 
 header video {
@@ -86,9 +83,8 @@ svg {
 
 svg text {
   font-family: Biko, sans-serif;
-  font-weight: 800;
-  text-transform: uppercase;
-  font-size: 36px;
+  font-weight: 1000;
+  font-size: 46px;
 }
 
 svg rect {
@@ -96,14 +92,25 @@ svg rect {
   width:100vw;
   height:100vh;
   fill: white;
+   -webkit-mask: url(#mask);
+    mask: url(#mask);
+
+}
+.texttyped {
+  position: relative;
+  top: -280px;
+  left: 130px;
+  }
+  .texttyped h2 {
+  font-family: 'Poppins';
+  font-size: 50px;
+  font-weight: 700;
+}
+.texttyped p {
+  font-family: 'Poppins';
 }
 
-svg > rect {
-  width:100vw;
-  height:100vh;
-    -webkit-mask: url(#mask);
-    mask: url(#mask);
-}
+
 
 // _____banner dashboard
 
