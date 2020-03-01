@@ -1,6 +1,6 @@
 
 
-  <div class="search-form-control form-group align-items-center">
+  <div class="search-form-control form-inline form-group align-items-center">
     <%= form_tag results_path, method: :get do %>
       <%= text_field_tag :query,
       params[:query], class: "form-control", placeholder: "Search by categories, city..." %>
@@ -9,10 +9,8 @@
       <% end %>
     </div>
 
-<hr>
 
-  <div style="display: flex">
-    <p style="margin-top: 3px;">Popular categories:</p>
+
 
 
   <div style="display: flex; margin-top: 10px;">
