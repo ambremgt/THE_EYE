@@ -1,66 +1,58 @@
-
-
-
-<div class="container-portfolio" style="display: flex;">
-  <div class="container-details">
-    <div>
+<div class="header-portfolio">
+  <div class="inner-content" style="display: flex;">
+    <% if @filmmaker.portfolio_assets %>
+        <% @filmmaker.portfolio_assets.each do |asset| %>
+          <% asset.photos.each do |photo| %>
+           <%= cl_image_tag photo.key, height: 200, width: 300, crop: :fill, class: 'portfolio-img' %>
+          <% end %>
+        <% end %>
+    <% end %>
+    <div class="name" style="color: white;margin-left: 50px; margin-top: -6px;">
+      <h2><%= @filmmaker.first_name %> <%= @filmmaker.last_name %></h2>
+      <p style="margin-bottom: 8px; font-size: 1.3em;">Filmmaker</p>
       <div style="display: flex;">
         <p class="fas fa-map-marker-alt"></p>
         <p style="margin-left: 10px;"><%= @filmmaker.city %></p>
       </div>
-      <div style="display: flex;">
+      <div class="contact">
         <%= simple_form_for @chatroom do |form| %>
           <%= form.input_field :receiver_id, as: :hidden, value: @filmmaker.id %>
-          <%= form.submit "Contact filmmaker", class: 'btn btn-search' %>
+          <%= form.submit "Contact", class: 'btn-contact' %>
         <% end %>
-
-        <div style="display: flex; margin-left: 30px;">
-          <p class="fas fa-star" style="color: #ffc31e; margin-top: 3px;"></p>
-          <p style="margin-left: 7px;">4,7</p>
-        </div>
+        <a href="" class="btn-share"><i class="fas fa-share fa-lg mr-2"></i>Share a project</a>
       </div>
-    </div>
-  </div>
-  <div class="container-photo">
-    <% if @filmmaker.portfolio_assets %>
-      <% @filmmaker.portfolio_assets.each do |asset| %>
-        <% asset.photos.each do |photo| %>
-          <%= cl_image_tag photo.key, height: 200, width: 300, crop: :fill %>
-        <% end %>
-      <% end %>
-    <% end %>
-  </div>
-  <div class="name">
-    <h2><%= @filmmaker.first_name %> <%= @filmmaker.last_name %></h2>
-    <p>Filmmaker</p>
-  </div>
-</div>
-
-<div style="display: flex; margin-bottom: 50px;">
-  <div class="row">
-    <div class="col-4">
-      <div class="container-description" style="height: 100%">
-        <h1>Interest</h1>
-          <ul>
-            <li><%= @filmmaker.interest_list.first %></li>
-          </ul>
-      </div>
-    </div>
-      <div class="col-8">
-        <div class="container-description" >
-          <h1>Biography</h1>
-          <p><%= @filmmaker.biography %></p>
-        </div>
-        <div class="container-description">
-          <h1>Equipments</h1>
-          <p><%= @filmmaker.biography %></p>
-        </div>
     </div>
   </div>
 </div>
 
-<div class="collab">
-  <h1>My collaborations</h1>
+<div class="row" style="margin-top: 80px">
+  <div class="col-8 container-portfolio">
+    <h2>Videos</h2>
+  </div>
+  <div class="col-3 container-portfolio">
+    <h2>Biography</h2>
+    <p><%= @filmmaker.biography %></p>
+  </div>
+</div>
+
+
+
+  <div class="row container-interest">
+    <div class="col-10">
+        <h2>Interest</h2>
+        <ul>
+          <li><%= @filmmaker.interest_list %></li>
+        </ul>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+<div class="collab container-interest" style="margin-bottom: 100px">
+  <h2>My collaborations</h2>
 
 
   <div class="wrap">
