@@ -1,11 +1,19 @@
 
-  <div class="search-form-control form-group search w-50">
-  <h2 style="float: left; margin-bottom: 12px;">The first community of filmmakers.</h2>
+
+  <div class="search-form-control form-group align-items-center">
     <%= form_tag results_path, method: :get do %>
       <%= text_field_tag :query,
       params[:query], class: "form-control", placeholder: "Search by categories, city..." %>
-      <%= submit_tag "Search", class: "btn btn-search slower delay-5s" %>
-    <% end %>
+      <%= submit_tag "FIND", class: "btn btn-search" %>
+
+      <% end %>
+    </div>
+
+<hr>
+
+  <div style="display: flex">
+    <p style="margin-top: 3px;">Popular categories:</p>
+
 
   <div style="display: flex; margin-top: 10px;">
     <p>Popular categories:</p>

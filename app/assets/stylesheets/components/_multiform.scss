@@ -8,27 +8,26 @@
 //     position: relative;
 //     margin-top: 30px;
 // }
-.blocktoIt{
-  height: 40vh;
-  margin-top: auto;
+
+.leftform{
+  height:100%;
 }
 
 .multiformcustom{
+  display: block;
+  align-items:center;
   text-align: center;
-  margin-top:20vh;
-    justify-content: center;
+    justify-content: space-between;
     // background: white;
     border: 0 none;
     // border-radius: 0px;
     // box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
     padding: 1em 1em;
     // box-sizing: cover;
-    width: 50vw;
-    height: 80vh;
-    margin: 0 10%;
-
     /*stacking fieldsets above each other*/
-    position: relative;
+    margin-top: 10vh;
+    margin-bottom:10vh;
+    height: 80vh;
 
 }
 .form-post {
@@ -38,17 +37,20 @@
   border-radius: 5px;
   }
 .category-choices {
-  display: flex;
-  justify-content: space-around;
+  display: block;
+  justify-content: space-between;
   flex-wrap: wrap;
   margin: 20px 0;
+  padding: auto;
 }
 
 .category-choice {
-  display: flex;
+  display: grid;
+  grid-gap: 2rem;
   align-items: center;
   justify-content: center;
   background: #343a40;
+  border: 1px solid #ccc;
   color: white;
   padding: 5px;
   border-radius: 5px;
@@ -161,9 +163,9 @@
 
 #progressbar li {
     list-style-type: none;
-    color: #343a40;
+    color: #429ea5;
     text-transform: uppercase;
-    font-size: 9px;
+    font-size: 12px;
     width: 33.33%;
     float: left;
     position: relative;
@@ -180,8 +182,8 @@
     line-height: 32px;
     display: block;
     font-size: 24px;
-    color: #343a40;
-    background: #343a40;
+    color: #429ea5;
+    background: #white;
     border-radius: 25px;
     margin: 0 auto 10px auto;
 }
@@ -191,7 +193,7 @@
     content: '';
     width: 100%;
     height: 2px;
-    background: #343a40;
+    background: #white;
     position: absolute;
     left: -50%;
     top: 9px;
@@ -206,7 +208,7 @@
 // /*marking active/completed steps green*/
 // /*The number of the step and the connector before it = green*/
 #progressbar li.active:before, #progressbar li.active:after {
-    background: #343a40;
+    background: #429ea5;
     color: white;
 }
 

@@ -27,8 +27,9 @@ const fixStepIndicator = (currentTab) => {
   for (i = 0; i < x.length; i++) {
     x[i].classList.remove('active');
   }
+  for (i = 0; i <= currentTab; i++)
   //... and adds the "active" class to the current step:
-  x[currentTab].classList.add('active');
+  x[i].classList.add('active');
 }
 
 const multiForm = () => {
@@ -38,7 +39,6 @@ const multiForm = () => {
     if (currentTab < fieldset.length) {
       document.querySelector('#next').addEventListener('click', (event) => {
         fieldset[currentTab].classList.add('d-none');
-        console.log(fieldset_2);
         fieldset_2[currentTab].classList.add('d-none');
 
     //     fieldset[currentTab].classList.add('animated', 'fadeOutLeft');

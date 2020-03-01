@@ -4,8 +4,9 @@
 
 .search-form-control .btn {
   position: absolute;
-  bottom: 52px;
-  right: -115px;
+
+  bottom: 1px;
+  right: -140px;
 }
 
 .search-form-control .form-control {
@@ -14,6 +15,8 @@
   border: solid 1px #77767614;
   font-family: 'Poppins';
 }
+
+
 
 .search-form-control .form-control:focus {
   border: 1px solid #1EDD88;
