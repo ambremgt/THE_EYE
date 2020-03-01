@@ -17,6 +17,7 @@
       <div class="contact">
         <%= simple_form_for @chatroom do |form| %>
           <%= form.input_field :receiver_id, as: :hidden, value: @filmmaker.id %>
+
           <%= form.submit "Contact", class: 'btn-contact' %>
         <% end %>
         <a href="" class="btn-share"><i class="fas fa-share fa-lg mr-2"></i>Share a project</a>
@@ -37,12 +38,14 @@
 
 
 
+
   <div class="row container-interest">
     <div class="col-10">
         <h2>Interest</h2>
         <ul>
           <li><%= @filmmaker.interest_list %></li>
         </ul>
+
     </div>
   </div>
 
