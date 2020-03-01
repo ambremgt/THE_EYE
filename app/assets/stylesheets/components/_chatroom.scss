@@ -14,22 +14,30 @@
   }
 }
 
-.chatroom-main {
-   flex-grow: 1;
+.new_message {
+  display: flex;
+  justify-content: space-between;
 
-  .chatroom-bottom {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 1rem;
-    border-top: 1px solid $gray-200;
+  padding: 1rem;
+  border-top: 1px solid $gray-200;
 
-    .btn-attach {
+    .btn-send {
       height: 38px;
-       margin-bottom: 5px;
+      margin-bottom: 5px;
       flex-shrink: 1;
+      display: inline-block;
     }
+
+    .message_content {
+    margin-bottom: 5px;
+    flex-grow: 3;
   }
+  .attachment-input {
+  margin-bottom: 5px;
+  flex-grow: 3;
+  position: absolute;
+  background-color: white;
+    }
 }
 #messages {
   padding: 0 1rem;
@@ -38,16 +46,11 @@
   max-height: calc(100vh - 66px - 65px - 71px);
   display: flex;
   flex-direction: column;
+   flex-grow: 1;
 
 }
 
-#new_message {
- margin-bottom: 5px;
- flex-grow: 3;
-  .form-group {
-    margin-bottom: 0;
-  }
-}
+
 
 
 .chatroom-sidebar {
@@ -66,4 +69,5 @@
     margin: 30px 0;
   }
 }
+
 

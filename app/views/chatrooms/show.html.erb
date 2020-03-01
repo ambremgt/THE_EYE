@@ -4,34 +4,20 @@
 
     <div id="messages" data-chatroom-id="<%= @chatroom.id %>">
       <% @chatroom.messages.each do |message| %>
-        <%= render "messages/message", message: message %>
+      <%= render "messages/message", message: message %>
       <% end %>
     </div>
 
-    <div class="chatroom-bottom">
-
-      <%= simple_form_for [ @chatroom, @message ] do |f| %>
-        <%= f.input :content, label: false, placeholder: "Message ##{@chatroom.name}" %>
-      <% end %>
-
-      <% if current_user.shotlists.present? %>
-        <div class="dropdown show">
-          <a class="btn btn-info btn-attach dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Share project
-          </a>
-
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-          <% @current_user.shotlists.each do |shotlist| %>
-            <%= link_to shotlist.title, shotlist_path(shotlist), class: "shotlist-link" %>
-          <% end %>
-        </div>
-      </div>
-      <% else %>
-          <%= link_to("create your first project", new_shotlist_path(@shotlist) , class: "btn btn-info btn-attach") %>
+    <div class="chatroom-input">
+      <%= simple_form_for [ @chatroom, @message ], class: "form-inline" do |f| %>
+        <%= f.input :content, label: false %>
+        <%= f.button :submit, "send", class: "btn btn-light form-group btn-send" %>
       <% end %>
     </div>
 
   </div>
+
+
 
  <div class="chatroom-sidebar">
   <% other_chatter = current_user.other_chatter?(@chatroom) %>
@@ -46,6 +32,22 @@
     <% other_chatter.interest_list.each do |interest| %>
       <small><%= interest %></small>
     <% end %>
+
+    <% if current_user.shotlists.present? %>
+      <div class="dropdown show">
+        <a class="btn-attach dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         <small> Share a shotlist with <%= other_chatter.first_name %></small>
+        </a>
+
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <% @current_user.shotlists.each do |shotlist| %>
+            <%= link_to shotlist.title, shotlist_path(shotlist), class: "shotlist-link" %>
+          <% end %>
+        </div>
+      </div>
+      <% else %>
+          <%= link_to("create your first project", new_shotlist_path(@shotlist) , class: "btn btn-info btn-attach") %>
+      <% end %>
  </div>
 
 </div>
