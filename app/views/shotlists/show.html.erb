@@ -1,3 +1,6 @@
+<% content_for :meta_title, "#{@shotlist.title}" %>
+<% content_for :meta_description, @shotlist.description %>
+
 <div class="container dashboard" style="margin-top: 50px;">
         <div class="row">
           <div class="col-lg-4 dashboard-projet">
@@ -11,7 +14,6 @@
               <p>Shot size:  <%= shot.shot_size %></p>
               <p>Movement: <%= shot.movement %> </p>
               <p>Description: <%= shot.description %></p>
-
             <% end %>
 
           </div>

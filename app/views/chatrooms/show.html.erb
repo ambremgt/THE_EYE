@@ -1,6 +1,7 @@
 <div class="chatroom container">
 
   <div class="chatroom-main">
+
     <% other_chatter = current_user.other_chatter?(@chatroom) %>
     <div id="messages" data-chatroom-id="<%= @chatroom.id %>">
       <% @chatroom.messages.each do |message| %>
