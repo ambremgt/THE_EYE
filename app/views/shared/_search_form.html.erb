@@ -4,8 +4,7 @@
     <%= form_tag results_path, method: :get do %>
       <%= text_field_tag :query,
       params[:query], class: "form-control", placeholder: "Search by categories, city..." %>
-      <%= submit_tag "Find", class: "btn btn-navbar2-transparent" %>
-
+      <%= submit_tag "Find", class: "btn" %>
       <% end %>
     </div>
 

@@ -3,20 +3,23 @@
 }
 
 .search-form-control .btn{
-
-  bottom: 1px;
-  right: -140px;
+  color: #999797;
+  font-weight: 300;
+  font-size: 14px;
+  position: relative;
+  right: 69px;
 }
 
 .search-form-control .form-control {
   height: 2.5rem;
   width: 32vw;
-  box-shadow: 2px 6px 14px #f1f1f1;
-  border: solid 1px #77767614;
-  border-radius:2px;
+  border: solid 1px #e2e0e0;
+  border-radius: 35px;
   font-family: 'Poppins';
+  font-weight: 300;
+  font-size: 14px;
+  background-color: #f7f7f7;
 }
-
 
 
 .search-form-control .form-control:focus {
@@ -26,10 +29,9 @@
 }
 
 .search {
-  align-items:center;
-  margin-top: 16px;
-  margin-left:8rem;
-
+  margin-top: 15px;
+  margin-left: 7em;
+  text-align: center;
 }
 
 .search h2 {
