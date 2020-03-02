@@ -21,7 +21,7 @@
 
 .inner-content {
   position: relative;
-  width: 95%;
+  width: 93%;
   margin: 0 auto;
   padding-top: 120px;
   display: flex;
@@ -29,23 +29,24 @@
   top: 10vh;
 }
 
-.container-portfolio{
-  background-color: white;
+.container-portfolio {
   border-radius: 8px;
   box-shadow: -4px 1px 20px rgba(150, 149, 149, 0.2);
-  margin-top: 30px;
-  margin-left: 35px;
-  margin-right: 10px;
-  padding: 40px;
+  padding: 20px;
 }
 
 .container-interest {
-  background-color: white;
   border-radius: 8px;
   box-shadow: -4px 1px 20px rgba(150, 149, 149, 0.2);
   margin-top: 30px;
-  padding: 40px;
-  margin: 23px;
+  padding: 10px;
+}
+
+.container-social {
+  border-radius: 8px;
+  box-shadow: -4px 1px 20px rgba(150, 149, 149, 0.2);
+  margin-top: 30px;
+  padding: 35px;
 }
 
 
