@@ -9,19 +9,19 @@
       <h1 id="name_user" class="animated delay-5s fadeInUp"><%= current_user.first_name%>,</h1>
       <h3 style="position:absolute;top:55vh;left:5vw;">Collaborations</h3>
 
-      <div class="col-lg-4 dashboard-box" id="idboxdash" style="background-color: #5464f7;">
+      <div class="col-lg-4 dashboard-box" id="idboxdash">
               <!-- <img style="width:100px; position: absolute;bottom: 20px; background-color: #5464f7;" src="https://cdn.dribbble.com/users/493580/screenshots/9836409/media/7f4aa9eec8d1c4f23f4dabb17826b0bf.gif" alt=""> -->
-              <i class="fas fa-user-friends" style="color: white; position: absolute; top: 30px; left: 20px;"></i>
-              <h3 style="color: white; margin-left: 20px;"><%= current_user.first_name %> <%= current_user.last_name %></h3>
-              <p style=" font-style: italic; color: white;"><%= current_user.city %></p>
-              <i class="fas fa-user-edit" style="position: absolute;top: 30px;left: 300px;color: white;"></i>
-              <hr style="background: white;">
-              <p style="color: white;">Wallet : <%= current_user.wallet %> Credits</p>
-              <i class="fas fa-money-bill-wave" style="position: absolute;top: 119px;left: 300px;color: white;"></i>
-              <p style="color: white;">Collaborations :  5</p>
-              <i class="fas fa-video" style="position: absolute;top: 161px;left: 300px;color: white;"></i>
-              <p style="color: white;">Rating: 4,6</p>
-              <i class="fas fa-star" style="position: absolute;top: 204px;left: 300px;color: white;"></i>
+              <i class="fas fa-user-friends" style="color: #5464f7; position: absolute; top: 23px; left: 20px;"></i>
+              <h3 style="margin-left: 20px;"><%= current_user.first_name %> <%= current_user.last_name %></h3>
+              <p style=" font-style: italic;"><%= current_user.city %></p>
+              <i class="fas fa-user-edit" style="position: absolute;top: 23px;left: 300px;color: #5464f7;"></i>
+              <hr style="background: #5464f7;">
+              <p>Wallet : <%= current_user.wallet %> Credits</p>
+              <i class="fas fa-money-bill-wave" style="position: absolute;top: 112px;left: 300px;color: #5464f7;"></i>
+              <p>Collaborations :  5</p>
+              <i class="fas fa-video" style="position: absolute;top: 154px;left: 300px;color: #5464f7;"></i>
+              <p>Rating: 4,6</p>
+              <i class="fas fa-star" style="position: absolute;top: 197px;left: 300px;color: #5464f7;"></i>
           </div>
   </div>
 
@@ -29,12 +29,14 @@
       <% num = @user.shotlists.length %>
         <% @user.shotlists.reverse_each  do |shotlist|%>
           <div class="dashdo">
-            <hr>
-            <h1>PROJECT#<%=num%></h1>
-            <hr>
+            <div class="titlesticky">
+              <h1>PROJECT#<%=num%></h1>
+            </div>
 
 
-            <h2 class="line2 animated fadeInRight d-none" data-aos="fade-left">Title: <%=shotlist.title%></h2>
+
+
+            <h2 class="line2 animated fadeInRight d-none">Title: <%=shotlist.title%></h2>
             <p class="line2 animated fadeInRight d-none">Description: <%= shotlist.description%></p>
             <hr class="line2 animated fadeInLeft d-none">
             <% num -= 1 %>
@@ -60,7 +62,7 @@
                   <div class="col">
                     <div class="tags">
                       <% shotlist.shotlist_tag_list.each do |tag| %>
-                          <%= link_to tag, results_path(tag: tag), class: ".btn-tag-result" %>
+                          <%= link_to tag, results_path(tag: tag) %>
                       <% end %>
                        <div class="search-form-control form-inline form-group align-items-center">
                         <%= form_tag results_path, method: :get do %>
