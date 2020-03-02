@@ -24,7 +24,7 @@ import { attachShotlist } from '../components/attach_shotlist';
 
 // import { video } from '../components/home';
 import { loadDynamicBannerText } from '../components/banner';
-
+import { onPlayerReady } from '../components/video';
 // document.addEventListener('turbolinks:load', () => {
 //   // Call your JS functions here
 //   initUpdateNavbarOnScroll();

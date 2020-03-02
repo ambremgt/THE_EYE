@@ -54,7 +54,7 @@
               <div style="text-align: center;">
                 <ul><% if current_user.interest_list.present?  %>
                   <% current_user.interest_list.each do |tag| %>
-                    <li><%= link_to tag, results_path(tag: tag), class: "btn-interest" %></li>
+                    <li><%= link_to tag, results_path(tag: tag), class: "btn-tag" %></li>
                   <% end %>
                 <% end %></ul>
               </div>
