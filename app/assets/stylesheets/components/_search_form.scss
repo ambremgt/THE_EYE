@@ -9,8 +9,8 @@
 }
 
 .search-form-control .form-control {
-  height: 3rem;
-  width: 60vw;
+  height: 2.5rem;
+  width: 32vw;
   box-shadow: 2px 6px 14px #f1f1f1;
   border: solid 1px #77767614;
   border-radius:2px;
@@ -20,17 +20,15 @@
 
 
 .search-form-control .form-control:focus {
-  border: 1px solid #429ea5;
+  border: 1px solid #5464f7;
   outline: none !important;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
 .search {
-  position: sticky;
-  // top: -230px;
-  // left: 130px;
-  bottom:8vh;
-  margin-left: 8vw;
+  align-items:center;
+  margin-top: 16px;
+  margin-left:8rem;
 
 }
 
