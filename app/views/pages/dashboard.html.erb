@@ -1,155 +1,91 @@
 
-  <ul class="nav nav-tabs" style="text-decoration: none;">
-    <li class="active"><a class="btn btn-dashboard" data-toggle="tab" href="#profile" style="font-weight:500; color: white;">My profile</a></li>
-    <li><a data-toggle="tab" class="btn btn-dashboard" href="#collaboration" style="font-weight:500; color: white;">My collaborations</a></li>
+
+
+
+    <div class="baner_dash">
+
+      <h2 id="hello" class="animated delay-1s fadeInDown">Hello</h2>
+
+      <h1 id="name_user" class="animated delay-5s fadeInUp"><%= current_user.first_name%>,</h1>
+      <% if current_user.portfolio_assets %>
+        <% current_user.portfolio_assets.each do |asset| %>
+          <% asset.photos.each do |photo| %>
+            <%= cl_image_tag photo.key, height: 300, width: 250, crop: :fill %>
+          <% end %>
+        <% end %>
+      <% end %>
+      <div class="col-lg-4 dashboard-box" style="background-color: #ff4c54;">
+              <img style="width:100px; position: absolute;bottom: 20px;" src="https://cdn.dribbble.com/users/493580/screenshots/9836409/media/7f4aa9eec8d1c4f23f4dabb17826b0bf.gif" alt="">
+              <i class="fas fa-user-friends" style="color: white; position: absolute; top: 30px; left: 20px;"></i>
+              <h3 style="color: white; margin-left: 20px;"><%= current_user.first_name %> <%= current_user.last_name %></h3>
+              <p style=" font-style: italic; color: white;"><%= current_user.city %></p>
+              <i class="fas fa-user-edit" style="position: absolute;top: 30px;left: 300px;color: white;"></i>
+              <hr style="background: white;">
+              <p style="color: white;">Wallet : <%= current_user.wallet %> Credits</p>
+              <i class="fas fa-money-bill-wave" style="position: absolute;top: 119px;left: 300px;color: white;"></i>
+              <p style="color: white;">Collaborations :  5</p>
+              <i class="fas fa-video" style="position: absolute;top: 161px;left: 300px;color: white;"></i>
+              <p style="color: white;">Rating: 4,6</p>
+              <i class="fas fa-star" style="position: absolute;top: 204px;left: 300px;color: white;"></i>
+          </div>
+  </div>
+
+
+      <ul class="nav nav-tabs" style="text-decoration: none;">
+    <li class="active"><a class="btn btn-navbar2-transparent" data-toggle="tab" href="#profile" style="font-weight:500;">My profile</a></li>
+    <li><a data-toggle="tab" class="btn btn-navbar2" href="#collaboration" style="font-weight:500;">My collaborations</a></li>
   </ul>
 
-  <div class="tab-content">
-    <div id="profile" class="tab-pane active">
-      <div class="card-category" >
-          <h2 class="animated rollIn delay-3s">Hello</h2>
-          <h1 class="animated rollIn delay-5s"><%= current_user.first_name%>,</h1>
-      </div>
-
-      <div class="container dashboard" style="margin-top: 30px;">
-        <div class="row mt-5">
-          <div class="col-lg-4 mt-5">
-             <p style="margin-left: 14px;"> <% if current_user.portfolio_assets %>
-                <% current_user.portfolio_assets.each do |asset| %>
-                  <% asset.photos.each do |photo| %>
-                    <%= cl_image_tag photo.key, height: 300, width: 250, crop: :fill %>
-                  <% end %>
-                <% end %>
-              <% end %></p>
-          </div>
-          <div class="col-lg-8 dashboard-box mt-5">
-              <i class="fas fa-book-open" style="color: #0cd2f9; position: absolute; top: 32px; left: 23px;"></i>
-              <h3 style="margin-left: 25px;">Your biography</h3>
-              <hr>
-            <p><%= current_user.biography %></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="container dashboard" style="margin-top: 30px;">
-        <div class="row">
-
-          <div class="col-lg-4 dashboard-box" style="background-color: #f5e6c8">
-            <i class="fas fa-user-edit" style="color: #545352; position: absolute; top: 30px; left: 20px;"></i>
-            <h3 style="margin-left: 20px;">Information</h3>
-            <hr>
-            <h3><%= current_user.first_name %> <%= current_user.last_name %></h3>
-            <p>Filmmaker</p>
-            <p class="fas fa-map-marker-alt" style="color: #545352; position: absolute; top: 178px;left: 17px;"></p>
-            <p style="margin-left: 10px; font-style: italic;"><%= current_user.city %></p>
-            <img style="width:300px; position: absolute; bottom: 30px;" src="https://cdn.dribbble.com/users/1601802/screenshots/6510697/dribbble-gif.gif" alt="">
-          </div>
-
-          <div class="col-lg-3 dashboard-interest">
-            <div class="center" style="margin-bottom: 50px;">
-              <i class="fas fa-heart" style="color: red; position: absolute; top: 31px; left: 50px;"></i>
-              <h3>Your interests</h3>
-              <hr>
-            </div>
-              <div style="text-align: center;">
-                <ul><% if current_user.interest_list.present?  %>
-                  <% current_user.interest_list.each do |tag| %>
-                    <li><%= link_to tag, results_path(tag: tag), class: "btn-tag" %></li>
-                  <% end %>
-                <% end %></ul>
-              </div>
-          </div>
-            <div class="col-lg-4 dashboard-box" style="background-color: #ff4c54;">
-              <img style="width:300px; position: absolute;bottom: 45px;" src="https://cdn.dribbble.com/users/493580/screenshots/9836409/media/7f4aa9eec8d1c4f23f4dabb17826b0bf.gif" alt="">
-              <i class="fas fa-user-friends" style="color: white; position: absolute; top: 30px; left: 20px;"></i>
-              <h3 style="color: white; margin-left: 20px;">Communauty</h3>
-              <hr style="background: white;">
-              <p style="color: white;"><%= current_user.wallet %> Total Credits</p>
-              <i class="fas fa-money-bill-wave" style="position: absolute;top: 92px;left: 300px;color: white;"></i>
-              <p style="color: white;">Number of collaborations:  5</p>
-              <i class="fas fa-video" style="position: absolute;top: 136px;left: 300px;color: white;"></i>
-              <p style="color: white;">Rating: 4,6</p>
-              <i class="fas fa-star" style="position: absolute;top: 177px;left: 300px;color: white;"></i>
-          </div>
-        </div>
-      </div>
-
-      <div class="container dashboard" style="margin-top: 30px; margin-bottom: 50px;">
-        <div class="row">
-          <div class="col-lg-4 dashboard-box">
-            <div style="text-align: center;">
-              <h3>Languages</h3>
-              <hr>
-              <div style="display: flex;padding-left: 30px ;color:black;">
-                <ul>
-                  <li>English</li>
-                  <li>Spanish</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 dashboard-box">
-            <h3 style="text-align: center;">Social</h3>
-            <hr>
-              <i class="fab fa-facebook" style="position: relative; color:black;top: 11px;left: 250px;"></i>
-              <i class="fab fa-instagram" style="position: relative; color:black;top: 11px;left: 142px;"></i>
-              <i class="fab fa-vimeo-v" style="position: relative; color:black;top: 11px;left: 40px;"></i>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-
-    <div id="collaboration" class="tab-pane mt-5" >
-      <div class="container dashdo" style="background-color: black;">
-        <h1>My Collaborations</h1>
-      </div>
       <% num = 1%>
         <% @user.shotlists.each  do |shotlist|%>
           <div class="dashdo">
             <hr>
-              <h1>PROJECT#<%=num%></h1>
-              <hr>
-                <% num += 1 %>
+            <h1>PROJECT#<%=num%></h1>
+            <hr>
+            <% num += 1 %>
 
-                <h3>Title: <%=shotlist.title%></h3>
-                <p>Description: <%= shotlist.description%></p>
-                <hr>
-                <% shotlist.shots.each do |shot| %>
-                  <div class="row">
-                  <div class="col">
-                    <h3>Details of the scene</h3>
-                    <p>Angle: <%= shot.angle %></p>
-                    <p>Shote size: <%= shot.shot_size %></p>
-                    <p>Movement: <%= shot.movement %></p>
-                    <p>Description: <%= shot.description %></p>
-                    <p>Equipment: <%= shot.equipment %></p>
-                  </div>
-
-
-              <div class="col">
-                <h3>Status</h3>
-                <hr>
-
-                <hr>
-              </div>
-                <% end %>
+            <h3>Title: <%=shotlist.title%></h3>
+            <p>Description: <%= shotlist.description%></p>
+            <hr>
+            <% shotlist.shots.each do |shot| %>
+              <div class="row">
+                <div class="col">
+                  <h2>Details of the scene</h2>
+                  <h3>Description: <%= shot.description %></h3>
+                  <p>Angle: <%= shot.angle %></p>
+                  <p>Shote size: <%= shot.shot_size %></p>
+                  <p>Movement: <%= shot.movement %></p>
+                  <p>Equipment: <%= shot.equipment %></p>
                 </div>
-                     <div class="tags">Tags:
-                      <% shotlist.shotlist_tag_list.each do |tag| %>
-                          <%= link_to tag, results_path(tag: tag), class: ".btn-tag-result" %>
-                        <% end %></div>
-                     <div class="search-form-control form-inline form-group align-items-center">
-                  <%= form_tag results_path, method: :get do %>
-                    <%= hidden_field_tag(:shotlist_tag_list, shotlist.shotlist_tag_list) %>
 
-                    <%= submit_tag "Find matches", class: "btn btn-search" %>
+
+                <div class="col">
+                  <h3>Status</h3>
+                  <hr>
+
+                  <hr>
+                </div>
+                <% end %>
+                <div class="col">
+                  <div class="tags">Tags:
+                    <% shotlist.shotlist_tag_list.each do |tag| %>
+                        <%= link_to tag, results_path(tag: tag), class: ".btn-tag-result" %>
+                    <% end %>
+                     <div class="search-form-control form-inline form-group align-items-center">
+                      <%= form_tag results_path, method: :get do %>
+                        <%= hidden_field_tag(:shotlist_tag_list, shotlist.shotlist_tag_list) %>
+
+                        <%= submit_tag "Find matches", class: "btn btn-navbar2" %>
 
                   <% end %>
-                 </div>
+                  </div>
+                  </div>
+               </div>
             </div>
-              <% end %>
+          </div>
+
+        <% end %>
+
 
 
           <div class="collab">
