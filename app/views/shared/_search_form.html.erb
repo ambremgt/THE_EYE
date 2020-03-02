@@ -4,7 +4,7 @@
     <%= form_tag results_path, method: :get do %>
       <%= text_field_tag :query,
       params[:query], class: "form-control", placeholder: "Search by categories, city..." %>
-      <%= submit_tag "Find", class: "btn btn-search" %>
+      <%= submit_tag "Find", class: "btn btn-navbar2-transparent" %>
 
       <% end %>
     </div>
@@ -13,16 +13,8 @@
 
 
 
-  <div style="display: flex; margin-top: 10px;">
-    <p>Popular categories:</p>
-    <% @filmmakers.first(1).each do |filmmaker| %>
-      <% filmmaker.interest_list.each do |tag| %>
-        <%= link_to tag, results_path(tag: tag), class: "btn-tag" %>
-      <% end %>
-    <% end %>
-  </div>
 
-</div>
+
 
 
 
