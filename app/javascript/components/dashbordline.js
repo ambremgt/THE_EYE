@@ -1,6 +1,5 @@
 const dashboardLine = () => {
   const x = document.querySelectorAll('.line2');
-  console.log(x);
   x.forEach((element) => {
     window.addEventListener('scroll', () => {
       if ( element.getBoundingClientRect().top < 550 ) {
