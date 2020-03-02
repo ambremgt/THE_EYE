@@ -42,21 +42,17 @@
               <% end %>
             <div class="card-trip-infos">
               <div>
-                <h2 style="margin-bottom: 5px;"><%= filmmaker.first_name%> <%= filmmaker.last_name %></h2>
+                <h2 style="margin-bottom: 8px;"><%= filmmaker.first_name%> <%= filmmaker.last_name %></h2>
                 <div style="display: flex;margin-bottom: 5px">
                   <p class="fas fa-map-marker-alt"></p>
                   <p style="margin-left: 10px;"><%= filmmaker.city %></p>
                 </div>
                 <% if filmmaker.biography %>
-                <p><%= filmmaker.biography.split(' ').slice(0,13).join(' ')%></p>
-                <div style="display: flex; margin-bottom: 10px">
-                  <p class="fas fa-star" style="color: #ffc31e; margin-top: 3px;"></p>
-                  <p style="margin-left: 7px;">4,7</p>
-                </div>
+                <p style="margin-bottom: 5px;"><%= filmmaker.biography.split(' ').slice(0,12).join(' ')%>...</p>
                 <% end %>
-                <div style="text-align: center;">
+                <div style="text-align: left;">
                 <% if filmmaker.interest_list.present?  %>
-                  <% filmmaker.interest_list.first(2).each do |tag| %>
+                  <% filmmaker.interest_list.first(3).each do |tag| %>
                     <%= link_to tag, results_path(tag: tag), class: "btn-tag" %>
                   <% end %>
                 <% end %>

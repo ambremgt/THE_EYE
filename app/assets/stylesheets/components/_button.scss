@@ -69,9 +69,8 @@
   background: transparent;
   border: solid 1px #727272;
   transition: background 0.3s ease;
-  text-align: center;
-  font-size: 13px;
-  margin-left: 10px;
+  text-align: left;
+  font-size: 12px;
   margin-right: 10px;
   height: 25px;
   border-radius: 4px;
@@ -90,7 +89,7 @@
 // page results
 .btn-tag-result {
   color: #727272;
-  padding: 11px;
+  padding: 8px;
   background: transparent;
   border: solid 1px #727272;
   -webkit-transition: background 0.3s ease;
@@ -100,7 +99,7 @@
   margin-left: 20px;
   margin-right: 20px;
   height: 25px;
-  border-radius: 25px;
+  border-radius: 4px;
   text-decoration: none;
 }
 .btn-tag-result:hover {
