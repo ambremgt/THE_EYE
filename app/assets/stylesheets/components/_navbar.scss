@@ -48,7 +48,7 @@
 .dropdown-item {
     display: block;
     width: 100%;
-    padding: 0.25rem 1.5rem;
+    padding: 0.25rem 1rem;
     clear: both;
     font-weight: 400;
     color: #212529;
@@ -59,7 +59,7 @@
     margin-top: 5px;
 }
 
-.navbar-light .navbar-nav .nav-link {
+.nav-link {
   color: #6b6b6b;
   font-weight: 300;
   font-size: 15px;
@@ -70,7 +70,7 @@
   border-radius: 2px;
 }
 
-.navbar-light .navbar-nav .nav-link:hover {
+.nav-link:hover {
   color: black;
   transition-duration: 0.4s;
 }
@@ -79,7 +79,7 @@
 
 // buttons NAVBAR 1
 
-.navbar-light .navbar-nav .nav-link-transparent {
+.nav-link-transparent {
   color: black;
   font-weight: 400;
   font-size: 13px;
@@ -92,7 +92,7 @@
   border: solid 1px black;
 }
 
-.navbar-light .navbar-nav .nav-link-transparent:hover {
+.nav-link-transparent:hover {
   background-color: #429ea5;
   color: white;
   transition: 0.5s;
@@ -101,9 +101,33 @@
 
 
 // BUTTONS NAVBAR 2
+.btn-navbar2{
+  background-color: #5464f7;
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+  padding-right: 60px;
+  padding-left: 60px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  margin: 8px;
+  border-radius: 3px;
+  border: solid 1px #5464f7;
+  box-sizing:border-box;
 
-.navbar-light .navbar-nav .btn-navbar2-transparent {
-  color: #eaebf2;
+
+}
+.btn-navbar2:hover {
+  color: #5464f7;
+  background-color: transparent;
+  transition: 0.5s;
+  border: solid 1px #5464f7;
+  text-decoration: none;
+}
+
+
+.btn-navbar2-transparent {
+  color: grey;
   font-weight: 400;
   font-size: 13px;
   padding-right: 25px;
@@ -112,10 +136,11 @@
   padding-bottom: 7px;
   margin: 10px;
   border-radius: 3px;
-  border: solid 1px #eaebf2;
+  border: solid 1px grey;
+  box-sizing:border-box;
 }
 
-.navbar-light .navbar-nav .btn-navbar2-transparent:hover {
+.btn-navbar2-transparent:hover {
   background-color: #5464f7;
   color: white;
   transition: 0.5s;

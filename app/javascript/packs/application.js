@@ -22,12 +22,16 @@ import { multiForm } from '../components/multiform';
 import { activeCheck } from '../components/checkbox';
 import { attachShotlist } from '../components/attach_shotlist';
 
+
 import { hiddenPoster } from '../components/video';
 
 // import { shotlistPreviewLink } from '../components/shotlist_preview_link';
 
 // import { video } from '../components/home';
 import { loadDynamicBannerText } from '../components/banner';
+=======
+
+
 // document.addEventListener('turbolinks:load', () => {
 //   // Call your JS functions here
 //   initUpdateNavbarOnScroll();
@@ -47,7 +51,6 @@ document.addEventListener('turbolinks:load', () => {
   if (document.querySelector('.shotlist-link')) {
 
     attachShotlist();
-    //shotlistPreviewLink();
   }
   if (document.querySelector('.category-choice')) {
   activeCheck();
@@ -56,9 +59,9 @@ document.addEventListener('turbolinks:load', () => {
   if (document.querySelector('.blocktoIt')) {
     multiForm();
   }
-  if (document.querySelector('#banner-typed-text')) {
-    loadDynamicBannerText();
-  }
+  // if (document.querySelector('#banner-typed-text')) {
+  //   loadDynamicBannerText();
+  // }
 
 
 });

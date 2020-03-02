@@ -1,5 +1,9 @@
 <div class="navbar navbar-expand-lg navbar-light navbar-lewagon fixed-top">
-  <%= link_to "Home", "/", class: "navbar-brand text-white" %>
+
+  <%= link_to "camea", "/", class: "navbar-brand" %>
+  <div class=" search" >
+    <%= render 'shared/search_form' %>
+  </div>
   <button class="navbar-toggler" type="button"
           data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -11,9 +15,6 @@
     <ul class="navbar-nav mr-auto">
 
       <% if user_signed_in? %>
-        <li class="nav-item">
-          <%= link_to "Add a project", "/shotlists/new", class: "btn btn-navbar2-transparent" %>
-        </li>
 
         <li class="nav-item">
           <%= link_to "Dashboard", "/dashboard", class: "btn btn-navbar2-transparent" %>
@@ -69,7 +70,7 @@
         </li>
 
         <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "btn nav-link-transparent" %></li>
+          <%= link_to "Login", new_user_session_path, class: "btn nav-link-blue" %></li>
         </li>
       <% end %>
     </ul>
