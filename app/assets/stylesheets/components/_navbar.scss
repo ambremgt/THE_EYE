@@ -21,6 +21,7 @@
 }
 
 
+
 .navbar-nav p {
     margin-top: 0;
     margin-bottom: 0;
@@ -106,7 +107,7 @@
 // BUTTONS NAVBAR 2
 .btn-navbar2{
   background-color: #5464f7;
-  color: white;
+  color: white!important;
   font-weight: 600;
   font-size: 20px;
   padding-right: 60px;
@@ -121,7 +122,7 @@
 
 }
 .btn-navbar2:hover {
-  color: #5464f7;
+  color: #5464f7!important;
   background-color: transparent;
   transition: 0.5s;
   border: solid 1px #5464f7;
@@ -174,6 +175,10 @@
   color: #5464f7;
   transition: 0.5s;
 }
+.navbar-brand:hover {
+  color:#5464f7!important;
+}
+
 
 #user-channel {
   margin-right: 8px;

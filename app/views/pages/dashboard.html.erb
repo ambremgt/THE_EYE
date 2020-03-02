@@ -34,43 +34,47 @@
             <hr>
 
 
-            <h3 class="line2 animated fadeInRight d-none" data-aos="fade-left">Title: <%=shotlist.title%></h3>
+            <h2 class="line2 animated fadeInRight d-none" data-aos="fade-left">Title: <%=shotlist.title%></h2>
             <p class="line2 animated fadeInRight d-none">Description: <%= shotlist.description%></p>
             <hr class="line2 animated fadeInLeft d-none">
             <% num -= 1 %>
+
             <% shotlist.shots.each do |shot| %>
-              <div class="row">
-                <div class="col">
-                  <h2 class="line2 animated fadeInRight d-none">Details of the scene</h2>
-                  <h3 class="line2 animated fadeInRight d-none">Description: <%= shot.description %></h3>
-                  <p class="line2 animated fadeInRight d-none">Angle: <%= shot.angle %></p>
-                  <p class="line2 animated fadeInRight d-none">Shote size: <%= shot.shot_size %></p>
-                  <p class="line2 animated fadeInRight d-none">Movement: <%= shot.movement %></p>
-                  <p class="line2 animated fadeInRight d-none">Equipment: <%= shot.equipment %></p>
-                </div>
+            <% if shot %>
+                <div class="row">
+                  <div class="col">
+                    <h2 class="line2 animated fadeInRight d-none">Details of the scene</h2>
+                    <h3 class="line2 animated fadeInRight d-none">Description: <%= shot.description %></h3>
+                    <p class="line2 animated fadeInRight d-none">Angle: <%= shot.angle %></p>
+                    <p class="line2 animated fadeInRight d-none">Shote size: <%= shot.shot_size %></p>
+                    <p class="line2 animated fadeInRight d-none">Movement: <%= shot.movement %></p>
+                    <p class="line2 animated fadeInRight d-none">Equipment: <%= shot.equipment %></p>
+                  </div>
 
 
-                <div class="col">
-                  <h3 class="line2 animated fadeInRight d-none" >Status</h3>
+                  <div class="col">
+                    <h3 class="line2 animated fadeInRight d-none" >Status</h3>
 
-                </div>
-                <% end %>
-                <div class="col">
-                  <div class="tags">
-                    <% shotlist.shotlist_tag_list.each do |tag| %>
-                        <%= link_to tag, results_path(tag: tag), class: ".btn-tag-result" %>
-                    <% end %>
-                     <div class="search-form-control form-inline form-group align-items-center">
-                      <%= form_tag results_path, method: :get do %>
-                        <%= hidden_field_tag(:shotlist_tag_list, shotlist.shotlist_tag_list) %>
-
-                        <%= submit_tag "Find matches", class: "btn btn-navbar2 line2 animated fadeInRight d-none" %>
-
+                  </div>
                   <% end %>
-                  </div>
-                  </div>
-               </div>
-            </div>
+                  <div class="col">
+                    <div class="tags">
+                      <% shotlist.shotlist_tag_list.each do |tag| %>
+                          <%= link_to tag, results_path(tag: tag), class: ".btn-tag-result" %>
+                      <% end %>
+                       <div class="search-form-control form-inline form-group align-items-center">
+                        <%= form_tag results_path, method: :get do %>
+                          <%= hidden_field_tag(:shotlist_tag_list, shotlist.shotlist_tag_list) %>
+
+                          <%= submit_tag "Find matches", class: "btn btn-navbar2 line2 animated fadeInRight d-none" %>
+
+                    <% end %>
+                    </div>
+                    </div>
+                 </div>
+              </div>
+
+            <% end %>
           </div>
 
         <% end %>
