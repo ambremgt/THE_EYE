@@ -48,6 +48,12 @@
                 <%= f.input :description, placeholder: "It's party time excellent", class: "inp" %>
 
             </fieldset>
+            <fieldset class="blocktoIt d-none">
+                <h2 class="fs-title animated bounceInDown">Select tags that correspond to your project:</h2>
+                  <%= f.input :shotlist_tag_list, as: :check_boxes, collection: [ "Pass your collection here" ] %>
+
+
+            </fieldset>
             <hr>
             <button type="button" id="prev" class="d-none btn btn-outline-dark btn-lg" >Previous</button>
             <button type="button" id="next" class="btn btn-search">Next</button>
