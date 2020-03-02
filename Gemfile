@@ -40,6 +40,7 @@ gem 'acts-as-taggable-on', '~> 6.0'
 
 gem 'animate.css-rails', '~> 3.2'
 
+gem 'rails_autolink', '~> 1.1', '>= 1.1.6'
 
 group :development, :test do  gem 'pry-byebug'
   gem 'pry-rails'
