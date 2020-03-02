@@ -122,3 +122,47 @@ $black: #000;
   color:#fff;
   opacity:1;
 }
+
+
+
+// MOSAIC
+
+
+.mosaic {
+  margin-top: 20px;
+  text-align: center;
+}
+
+iframe {
+  left: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+  margin-bottom: 10px;
+}
+
+.poster {
+  background-size: cover;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 10;
+}
+
+
+.group {
+  height: 250px;
+  position: relative;
+  width: 450px;
+}
+
+.hidden-poster {
+  visibility: hidden;
+  transition-duration: 0.5s
+}
+
+

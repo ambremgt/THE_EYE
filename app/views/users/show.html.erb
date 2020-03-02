@@ -26,17 +26,27 @@
   </div>
 </div>
 
-<div class="row" style="margin-top: 120px">
-  <div class="col-8 ml-5">
-    <h2 class="mb-4">Video</h2>
 
-    <div class="card">
-      <div class="card-play"></div>
-      <div class="card-video">
-        <iframe id="video" src="https://www.youtube.com/embed/JE9z-gy4De4?enablejsapi=1&amp;html5=1&amp;iv_load_policy=3&amp;rel=0&amp;showinfo=0" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-      </div>
-    </div>
+<h2 style="text-align: left; margin-left: 15px; margin-top: 120px">My collaborations</h2>
+<div class="mosaic">
+  <div class="row">
+    <% if @filmmaker.portfolio_assets %>
+        <% @filmmaker.portfolio_assets.each do |asset| %>
+        <% if asset.video_url.present? %>
+          <% JSON.parse(asset.video_url).each do |id| %>
+            <div class="col-4" style="margin-bottom: 10px;">
+              <div class="group">
+                <iframe src="https://player.vimeo.com/video/<%= id %>?autoplay=1&autopause=0&muted=1&title=0&byline=0&portrait=0&controls=0" width="450" height="250" preload="auto" frameborder="0" allowfullscreen></iframe>
+                <div class="poster" style="background-image: url(https://i.vimeocdn.com/video/116825470_450x250.webp);"></div>
+             </div>
+            </div>
+          <% end %>
+        <% end %>
+      <% end %>
+    <% end %>
   </div>
+</div>
+
 
   <div class="col-3 ml-4">
     <h2 class="mb-4">Biography</h2>
@@ -44,57 +54,6 @@
       <p><%= @filmmaker.biography %></p>
     </div>
   </div>
-</div>
-
-
-
-
-<!--
-
-<button type="button" class="btn btn-primary video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/Jfrjeg26Cwk" data-target="#myModal">
-  Play Video 1 - autoplay
-</button>
-
-<button type="button" class="btn btn-primary video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/IP7uGKgJL8U" data-target="#myModal">
-  Play Video 2
-</button>
-
-<button type="button" class="btn btn-primary video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/A-twOC3W558" data-target="#myModal">
-  Play Video 3
-</button>
-
-<button type="button" class="btn btn-primary video-btn" data-toggle="modal" data-src="https://player.vimeo.com/video/58385453?badge=0" data-target="#myModal">
-  Play Vimeo Video
-</button>
-
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-
-
-      <div class="modal-body">
-
-       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-
-<div class="embed-responsive embed-responsive-16by9">
-  <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
-</div>
-
-
-      </div>
-
-    </div>
-  </div>
-</div>
-
-
- -->
-
-
-
-<div class="row mb-5">
   <div class="col-4" style="margin-left: 50px;">
     <h2 class="mb-4 mt-5">Interest</h2>
     <div class="container-interest">
@@ -113,17 +72,11 @@
       </ul>
     </div>
   </div>
-  <div class="col-3" style="margin-left: 50px;">
-    <h2 class="mb-4 mt-5">Follow me </h2>
-    <div class="container-social">
-      <ul style="text-align: center;">
-        <i class="fab fa-facebook fa-2x" style="margin-right: 30px;"></i>
-        <i class="fab fa-instagram fa-2x"></i>
-        <i class="fab fa-vimeo-v fa-2x" style="margin-left: 30px;"></i>
-      </ul>
-    </div>
-  </div>
 </div>
+
+
+
+
 
 
 
