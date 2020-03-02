@@ -23,7 +23,7 @@ import { attachShotlist } from '../components/attach_shotlist';
 // import { shotlistPreviewLink } from '../components/shotlist_preview_link';
 
 // import { video } from '../components/home';
-import { loadDynamicBannerText } from '../components/banner';
+// import { loadDynamicBannerText } from '../components/banner';
 // import { onPlayerReady } from '../components/video';
 // document.addEventListener('turbolinks:load', () => {
 //   // Call your JS functions here
@@ -49,9 +49,9 @@ document.addEventListener('turbolinks:load', () => {
   if (document.querySelector('.blocktoIt')) {
     multiForm();
   }
-  if (document.querySelector('#banner-typed-text')) {
-    loadDynamicBannerText();
-  }
+  // if (document.querySelector('#banner-typed-text')) {
+  //   loadDynamicBannerText();
+  // }
 
 
 });
