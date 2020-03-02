@@ -20,6 +20,7 @@ import { initUpdateFooterOnScroll } from '../components/footer';
 import { multiForm } from '../components/multiform';
 import { activeCheck } from '../components/checkbox';
 import { attachShotlist } from '../components/attach_shotlist';
+import { dashboardLine } from '../components/dashbordline';
 
 // import { video } from '../components/home';
 // import { loadDynamicBannerText } from '../components/banner';
@@ -50,6 +51,9 @@ document.addEventListener('turbolinks:load', () => {
   // if (document.querySelector('#banner-typed-text')) {
   //   loadDynamicBannerText();
   // }
+  if (document.querySelector('.line2')){
+    dashboardLine();
+  }
 
 
 });
