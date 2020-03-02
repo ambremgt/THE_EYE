@@ -6,16 +6,14 @@
 
   <div class="tab-content">
     <div id="profile" class="tab-pane active">
-      <div class="card-category" style="background-color: #2b2b2b;">
-        <div style="text-align: center;">
-          <h1>Hi <%= current_user.first_name %>,</h1>
-          <h3>Welcome back</h3>
-        </div>
+      <div class="card-category" >
+          <h2 class="animated rollIn delay-3s">Hello</h2>
+          <h1 class="animated rollIn delay-5s"><%= current_user.first_name%>,</h1>
       </div>
 
       <div class="container dashboard" style="margin-top: 30px;">
-        <div class="row">
-          <div class="col-lg-4">
+        <div class="row mt-5">
+          <div class="col-lg-4 mt-5">
              <p style="margin-left: 14px;"> <% if current_user.portfolio_assets %>
                 <% current_user.portfolio_assets.each do |asset| %>
                   <% asset.photos.each do |photo| %>
@@ -24,7 +22,7 @@
                 <% end %>
               <% end %></p>
           </div>
-          <div class="col-lg-8 dashboard-box">
+          <div class="col-lg-8 dashboard-box mt-5">
               <i class="fas fa-book-open" style="color: #0cd2f9; position: absolute; top: 32px; left: 23px;"></i>
               <h3 style="margin-left: 25px;">Your biography</h3>
               <hr>
@@ -82,7 +80,7 @@
             <div style="text-align: center;">
               <h3>Languages</h3>
               <hr>
-              <div style="display: flex;padding-left: 30px;">
+              <div style="display: flex;padding-left: 30px ;color:black;">
                 <ul>
                   <li>English</li>
                   <li>Spanish</li>
@@ -93,9 +91,9 @@
           <div class="col-lg-4 dashboard-box">
             <h3 style="text-align: center;">Social</h3>
             <hr>
-              <i class="fab fa-facebook" style="position: relative;top: 11px;left: 250px;"></i>
-              <i class="fab fa-instagram" style="position: relative;top: 11px;left: 142px;"></i>
-              <i class="fab fa-vimeo-v" style="position: relative;top: 11px;left: 40px;"></i>
+              <i class="fab fa-facebook" style="position: relative; color:black;top: 11px;left: 250px;"></i>
+              <i class="fab fa-instagram" style="position: relative; color:black;top: 11px;left: 142px;"></i>
+              <i class="fab fa-vimeo-v" style="position: relative; color:black;top: 11px;left: 40px;"></i>
           </div>
         </div>
       </div>
@@ -103,38 +101,43 @@
 
 
 
-    <div id="collaboration" class="tab-pane" >
-      <div class="card-category" style="background-color: #2b2b2b;">
+    <div id="collaboration" class="tab-pane mt-5" >
+      <div class="container dashdo" style="background-color: black;">
         <h1>My Collaborations</h1>
       </div>
 
-       <div class="container dashboard" style="margin-top: 50px;">
-        <div class="row">
-          <div class="col-lg-4 dashboard-projet">
-            <h3 class="center">My current project</h3>
-            <hr>
+
+            <% num = 1%>
             <% @user.shotlists.each  do |shotlist|%>
-              <h3><%=shotlist.title%></h3>
-              <p>Description: <%= shotlist.description%></p>
-          </div>
-          <div class="col-lg-4 dashboard-box">
-            <h3 class="center">Details of the scene</h3>
-            <hr>
-              <% shotlist.shots.each do |shot| %>
-              <p>Angle: <%= shot.angle %></p>
-              <p>Shote size: <%= shot.shot_size %></p>
-              <p>Movement: <%= shot.movement %></p>
-              <p>Description: <%= shot.description %></p>
-              <p>Equipment: <%= shot.equipment %></p>
+            <div class="dashdo">
+              <hr>
+                <h1>PROJECT#<%=num%></h1>
+                <hr>
+                <% num += 1 %>
+                  <h3>Title: <%=shotlist.title%></h3>
+                  <p>Description: <%= shotlist.description%></p>
+                <hr>
+                  <% shotlist.shots.each do |shot| %>
+                  <div class="row">
+                  <div class="col">
+                    <h3>Details of the scene</h3>
+                    <p>Angle: <%= shot.angle %></p>
+                    <p>Shote size: <%= shot.shot_size %></p>
+                    <p>Movement: <%= shot.movement %></p>
+                    <p>Description: <%= shot.description %></p>
+                    <p>Equipment: <%= shot.equipment %></p>
+                  </div>
+
+
+              <div class="col">
+                <h3>Status</h3>
+                <hr>
+              </div>
+                <% end %>
+                </div>
+            </div>
               <% end %>
-            <% end %>
-          </div>
-          <div class="col-lg-2 dashboard-box">
-            <h3 class="center">Status</h3>
-            <hr>
-          </div>
-        </div>
-      </div>
+
 
           <div class="collab">
           <div class="wrap">
@@ -181,15 +184,7 @@
            </div>
           </div>
           </div>
-    </div>
 
-      </div>
-          </div>
-        </div>
-      </div>
-  </div>
-    </div>
-    </div>
   </div>
 </div>
 

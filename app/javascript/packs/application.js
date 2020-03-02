@@ -19,7 +19,8 @@ import { initUpdateNavbarOnScroll } from '../components/navbar';
 import { initUpdateFooterOnScroll } from '../components/footer';
 import { multiForm } from '../components/multiform';
 import { activeCheck } from '../components/checkbox';
-import { attachShotlist } from '../components/attachShotlist';
+import { attachShotlist } from '../components/attach_shotlist';
+// import { shotlistPreviewLink } from '../components/shotlist_preview_link';
 
 // import { video } from '../components/home';
 import { loadDynamicBannerText } from '../components/banner';
@@ -35,9 +36,11 @@ document.addEventListener('turbolinks:load', () => {
   initUpdateNavbarOnScroll();
   initUpdateFooterOnScroll();
 
+
   if (document.querySelector('.shotlist-link')) {
 
     attachShotlist();
+    //shotlistPreviewLink();
   }
   if (document.querySelector('.category-choice')) {
   activeCheck();

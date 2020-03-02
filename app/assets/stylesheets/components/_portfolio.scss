@@ -1,3 +1,25 @@
+
+// .container-portfolio {
+//   padding: 40px;
+//   background-size: cover;
+//   background: linear-gradient(75deg,#22263D 0,#342441 25%,#342441 80%,#22263D 100%);
+//   margin-top: 0;
+//   margin-bottom: 50px;
+//   color:black;
+//   height:60vh;
+// }
+
+// .container-details {
+//   background-color: white;
+//   padding: 50px;
+//   border-radius: 5px;
+//   width: 50%;
+//   margin: auto;
+// }
+
+// .container-details h2 {
+//   color: #444444;
+
 .header-portfolio {
   width: 100%;
   display: block;
@@ -29,13 +51,28 @@
   top: 10vh;
 }
 
+<<<<<<< HEAD
 .container-portfolio {
+=======
+.container-portfolio{
+  color:black;
+  background-color: white;
+>>>>>>> master
   border-radius: 8px;
   box-shadow: -4px 1px 20px rgba(150, 149, 149, 0.2);
   padding: 20px;
 }
 
+
+// .container-description {
+//   color:black;
+
 .container-interest {
+<<<<<<< HEAD
+=======
+  color:black;
+  background-color: white;
+>>>>>>> master
   border-radius: 8px;
   box-shadow: -4px 1px 20px rgba(150, 149, 149, 0.2);
   margin-top: 30px;
@@ -51,6 +88,7 @@
 
 
 .collab {
+  color:black;
   background-color: white;
   text-align: left;
   margin: 20px;
