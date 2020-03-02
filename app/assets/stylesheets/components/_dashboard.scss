@@ -11,9 +11,11 @@ hr{
   color:black;
 }
 #idboxdash{
+  background-color:white;
+  color:#5464f7;
   position: absolute;
-  top:40vh;
   right: 20vw;
+  top:30vh;
 }
 #name_user {
   position:absolute;
@@ -174,6 +176,16 @@ padding-left:0;
   margin-left:10vw;
   height:80vh;
   width:90vw;
+}
+.titlesticky{
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  position: -webkit-sticky;
+  position:sticky;
+  top:7vh;
+  background-color:#5464f7;
+  color:white;
+  margin: none;
 }
 .line_dashboard{
   justify-content: space-between;
