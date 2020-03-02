@@ -14,8 +14,10 @@
 }
 
 .navbar-brand {
-  margin-left: 5%;
+  margin-left: 1%;
   font-size:1rem;
+  font-weight: 600;
+  font-size: 18px;
 }
 
 
@@ -30,6 +32,7 @@
 .navbar {
   color : #757575;
   font-weight: 300;
+  height: 60px;
 }
 
 .avatar-large {
@@ -127,7 +130,7 @@
 
 
 .btn-navbar2-transparent {
-  color: grey;
+  color: black;
   font-weight: 400;
   font-size: 13px;
   padding-right: 25px;
@@ -135,8 +138,9 @@
   padding-top: 7px;
   padding-bottom: 7px;
   margin: 10px;
+  margin-right: 17px;
   border-radius: 3px;
-  border: solid 1px grey;
+  border: solid 1px black;
   box-sizing:border-box;
 }
 
@@ -152,7 +156,9 @@
 
 .nav-icon {
   color: black;
-  margin: 0.8em;
+  margin: 0.45em;
+  position: relative;
+  top: 7px;
 }
 
 .nav-icon:hover {
@@ -170,17 +176,14 @@
   transition: 0.5s;
 }
 
-
-
 #user-channel {
-  margin-right: 20px;
+  margin-right: 8px;
 }
 
 
 #notif-counter {
   color: black;
   position: relative;
-  margin-left: 18px;
   .msg-number {
     position: absolute;
     background: red;
@@ -200,6 +203,6 @@
 
 // JS
 .navbar-lewagon-white {
-  background-color: black;
+  background-color: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
