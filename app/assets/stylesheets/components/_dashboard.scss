@@ -7,8 +7,13 @@ hr{
   width:100vw;
   height:60vh;
 
-  background-color:black;
-  color:white;
+  background-color:white;
+  color:black;
+}
+#idboxdash{
+  position: absolute;
+  top:40vh;
+  right: 20vw;
 }
 #name_user {
   position:absolute;
@@ -50,7 +55,7 @@ hr{
   box-shadow: 0 0 15px rgba(189, 189, 189, 0.2);
   border-radius: 8px;
   padding: 20px;
-  height:40vh;
+  height:32vh;
   width:26vw;
 }
 
