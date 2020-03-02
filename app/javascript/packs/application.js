@@ -29,7 +29,7 @@ import { hiddenPoster } from '../components/video';
 
 // import { video } from '../components/home';
 import { loadDynamicBannerText } from '../components/banner';
-=======
+
 
 
 // document.addEventListener('turbolinks:load', () => {
