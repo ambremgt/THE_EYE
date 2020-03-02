@@ -15,26 +15,33 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+import "bootstrap";
 import { initUpdateNavbarOnScroll } from '../components/navbar';
 import { initUpdateFooterOnScroll } from '../components/footer';
 import { multiForm } from '../components/multiform';
 import { activeCheck } from '../components/checkbox';
 import { attachShotlist } from '../components/attach_shotlist';
+
+import { hiddenPoster } from '../components/video';
+
 // import { shotlistPreviewLink } from '../components/shotlist_preview_link';
 
 // import { video } from '../components/home';
 import { loadDynamicBannerText } from '../components/banner';
-import { onPlayerReady } from '../components/video';
 // document.addEventListener('turbolinks:load', () => {
 //   // Call your JS functions here
 //   initUpdateNavbarOnScroll();
 //   multiForm();
 //   // loadDynamicBannerText();
 // });
+
+
+
 document.addEventListener('turbolinks:load', () => {
   // video();
   initUpdateNavbarOnScroll();
   initUpdateFooterOnScroll();
+  hiddenPoster();
 
 
   if (document.querySelector('.shotlist-link')) {
@@ -60,4 +67,3 @@ document.addEventListener('turbolinks:load', () => {
 // Note(lewagon): ABOVE IS RAILS DEFAULT CONFIGURATION
 // WRITE YOUR OWN JS STARTING FROM HERE 👇
 // ----------------------------------------------------
-import "bootstrap";

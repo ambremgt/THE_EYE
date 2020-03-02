@@ -190,11 +190,11 @@ arthur.interest_list.add(["Landscapes", "Urban", "Architecture", "Timelapse"])
 arthur.save!
 
 #Create 10 portfolioasset
-assetsMohamed = PortfolioAsset.new(user_id: mohamed.id)
+assetsMohamed = PortfolioAsset.new(user_id: mohamed.id, video_url: ["23237102", "156406155", "47311103"])
 assetsMohamed.photos.attach(io: URI.open("https://images.pexels.com/photos/2608519/pexels-photo-2608519.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"), filename: "mohamedcard.png", content_type: 'image/png')
 assetsMohamed.save!
 
-assetsSunyu = PortfolioAsset.new(user_id: sunyu.id)
+assetsSunyu = PortfolioAsset.new(user_id: sunyu.id, video_url: ["47360546", "18554749", "239492916","110032662", "58957794", "287060201"])
 assetsSunyu.photos.attach(io: URI.open("https://images.pexels.com/photos/3768221/pexels-photo-3768221.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"), filename: "sunyucard.png", content_type: 'image/png')
 assetsSunyu.save!
 
