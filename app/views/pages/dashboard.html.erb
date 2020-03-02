@@ -105,19 +105,18 @@
       <div class="container dashdo" style="background-color: black;">
         <h1>My Collaborations</h1>
       </div>
-
-
-            <% num = 1%>
-            <% @user.shotlists.each  do |shotlist|%>
-            <div class="dashdo">
+      <% num = 1%>
+        <% @user.shotlists.each  do |shotlist|%>
+          <div class="dashdo">
+            <hr>
+              <h1>PROJECT#<%=num%></h1>
               <hr>
-                <h1>PROJECT#<%=num%></h1>
-                <hr>
                 <% num += 1 %>
-                  <h3>Title: <%=shotlist.title%></h3>
-                  <p>Description: <%= shotlist.description%></p>
+
+                <h3>Title: <%=shotlist.title%></h3>
+                <p>Description: <%= shotlist.description%></p>
                 <hr>
-                  <% shotlist.shots.each do |shot| %>
+                <% shotlist.shots.each do |shot| %>
                   <div class="row">
                   <div class="col">
                     <h3>Details of the scene</h3>
@@ -132,9 +131,23 @@
               <div class="col">
                 <h3>Status</h3>
                 <hr>
+
+                <hr>
               </div>
                 <% end %>
                 </div>
+                     <div class="tags">Tags:
+                      <% shotlist.shotlist_tag_list.each do |tag| %>
+                          <%= link_to tag, results_path(tag: tag), class: ".btn-tag-result" %>
+                        <% end %></div>
+                     <div class="search-form-control form-inline form-group align-items-center">
+                  <%= form_tag results_path, method: :get do %>
+                    <%= hidden_field_tag(:shotlist_tag_list, shotlist.shotlist_tag_list) %>
+
+                    <%= submit_tag "Find matches", class: "btn btn-search" %>
+
+                  <% end %>
+                 </div>
             </div>
               <% end %>
 

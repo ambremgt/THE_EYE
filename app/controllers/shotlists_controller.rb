@@ -20,6 +20,8 @@ class ShotlistsController < ApplicationController
   def show
   end
 
+  def
+
   def destroy
     @shotlist.destroy
     redirect_to dashboard_path(@shotlist.user)
@@ -32,7 +34,7 @@ class ShotlistsController < ApplicationController
   end
 
   def shotlist_params
-    params.require(:shotlist).permit(:description, :title)
+    params.require(:shotlist).permit(:description, :title, shotlist_tag_list: [])
   end
 end
 
