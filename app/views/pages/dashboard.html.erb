@@ -7,15 +7,10 @@
       <h2 id="hello" class="animated delay-1s fadeInDown">Hello</h2>
 
       <h1 id="name_user" class="animated delay-5s fadeInUp"><%= current_user.first_name%>,</h1>
-      <% if current_user.portfolio_assets %>
-        <% current_user.portfolio_assets.each do |asset| %>
-          <% asset.photos.each do |photo| %>
-            <%= cl_image_tag photo.key, height: 300, width: 250, crop: :fill %>
-          <% end %>
-        <% end %>
-      <% end %>
-      <div class="col-lg-4 dashboard-box" style="background-color: #ff4c54;">
-              <img style="width:100px; position: absolute;bottom: 20px;" src="https://cdn.dribbble.com/users/493580/screenshots/9836409/media/7f4aa9eec8d1c4f23f4dabb17826b0bf.gif" alt="">
+      <h3 style="position:absolute;top:55vh;left:5vw;">Collaborations</h3>
+
+      <div class="col-lg-4 dashboard-box" id="idboxdash" style="background-color: #5464f7;">
+              <!-- <img style="width:100px; position: absolute;bottom: 20px; background-color: #5464f7;" src="https://cdn.dribbble.com/users/493580/screenshots/9836409/media/7f4aa9eec8d1c4f23f4dabb17826b0bf.gif" alt=""> -->
               <i class="fas fa-user-friends" style="color: white; position: absolute; top: 30px; left: 20px;"></i>
               <h3 style="color: white; margin-left: 20px;"><%= current_user.first_name %> <%= current_user.last_name %></h3>
               <p style=" font-style: italic; color: white;"><%= current_user.city %></p>
@@ -31,22 +26,18 @@
   </div>
 
 
-      <ul class="nav nav-tabs" style="text-decoration: none;">
-    <li class="active"><a class="btn btn-navbar2-transparent" data-toggle="tab" href="#profile" style="font-weight:500;">My profile</a></li>
-    <li><a data-toggle="tab" class="btn btn-navbar2" href="#collaboration" style="font-weight:500;">My collaborations</a></li>
-  </ul>
-
-      <% num = 1%>
-        <% @user.shotlists.each  do |shotlist|%>
+      <% num = @user.shotlists.length %>
+        <% @user.shotlists.reverse_each  do |shotlist|%>
           <div class="dashdo">
             <hr>
             <h1>PROJECT#<%=num%></h1>
             <hr>
-            <% num += 1 %>
+
 
             <h3>Title: <%=shotlist.title%></h3>
             <p>Description: <%= shotlist.description%></p>
             <hr>
+            <% num -= 1 %>
             <% shotlist.shots.each do |shot| %>
               <div class="row">
                 <div class="col">
