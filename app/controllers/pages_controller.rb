@@ -19,11 +19,13 @@ class PagesController < ApplicationController
     elsif params[:tag].present?
       @filmmakers = User.tagged_with(params[:tag])
     elsif params[:shotlist_tag_list].present?
+      @flimmakers = User.tagged_with(params[:shotlist_tag_list], :any => true)
       # todo: show all filmmakers whose user tags include at least one shotlist tag
-      # @project_tags = Shotlist.tagged_with(params[:shotlist_tags])
-      #@filmmakers = User.tagged_with(@project_tags)
+
+
+
     end
-    raise
+
   end
 
   private
