@@ -36,26 +36,26 @@
 
 
 
-            <h2 class="line2 animated fadeInRight d-none">Title: <%=shotlist.title%></h2>
-            <p class="line2 animated fadeInRight d-none">Description: <%= shotlist.description%></p>
-            <hr class="line2 animated fadeInLeft d-none">
+            <h2 class="line2 animated slideInRight">Title: <%=shotlist.title%></h2>
+            <p class="line2 animated slideInRight">Description: <%= shotlist.description%></p>
+            <hr class="line2 animated fadeInLeft">
             <% num -= 1 %>
 
             <% shotlist.shots.each do |shot| %>
             <% if shot %>
                 <div class="row">
                   <div class="col">
-                    <h2 class="line2 animated fadeInRight d-none">Details of the scene</h2>
-                    <h3 class="line2 animated fadeInRight d-none">Description: <%= shot.description %></h3>
-                    <p class="line2 animated fadeInRight d-none">Angle: <%= shot.angle %></p>
-                    <p class="line2 animated fadeInRight d-none">Shote size: <%= shot.shot_size %></p>
-                    <p class="line2 animated fadeInRight d-none">Movement: <%= shot.movement %></p>
-                    <p class="line2 animated fadeInRight d-none">Equipment: <%= shot.equipment %></p>
+                    <h2 class="line2 animated fadeInRight">Details of the scene</h2>
+                    <h3 class="line2 animated fadeInRight">Description: <%= shot.description %></h3>
+                    <p class="line2 animated fadeInRight">Angle: <%= shot.angle %></p>
+                    <p class="line2 animated fadeInRight">Shote size: <%= shot.shot_size %></p>
+                    <p class="line2 animated fadeInRight">Movement: <%= shot.movement %></p>
+                    <p class="line2 animated fadeInRight">Equipment: <%= shot.equipment %></p>
                   </div>
 
 
                   <div class="col">
-                    <h3 class="line2 animated fadeInRight d-none" >Status</h3>
+                    <h3 class="line2 animated fadeInRight" >Status</h3>
 
                   </div>
                   <% end %>
@@ -68,7 +68,7 @@
                         <%= form_tag results_path, method: :get do %>
                           <%= hidden_field_tag(:shotlist_tag_list, shotlist.shotlist_tag_list) %>
 
-                          <%= submit_tag "Find matches", class: "btn btn-navbar2 line2 animated fadeInRight d-none" %>
+                          <%= submit_tag "Find matches", class: "btn btn-navbar2 line2 animated fadeInRight" %>
 
                     <% end %>
                     </div>

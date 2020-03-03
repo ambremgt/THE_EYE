@@ -190,6 +190,14 @@ padding-left:0;
 .line_dashboard{
   justify-content: space-between;
 }
+.line2{
+  display:none;
+  transition: display 1s;
+}
+.line2appear{
+  display:block;
+}
+
 // .dashboard-projet h2 {
 //   color: white;
 // }
