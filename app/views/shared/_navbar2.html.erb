@@ -20,24 +20,17 @@
           <%= link_to "Dashboard", "/dashboard", class: "btn btn-navbar2-transparent" %>
         </li>
 
+        <%# Notification center li %>
         <li class="nav-item" id="user-channel" data-user-id="<%= current_user.id %>">
-
           <div id="notif-counter" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
-
-            <i class="far fa-bell fa-lg nav-icon"></i>
 
             <% if (current_user.unread_messages_hash.values.sum) > 0 %>
               <span class="msg-number"><%= current_user.unread_messages_hash.values.sum %></span>
             <% end %>
+            <i class="far fa-bell fa-lg nav-icon"></i>
           </div>
-
-        <li class="nav-item">
-          <%= link_to "", destroy_user_session_path, method: :delete, class: "fas fa-user fa-lg nav-icon" %>
-        </li>
-
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="notif-counter">
-
+          <div class="dropdown-menu dropdown-menu-right notification-link" aria-labelledby="notif-counter">
             <% current_user.unread_messages_hash.select { |k, v| v != 0 }.each do |k, v| %>
               <% selected_chatroom = Chatroom.find(k) %>
                 <% other_chatter = current_user.other_chatter?(selected_chatroom) %>
@@ -47,22 +40,25 @@
                         <% if other_chatter.photo.present? %>
                           <%= cl_image_tag other_chatter.photo.key, height: 40, width: 30, crop: :fill, class: "card-trip-user avatar-bordered" %>
                         <% end %>
-
                         <div class="notification-content">
                           <p>
-                            <%= other_chatter.first_name %>
+                            <%= other_chatter.first_name %> <%= other_chatter.last_name %>
                             <small>
-                              <%= selected_chatroom.messages.last.created_at.strftime("%b %e | %l:%M%p") %>
+                              <%= selected_chatroom.messages.last.created_at.strftime("%b %e, %l:%M%p") %>
                             </small>
                           </p>
-                          <p><%= selected_chatroom.messages.last.content %></p>
+                          <p class="content"><%= selected_chatroom.messages.last.content %></p>
                         </div>
                       </div>
                     <% end %>
                 <% end %>
               <% end %>
             </div>
-          </li>
+        </li>
+        <%# END Notification center li %>
+         <li class="nav-item">
+          <%= link_to "", destroy_user_session_path, method: :delete, class: "fas fa-user fa-lg nav-icon" %>
+        </li>
 
       <% else %>
         <li class="nav-item" style="margin-right: 20px;">
