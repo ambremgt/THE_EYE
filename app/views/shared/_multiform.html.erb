@@ -1,5 +1,4 @@
 <!-- MultiStep Form -->
-<div class="container" style="margin-top: 100px">
   <div class="row align-items-center m-0">
     <div class="col text-center leftform bg-light">
 
@@ -42,17 +41,17 @@
         <hr>
 
         <fieldset class="blocktoIt">
-          <h2 class="fs-subtitle">Give your film a title</h2>
+          <h1 class="fs-subtitle">Give your film a title</h1>
           <%= f.input :title,label: false, placeholder: "Wayne's World seems a cool title, isn't it?", class: "inp" %>
         </fieldset>
 
         <fieldset class="blocktoIt d-none">
-          <h2 class="fs-subtitle">What is your film about?</h2>
+          <h1 class="fs-subtitle">What is your film about?</h1>
           <%= f.input :description, label: false, placeholder: "It's party time excellent", class: "inp" %>
         </fieldset>
 
         <fieldset class="blocktoIt d-none">
-          <h2 class="fs-subtitle">Select tags that correspond to your project:</h2>
+          <h1 class="fs-subtitle">Select tags that correspond to your project:</h1>
 
           <fieldset class="form-group check_boxes optional shotlist_tag_list">
             <legend class="col-form-label pt-0" style="display: none">Tags</legend>
@@ -67,9 +66,10 @@
           </fieldset>
 
           <hr>
-          <button type="button" id="prev" class="d-none btn btn-outline-dark btn-lg" >Previous</button>
-          <button type="button" id="next" class="btn btn-search">Next</button>
-          <%= f.button :submit ,"next", id: "sub", class: "submit btn btn-search d-none"%>
+
+          <button type="button" id="prev" class="d-none btn btn-navbar2-transparent btn-lg" >Previous</button>
+          <button type="button" id="next" class="btn btn-navbar2">Next</button>
+          <%= f.button :submit ,"next", id: "sub", class: "submit btn btn-navbar2 d-none"%>
 
           <% end %>
 
@@ -78,7 +78,7 @@
       </div>
     </div>
   </div>
-</div>
+
 <!-- /.MultiStep Form -->
 
 
