@@ -1,13 +1,13 @@
 
 
 
-
+<img style=" height:20vh;position:sticky;top:55vh;margin-left:0;" src="https://thumbs.gfycat.com/ApprehensiveHorribleHorsemouse.webp" alt="scroll down">
     <div class="baner_dash">
 
       <h2 id="hello" class="animated delay-1s fadeInDown">Hello</h2>
 
       <h1 id="name_user" class="animated delay-5s fadeInUp"><%= current_user.first_name%>,</h1>
-      <h3 style="position:absolute;top:55vh;left:5vw;">Collaborations</h3>
+
 
       <div class="col-lg-4 dashboard-box" id="idboxdash">
               <!-- <img style="width:100px; position: absolute;bottom: 20px; background-color: #5464f7;" src="https://cdn.dribbble.com/users/493580/screenshots/9836409/media/7f4aa9eec8d1c4f23f4dabb17826b0bf.gif" alt=""> -->
@@ -36,30 +36,22 @@
 
 
 
-            <h2 class="line2"><%=shotlist.title.upcase%></h2>
-            <p class="line2"><%= shotlist.description.capitalize%></p>
+            <h2 class="line2 mt-5"><%=shotlist.title.upcase%></h2>
+            <p class="line2 mt-5"><%= shotlist.description.capitalize%></p>
             <hr class="lineblock">
             <% num -= 1 %>
 
             <% shotlist.shots.each do |shot| %>
             <% if shot %>
+            <div class="description_sticky">
                 <div class="row">
                   <div class="col">
-                    <h2 class="line2">Details of the scene</h2>
-                    <h3 class="line2">Description: <%= shot.description %></h3>
-                    <p class="line2">Angle: <%= shot.angle %></p>
-                    <p class="line2">Shote size: <%= shot.shot_size %></p>
-                    <p class="line2">Movement: <%= shot.movement %></p>
-                    <p class="line2">Equipment: <%= shot.equipment %></p>
-                  </div>
-
-
-                  <div class="col">
-                    <h3 class="line2" >Status</h3>
-
-                  </div>
-                  <% end %>
-                  <div class="col">
+                    <h2 class="line2 mt-5">Details of the scene</h2>
+                    <h3 class="line2 mt-5">Description:  <%= shot.description %></h3>
+                    <h4 class="line2 mt-5">Angle:  <%= shot.angle %></h4>
+                    <h4 class="line2 mt-5">Shote size:  <%= shot.shot_size %></h4>
+                    <h4 class="line2 mt-5">Movement:  <%= shot.movement %></h4>
+                    <h4 class="line2 mt-5">Equipment:  <%= shot.equipment %></h4>
                     <div class="tags">
                       <% shotlist.shotlist_tag_list.each do |tag| %>
                           <%= link_to tag, results_path(tag: tag) %>
@@ -68,15 +60,42 @@
                         <%= form_tag results_path, method: :get do %>
                           <%= hidden_field_tag(:shotlist_tag_list, shotlist.shotlist_tag_list) %>
 
-                          <%= submit_tag "Find matches", class: "btn btn-navbar2 line2" %>
+                          <%= submit_tag "Find matches", class: "btn btn-navbar2 line2 mt-5" %>
 
                     <% end %>
                     </div>
                     </div>
+                  </div>
+
+
+
+                  <% end %>
+                  <div class="col">
+                    <div class="tile">
+            <img src='https://images.unsplash.com/photo-1464054313797-e27fb58e90a9?dpr=1&auto=format&crop=entropy&fit=crop&w=1500&h=996&q=80'/>
+            <div class="text">
+            <h1><%=shotlist.title.upcase%></h1>
+            <h2 class="animate-text"><%= shotlist.description.capitalize%></h2>
+            <p class="animate-text"><%= shot.description %>, Angle: <%= shot.angle %>, Shote size: <%= shot.shot_size %>, Movement: <%= shot.movement %>, Equipment: <%= shot.equipment %></p>
+          <div class="dots">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            </div>
+           </div>
+
+
                  </div>
+                 <div class="col">
+                    <h3 class="line2" >Status</h3>
+
+                  </div>
+                </div>
               </div>
 
             <% end %>
+
           </div>
 
         <% end %>

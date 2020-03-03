@@ -109,13 +109,14 @@
 .btn-navbar2{
   background-color: #5464f7;
   color: white!important;
-  font-weight: 600;
-  font-size: 20px;
-  padding-right: 60px;
-  padding-left: 60px;
+  font-weight: 440;
+  font-size: 13px;
+  padding-right: 50px;
+  padding-left: 50px;
   padding-top: 7px;
   padding-bottom: 7px;
-  margin: 8px;
+  margin: 10px;
+  margin-right: 23px;
   border-radius: 3px;
   border: solid 1px #5464f7;
   box-sizing:border-box;
@@ -127,13 +128,14 @@
   background-color: transparent;
   transition: 0.5s;
   border: solid 1px #5464f7;
+  transition: 0.5s;
   text-decoration: none;
 }
 
 
 .btn-navbar2-transparent {
   color: black;
-  font-weight: 400;
+  font-weight: 440;
   font-size: 13px;
   padding-right: 25px;
   padding-left: 25px;

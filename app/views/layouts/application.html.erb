@@ -10,8 +10,9 @@
   </head>
 
   <body>
-    <% if (params[:action] == "home") || (params[:action] == "new")  %>
+    <% if (params[:action] == "home") %>
     <%= render 'shared/navbar' %>
+    <% elsif (params[:action] == "new")%>
     <% else %>
     <%= render 'shared/navbar2' %>
     <% end %>
