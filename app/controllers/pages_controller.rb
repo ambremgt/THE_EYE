@@ -13,7 +13,6 @@ class PagesController < ApplicationController
 
   def results
 
-
     if params[:query].present?
 
       sql_query = "city ILIKE :query OR biography ILIKE :query"
@@ -23,17 +22,17 @@ class PagesController < ApplicationController
 
       @filmmakers = User.tagged_with(params[:tag])
 
+    elsif params[:shotlist_tag_list].present? && params[:location].present?
+      @filmmakers = User.where("city ILIKE ?", "%#{params[:location]}%").tagged_with(params[:shotlist_tag_list].downcase.split, :any => true)
+
     elsif params[:shotlist_tag_list].present?
       # show all filmmakers whose user tags include at least one shotlist tag
       @filmmakers = User.tagged_with(params[:shotlist_tag_list].downcase.split, :any => true)
 
     elsif params[:location].present?
+      #@filmmakers = User.where(city: params[:location])
+      @filmmakers = User.where("city ILIKE ?", "%#{params[:location]}%")
 
-      sql_query = "city ILIKE :location"
-      @filmmakers = User.where(sql_query, location: "%#{params[:location]}%")
-
-    elsif params[:location].present? && params[:shotlist_tag_list].present?
-      @filmmakers = User.tagged_with(params[:shotlist_tag_list].downcase.split).filter_by_city(params[:location])
 
     else
       @filmmakers = User.all
