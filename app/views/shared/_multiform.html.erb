@@ -1,15 +1,17 @@
 <!-- MultiStep Form -->
-  <div class="row align-items-center m-0">
-    <div class="col text-center leftform bg-light">
+  <div class="row d-flex m-0 align-items-center">
+    <div class="col leftform align-items-center bg-light">
 
       <div  class="blocktoPic">
-        <h3 class="fs-title">Create your shotlist</h3>
-        <p class="text-center text-muted">A shot list is a detailed list of every camera shot that needs to be captured in a scene of a video production. Created by the director and the cinematographer during preproduction, it outlines the precise specifics of every shot—such as the camera, shot size, and shot type—so the cinematographer and assistant director know exactly what needs to be captured to tell the story visually.</p>
-        <p class="text-center text-muted">It determines what equipment the camera crew needs, what lighting setups need to be created, call times for the actors, and what locations, set pieces, and props need to be ready.</p>
+        <h2 class="fs-title">Create your shotlist</h2>
+        <hr style="background-color: lightgrey">
+        <p class="text-muted">A shot list is a detailed list of every camera shot that needs to be captured in a scene of a video production. Created by the director and the cinematographer during preproduction, it outlines the precise specifics of every shot—such as the camera, shot size, and shot type—so the cinematographer and assistant director know exactly what needs to be captured to tell the story visually.</p>
+        <p class="text-muted">It determines what equipment the camera crew needs, what lighting setups need to be created, call times for the actors, and what locations, set pieces, and props need to be ready.</p>
       </div>
 
       <div class="blocktoPic d-none">
         <h2 class="fs-title">Create your shotlist</h2>
+        <hr style="background-color: lightgrey">
         <p class="text-center text-muted">A shot list is a detailed list of every camera shot that needs to be captured in a scene of a video production. Created by the director and the cinematographer during preproduction, it outlines the precise specifics of every shot—such as the camera, shot size, and shot type—so the cinematographer and assistant director know exactly what needs to be captured to tell the story visually.</p>
         <p class="text-center text-muted">It determines what equipment the camera crew needs, what lighting setups need to be created, call times for the actors, and what locations, set pieces, and props need to be ready.</p>
 
@@ -17,6 +19,7 @@
 
       <div class="blocktoPic d-none">
         <h2 class="fs-title">Create your shotlist</h2>
+        <hr style="background-color: lightgrey">
         <p class="text-center  text-muted">A shot list is a detailed list of every camera shot that needs to be captured in a scene of a video production. Created by the director and the cinematographer during preproduction, it outlines the precise specifics of every shot—such as the camera, shot size, and shot type—so the cinematographer and assistant director know exactly what needs to be captured to tell the story visually.</p>
         <p class="text-center text-muted">It determines what equipment the camera crew needs, what lighting setups need to be created, call times for the actors, and what locations, set pieces, and props need to be ready.</p>
 
@@ -38,7 +41,7 @@
         <%= simple_form_for(@shotlist) do |f| %>
         <%= f.error_notification %>
         <!-- fieldsets -->
-        <hr>
+        <hr style="background-color: lightgrey">
 
         <fieldset class="blocktoIt">
           <h1 class="fs-subtitle">Give your film a title</h1>
@@ -53,19 +56,100 @@
         <fieldset class="blocktoIt d-none">
           <h1 class="fs-subtitle">Select tags that correspond to your project:</h1>
 
-          <fieldset class="form-group check_boxes optional shotlist_tag_list">
-            <legend class="col-form-label pt-0" style="display: none">Tags</legend>
+            <fieldset class="form-group check_boxes optional shotlist_shotlist_tag_list">
+              <legend class="col-form-label pt-0">List of Tags</legend>
+                <div class="category-choices">
+                  <div class="container mr-5">
 
-              <div class="category-choices">
-                <div class="row d-flex justify-content-between">
-                  <%= f.input :shotlist_tag_list, as: :check_boxes, collection: Shotlist::TAGS %>
+                    <div class="row d-flex-inline align-items-center justify-content-between pr-5">
+                      <input type="hidden" name="shotlist[shotlist_tag_list][]" value="">
+                      <div class="col-2">
+
+                      <div class="form-check">
+                        <input class="form-check-input check_boxes optional" type="checkbox" value="landscapes" name="shotlist[shotlist_tag_list][]" id="shotlist_shotlist_tag_list_landscapes" hidden>
+                        <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shotlist_shotlist_tag_list_landscapes">landscapes</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input check_boxes optional" type="checkbox" value="seascapes" name="shotlist[shotlist_tag_list][]" id="shotlist_shotlist_tag_list_seascapes" hidden>
+                        <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shotlist_shotlist_tag_list_seascapes">seascapes</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input check_boxes optional" type="checkbox" value="architecture" name="shotlist[shotlist_tag_list][]" id="shotlist_shotlist_tag_list_architecture" hidden>
+                        <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shotlist_shotlist_tag_list_architecture">architecture</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input check_boxes optional" type="checkbox" value="Timelapse" name="shotlist[shotlist_tag_list][]" id="shotlist_shotlist_tag_list_timelapse" hidden>
+                        <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shotlist_shotlist_tag_list_timelapse">Timelapse</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input check_boxes optional" type="checkbox" value="Macro" name="shotlist[shotlist_tag_list][]" id="shotlist_shotlist_tag_list_macro" hidden>
+                        <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shotlist_shotlist_tag_list_macro">Macro</label>
+                      </div>
+                        <div class="form-check">
+                          <input class="form-check-input check_boxes optional" type="checkbox" value="StopMotion" name="shotlist[shotlist_tag_list][]" id="shotlist_shotlist_tag_list_stopmotion" hidden>
+                          <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shotlist_shotlist_tag_list_stopmotion">StopMotion</label>
+                        </div>
+                        </div>
+                        <div class="col-2">
+                        <div class="form-check">
+                          <input class="form-check-input check_boxes optional" type="checkbox" value="Drone" name="shotlist[shotlist_tag_list][]" id="shotlist_shotlist_tag_list_drone" hidden>
+                          <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shotlist_shotlist_tag_list_drone">Drone</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input check_boxes optional" type="checkbox" value="Trans-trav" name="shotlist[shotlist_tag_list][]" id="shotlist_shotlist_tag_list_trans-trav" hidden>
+                          <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shotlist_shotlist_tag_list_trans-trav">Transtrav</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input check_boxes optional" type="checkbox" value="Urban" name="shotlist[shotlist_tag_list][]" id="shotlist_shotlist_tag_list_urban" hidden>
+                          <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shotlist_shotlist_tag_list_urban">Urban</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input check_boxes optional" type="checkbox" value="Street" name="shotlist[shotlist_tag_list][]" id="shotlist_shotlist_tag_list_street" hidden>
+                          <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shotlist_shotlist_tag_list_street">Street</label>
+                        </div>
+
+                      <div class="form-check">
+                        <input class="form-check-input check_boxes optional" type="checkbox" value="City" name="shotlist[shotlist_tag_list][]" id="shotlist_shotlist_tag_list_city" hidden>
+                        <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shotlist_shotlist_tag_list_city">City</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input check_boxes optional" type="checkbox" value="Mountains" name="shotlist[shotlist_tag_list][]" id="shotlist_shotlist_tag_list_mountains" hidden>
+                        <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shotlist_shotlist_tag_list_mountains">Mountains</label>
+                      </div>
+                       </div>
+                      <div class="col-2">
+                      <div class="form-check">
+                        <input class="form-check-input check_boxes optional" type="checkbox" value="Nature" name="shotlist[shotlist_tag_list][]" id="shotlist_shotlist_tag_list_nature" hidden>
+                        <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shotlist_shotlist_tag_list_nature">Nature</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input check_boxes optional" type="checkbox" value="GoPro" name="shotlist[shotlist_tag_list][]" id="shotlist_shotlist_tag_list_gopro" hidden>
+                        <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shotlist_shotlist_tag_list_gopro">GoPro</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input check_boxes optional" type="checkbox" value="4KVideoCamera" name="shotlist[shotlist_tag_list][]" id="shotlist_shotlist_tag_list_4kvideocamera" hidden>
+                        <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shotlist_shotlist_tag_list_4kvideocamera">4KVideoCamera</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input check_boxes optional" type="checkbox" value="Sliders" name="shotlist[shotlist_tag_list][]" id="shotlist_shotlist_tag_list_sliders" hidden>
+                        <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shotlist_shotlist_tag_list_sliders">Sliders</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input check_boxes optional" type="checkbox" value="Shotgun" name="shotlist[shotlist_tag_list][]" id="shotlist_shotlist_tag_list_shotgun" hidden>
+                        <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shotlist_shotlist_tag_list_shotgun">Shotgun</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input check_boxes optional" type="checkbox" value="Documentary" name="shotlist[shotlist_tag_list][]" id="shotlist_shotlist_tag_list_documentary" hidden>
+                        <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shotlist_shotlist_tag_list_documentary">Documentary</label>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-
             </fieldset>
           </fieldset>
 
-          <hr>
+          <hr style="background-color: lightgrey">
 
           <button type="button" id="prev" class="d-none btn btn-navbar2-transparent btn-lg" >Previous</button>
           <button type="button" id="next" class="btn btn-navbar2">Next</button>
