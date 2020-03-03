@@ -42,7 +42,7 @@
             <% num -= 1 %>
 
             <% shotlist.shots.each do |shot| %>
-            <% if shot %>
+              <% if shot %>
                 <div class="row">
                   <div class="col">
 
@@ -60,22 +60,23 @@
 
                   <div class="col">
                     <h3 class="line2 animated fadeInRight" >Status</h3>
+                                      <div class="search-form-control form-inline form-group align-items-center">
+                        <%= form_tag results_path, method: :get do %>
+                          <%= hidden_field_tag(:shotlist_tag_list, shotlist.shotlist_tag_list) %>
+                          <%= hidden_field_tag(:location, shot.location) %>
+                          <%= submit_tag "Find matches", class: "btn btn-navbar2 line2 animated fadeInRight" %>
 
+                    <% end %>
+                    </div>
                   </div>
                   <% end %>
+
                   <div class="col">
                     <div class="tags">
                       <% shotlist.shotlist_tag_list.each do |tag| %>
                           <%= link_to tag, results_path(tag: tag) %>
                       <% end %>
-                       <div class="search-form-control form-inline form-group align-items-center">
-                        <%= form_tag results_path, method: :get do %>
-                          <%= hidden_field_tag(:shotlist_tag_list, shotlist.shotlist_tag_list) %>
 
-                          <%= submit_tag "Find matches", class: "btn btn-navbar2 line2 animated fadeInRight" %>
-
-                    <% end %>
-                    </div>
                     </div>
                  </div>
               </div>
