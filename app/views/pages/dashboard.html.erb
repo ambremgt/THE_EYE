@@ -45,8 +45,12 @@
             <% if shot %>
                 <div class="row">
                   <div class="col">
+
                     <h2 class="line2 animated fadeInRight">Details of the scene</h2>
                     <h3 class="line2 animated fadeInRight">Description: <%= shot.description %></h3>
+                     <% if shot.location.present? %>
+                      <p class="line2 animated fadeInRight">Location: <%= shot.location %></p>
+                    <% end %>
                     <p class="line2 animated fadeInRight">Angle: <%= shot.angle %></p>
                     <p class="line2 animated fadeInRight">Shote size: <%= shot.shot_size %></p>
                     <p class="line2 animated fadeInRight">Movement: <%= shot.movement %></p>
