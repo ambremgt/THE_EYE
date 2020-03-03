@@ -40,16 +40,14 @@
     <% if @filmmaker.portfolio_assets %>
         <% @filmmaker.portfolio_assets.each do |asset| %>
         <% if asset.video_url.present? %>
-          <% JSON.parse(asset.video_url).each do |id| %>
-            <div class="col-4" style="margin-bottom: 10px;">
-              <div class="group">
-                <iframe src="https://player.vimeo.com/video/<%= id %>?autoplay=1&autopause=0&muted=1&title=0&byline=0&portrait=0&controls=0&loop=1" width="450" height="250" preload="auto" frameborder="0" allowfullscreen></iframe>
-                <div class="poster" style="display:flex; background-image: url(https://i.vimeocdn.com/video/116825470_450x250.webp);">
-                  <i class="far fa-play-circle fa-3x" style="color:white; margin: auto; "></i>
-                </div>
-             </div>
+          <div class="col-4" style="margin-bottom: 10px;">
+            <div class="group">
+              <iframe src="https://player.vimeo.com/video/<%= asset.video_url %>?autoplay=1&autopause=0&muted=1&title=0&byline=0&portrait=0&controls=0&loop=1" width="450" height="250" preload="auto" frameborder="0" allowfullscreen></iframe>
+              <div class="poster" style="display:flex; background-image: url('<%= cl_image_path asset.poster_picture.key, height: 250, width: 450, crop: :fill %>');">
+                <i class="far fa-play-circle fa-3x" style="color:white; margin: auto; "></i>
+              </div>
             </div>
-          <% end %>
+          </div>
         <% end %>
       <% end %>
     <% end %>
