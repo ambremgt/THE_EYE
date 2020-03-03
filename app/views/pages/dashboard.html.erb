@@ -24,8 +24,8 @@
               <i class="fas fa-video" style="position: absolute;top: 154px;left: 300px;color: #5464f7;"></i>
               <p>Rating: 4,6</p>
               <i class="fas fa-star" style="position: absolute;top: 197px;left: 300px;color: #5464f7;"></i>
-        </div>
-  </div>
+      </div>
+    </div>
 
 
       <% num = @user.shotlists.length %>
@@ -53,24 +53,22 @@
 
             <% shotlist.shots.each do |shot| %>
 
-            <% if shot %>
-            <div class="description_sticky">
-                <div class="row">
-                  <div class="col">
-                    <h2 class="line2 mt-5">Details of the scene</h2>
-                    <h3 class="line2 mt-5">Description:  <%= shot.description %></h3>
-                    <h4 class="line2 mt-5">Angle:  <%= shot.angle %></h4>
-                    <h4 class="line2 mt-5">Shote size:  <%= shot.shot_size %></h4>
-                    <h4 class="line2 mt-5">Movement:  <%= shot.movement %></h4>
-                    <h4 class="line2 mt-5">Equipment:  <%= shot.equipment %></h4>
+              <% if shot %>
+                <div class="description_sticky">
+                  <div class="row">
+                    <div class="col">
+                      <h2 class="line2 mt-5">Details of the scene</h2>
+                      <h3 class="line2 mt-5">Description:  <%= shot.description %></h3>
+                      <h4 class="line2 mt-5">Angle:  <%= shot.angle %></h4>
+                      <h4 class="line2 mt-5">Shote size:  <%= shot.shot_size %></h4>
+                      <h4 class="line2 mt-5">Movement:  <%= shot.movement %></h4>
+                      <h4 class="line2 mt-5">Equipment:  <%= shot.equipment %></h4>
 
                     <div class="tags">
                       <% shotlist.shotlist_tag_list.each do |tag| %>
                           <%= link_to tag, results_path(tag: tag) %>
                       <% end %>
-
-
-                          <%= submit_tag "Find matches", class: "btn btn-navbar2 line2 mt-5" %>
+                    <%= submit_tag "Find matches", class: "btn btn-navbar2 line2 mt-5" %>
 
 
                     <% end %>
@@ -106,8 +104,6 @@
               </div>
 
             <% end %>
-
-          </div>
 
 
 
