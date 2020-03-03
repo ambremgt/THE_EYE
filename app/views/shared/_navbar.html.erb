@@ -18,30 +18,27 @@
           <%= link_to "Dashboard", "/dashboard", class: "btn btn-navbar2-transparent" %>
         </li>
 
-        <li class="nav-item" id="user-channel" data-user-id="<%= current_user.id %>">
 
+
+
+
+
+
+        <%# Notification center li %>
+        <li class="nav-item" id="user-channel" data-user-id="<%= current_user.id %>">
           <div id="notif-counter" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
-
-            <i class="far fa-bell fa-lg nav-icon"></i>
 
             <% if (current_user.unread_messages_hash.values.sum) > 0 %>
               <span class="msg-number"><%= current_user.unread_messages_hash.values.sum %></span>
             <% end %>
+            <i class="far fa-bell fa-lg nav-icon"></i>
           </div>
-
-        <li class="nav-item">
-          <%= link_to "", destroy_user_session_path, method: :delete, class: "fas fa-user fa-lg nav-icon" %>
-        </li>
-
           <div class="dropdown-menu dropdown-menu-right notification-link" aria-labelledby="notif-counter">
-
             <% current_user.unread_messages_hash.select { |k, v| v != 0 }.each do |k, v| %>
               <% selected_chatroom = Chatroom.find(k) %>
                 <% other_chatter = current_user.other_chatter?(selected_chatroom) %>
-
                   <%= link_to chatroom_path(k) do %>
-
                     <% if other_chatter.present? %>
                       <div class="notification">
                         <% if other_chatter.photo.present? %>
@@ -56,16 +53,23 @@
                           </p>
                           <p class="content"><%= selected_chatroom.messages.last.content %></p>
                         </div>
-
                       </div>
-
                     <% end %>
                 <% end %>
               <% end %>
             </div>
-          </li>
+        </li>
+        <%# END Notification center li %>
+        <li class="nav-item">
+          <%= link_to "", destroy_user_session_path, method: :delete, class: "fas fa-user fa-lg nav-icon" %>
+        </li>
 
-      <% else %>
+
+
+
+
+
+        <% else %>
         <li class="nav-item" style="margin-right: 20px;">
           <%= link_to "Find a filmmaker", "/", class: "btn nav-link-blue" %>
         </li>
