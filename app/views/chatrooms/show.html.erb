@@ -11,17 +11,17 @@
       <%= simple_form_for [ @chatroom, @message ], class: "form-inline" do |f| %>
         <%= f.input :content, label: false %>
 
-        <%= f.button :submit, "Send", class: "btn form-group btn-send" %>
-      <% end %>
+
+
       <div class="shotlist-dropdown">
         <% if current_user.shotlists.present? %>
       <div class="dropup show">
         <a class="btn-attach dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <small> Share a shotlist with <%= other_chatter.first_name %></small>
+          <small> Share a project with <%= other_chatter.first_name %></small>
         </a>
         <div class="dropdown-menu card-trip" aria-labelledby="dropdownMenuLink">
           <ul class="shotlist-dropdown-list">
-            <li>My shotlists:</li>
+            <li>My project:</li>
             <% @current_user.shotlists.each do |shotlist| %>
             <li><%= link_to shotlist.title, shotlist_path(shotlist), class: "shotlist-link" %></li>
           <% end %>
@@ -32,6 +32,12 @@
           <%= link_to("Create your first project", new_shotlist_path(@shotlist) , class: "btn btn-attach") %>
       <% end %>
       </div>
+
+
+        <%= f.button :submit, "Send", class: "btn form-group btn-send" %>
+      <% end %>
+
+
     </div>
   </div>
 

@@ -15,16 +15,20 @@
   padding-left: 110px;
 }
 .chatroom-input {
+    position: relative;
+    top: 60px;
   .shotlist-dropdown {
       border: 1px solid rgba(0, 0, 0, 0);
       margin-left: 15px;
       .btn-attach {
         font-size: 16px;
         border: solid 1px;
-        padding: 10px;
+        padding: 7px;
         border-radius: 4px;
         text-decoration: none;
         color: black;
+        position: relative;
+        top: 7px;
       }
       .btn-attach:hover {
         border: solid 1px;
@@ -78,13 +82,14 @@
     }
 }
 #messages {
+  height: 80vh;
   padding: 0 1rem;
   padding-top: 1rem;
   overflow: scroll;
   max-height: calc(90vh - 66px - 65px - 71px);
   display: flex;
   flex-direction: column;
-   flex-grow: 1;
+  flex-grow: 1;
 
 }
 
