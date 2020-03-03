@@ -24,8 +24,11 @@
         "<%= params[:tag] %>"
        <% elsif params[:shotlist_tag_list].present? %>
         "<%= params[:shotlist_tag_list] %>"
-    <% end %>
 
+      <% end %>
+      <% if params[:location].present? %>
+         in <%= params[:location] %>
+           <% end %>
     </p>
 
     <div class="row">
