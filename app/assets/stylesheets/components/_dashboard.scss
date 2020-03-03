@@ -179,15 +179,18 @@ padding-left:0;
   width:90vw;
 }
 .titlesticky{
-  border-bottom: 1px solid black;
-  border-top: 1px solid black;
+
   position: -webkit-sticky;
   position:sticky;
   top:7vh;
-  background-color:#5464f7;
-  color:white;
+  background-color:white;
+  padding:8px;
+  color:#5464f7;
   margin: none;
   z-index:2;
+  h1{
+    margin-left:5vw;
+  }
 }
 .description_sticky{
   position: -webkit-sticky;
@@ -210,6 +213,12 @@ padding-left:0;
 }
 .line2appear{
   visibility:visible;
+}
+.line2 h1, h2, h3, h4, p {
+  margin-left:5vw;
+}
+.line2 h1{
+  background-color:#5464f7;
 }
 
 // .dashboard-projet h2 {
