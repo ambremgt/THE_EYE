@@ -23,12 +23,7 @@
 .header-portfolio {
   width: 100%;
   display: block;
-  background-color: #bad0b8;
-  background-image: -webkit-linear-gradient(right, #312fab, #331133);
-  background-image: -moz-linear-gradient(right, #312fab, #331133);
-  background-image: -o-linear-gradient(right, #312fab, #331133);
-  background-image: -ms-linear-gradient(right, #312fab, #331133);
-  background-image: linear-gradient(right, #312fab, #331133);
+  background-image: -webkit-gradient(linear, right top, left top, from(#312fab), to(#25122d));
 }
 
 .contact {
