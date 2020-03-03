@@ -189,14 +189,27 @@ arthur.photo.attach(io: URI.open("https://images.pexels.com/photos/2379004/pexel
 arthur.interest_list.add(["Landscapes", "Urban", "Architecture", "Timelapse"])
 arthur.save!
 
-#Create 10 portfolioasset
-assetsMohamed = PortfolioAsset.new(user_id: mohamed.id, video_url: ["23237102", "156406155", "47311103"])
+assetsMohamed = PortfolioAsset.new(user_id: mohamed.id)
 assetsMohamed.photos.attach(io: URI.open("https://images.pexels.com/photos/2608519/pexels-photo-2608519.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"), filename: "mohamedcard.png", content_type: 'image/png')
 assetsMohamed.save!
 
-assetsSunyu = PortfolioAsset.new(user_id: sunyu.id, video_url: ["47360546", "18554749", "239492916","110032662", "58957794", "287060201"])
+
+
+assetsSunyu = PortfolioAsset.new(user_id: sunyu.id)
 assetsSunyu.photos.attach(io: URI.open("https://images.pexels.com/photos/3768221/pexels-photo-3768221.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"), filename: "sunyucard.png", content_type: 'image/png')
 assetsSunyu.save!
+
+assetsSunyu1 = PortfolioAsset.new(user_id: sunyu.id, video_url: "14352658")
+assetsSunyu1.poster_picture.attach(io: URI.open("https://i.vimeocdn.com/video/84084640_450x250.webp"), filename: "video1.png", content_type: 'image/png')
+assetsSunyu1.save!
+assetsSunyu2 = PortfolioAsset.new(user_id: sunyu.id, video_url: "18554749")
+assetsSunyu2.poster_picture.attach(io: URI.open("https://i.vimeocdn.com/video/116825470_450x250.webp"), filename: "video2.png", content_type: 'image/png')
+assetsSunyu2.save!
+assetsSunyu3 = PortfolioAsset.new(user_id: sunyu.id, video_url: "239492916")
+assetsSunyu3.poster_picture.attach(io: URI.open("https://i.vimeocdn.com/video/663890158_450x250.webp"), filename: "video3.png", content_type: 'image/png')
+assetsSunyu3.save!
+
+
 
 assetsMatheus = PortfolioAsset.new(user_id: matheus.id)
 assetsMatheus.photos.attach(io: URI.open("https://images.pexels.com/photos/1540983/pexels-photo-1540983.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"), filename: "matheuscard.png", content_type: 'image/png')
