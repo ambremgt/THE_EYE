@@ -59,35 +59,7 @@
 
               <div class="category-choices">
                 <div class="row d-flex justify-content-between">
-
-                  <input class="form-check-input check_boxes optional" type="checkbox" value="Pan/tilt" name="shotlist[shotlist_tag_list]" id="shotlist_shotlist_tag_list_landscapes" hidden>
-                  <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shotlist_shotlist_tag_list_landscapes">Landscapes</label>
-
-
-                  <input class="form-check-input check_boxes optional" type="checkbox" value="Crane shot" name="shotlist[shotlist_tag_list]" id="shotlist_shotlist_tag_list_seascapes" hidden>
-                  <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shotlist_shotlist_tag_list_seascapes">Seascapes</label>
-
-
-                  <input class="form-check-input check_boxes optional" type="checkbox" value="Zoom" name="shotlist[shotlist_tag_list]" id="shotlist_shotlist_tag_list_architecture" hidden>
-                  <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shotlist_shotlist_tag_list_architecture">Architecture</label>
-
-                  <input class="form-check-input check_boxes optional" type="checkbox" value="Random motion" name="shotlist[shotlist_tag_list]" id="shotlist_shotlist_tag_list_timelapse" hidden>
-                  <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shotlist_shotlist_tag_list_timelapse">Timelapse</label>
-
-
-                  <input class="form-check-input check_boxes optional" type="checkbox" value="360-degree motion" name="shotlist[shotlist_tag_list]" id="shotlist_shotlist_tag_list_macro" hidden>
-                  <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shotlist_shotlist_tag_list_macro">Macro</label>
-
-
-                  <input class="form-check-input check_boxes optional" type="checkbox" value="Compound motion" name="shotlist[shotlist_tag_list]" id="shotlist_shotlist_tag_list_stopmotion" hidden>
-                  <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shotlist_shotlist_tag_list_stopmotion">StopMotion</label>
-
-
-                  <input class="form-check-input check_boxes optional" type="checkbox" value="Dolly zoom" name="shotlist[shotlist_tag_list]" id="shotlist_shotlist_tag_list_drone" hidden>
-                  <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shotlist_shotlist_tag_list_drone">Drone</label>
-
-                  <input class="form-check-input check_boxes optional" type="checkbox" value="Dolly zoom" name="shotlist[shotlist_tag_list]" id="shotlist_shotlist_tag_list_trans-trav" hidden>
-                  <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shotlist_shotlist_tag_list_trans-trav">Trans-trav</label>
+                  <%= f.input :shotlist_tag_list, as: :check_boxes, collection: Shotlist::TAGS %>
                 </div>
               </div>
 
@@ -98,6 +70,7 @@
           <button type="button" id="prev" class="d-none btn btn-outline-dark btn-lg" >Previous</button>
           <button type="button" id="next" class="btn btn-search">Next</button>
           <%= f.button :submit ,"next", id: "sub", class: "submit btn btn-search d-none"%>
+
           <% end %>
 
         <!-- link to designify.me code snippets -->
