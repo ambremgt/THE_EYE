@@ -214,7 +214,7 @@ padding-left:0;
 .line2appear{
   visibility:visible;
 }
-.line2 h1, h2, h3, h4, p {
+.line2 > h1, > h2, > h3, > h4, > p {
   margin-left:5vw;
 }
 .line2 h1{
