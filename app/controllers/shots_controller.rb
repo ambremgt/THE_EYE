@@ -12,7 +12,7 @@ class ShotsController < ApplicationController
     @shotlist = Shotlist.find(params[:shotlist_id])
     @shot.shotlist = @shotlist
     if @shot.save
-      redirect_to dashboard_path(@shotlist.user)
+      redirect_to shotlist_path(@shotlist)
     else
       render :new
     end
