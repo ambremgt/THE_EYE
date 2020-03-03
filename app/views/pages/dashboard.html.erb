@@ -36,26 +36,26 @@
 
 
 
-            <h2 class="line2 animated fadeInRight">Title: <%=shotlist.title%></h2>
-            <p class="line2 animated fadeInRight">Description: <%= shotlist.description%></p>
-            <hr class="line2 animated fadeInLeft">
+            <h2 class="line2"><%=shotlist.title.upcase%></h2>
+            <p class="line2"><%= shotlist.description.capitalize%></p>
+            <hr class="lineblock">
             <% num -= 1 %>
 
             <% shotlist.shots.each do |shot| %>
             <% if shot %>
                 <div class="row">
                   <div class="col">
-                    <h2 class="line2 animated fadeInRight">Details of the scene</h2>
-                    <h3 class="line2 animated fadeInRight">Description: <%= shot.description %></h3>
-                    <p class="line2 animated fadeInRight">Angle: <%= shot.angle %></p>
-                    <p class="line2 animated fadeInRight">Shote size: <%= shot.shot_size %></p>
-                    <p class="line2 animated fadeInRight">Movement: <%= shot.movement %></p>
-                    <p class="line2 animated fadeInRight">Equipment: <%= shot.equipment %></p>
+                    <h2 class="line2">Details of the scene</h2>
+                    <h3 class="line2">Description: <%= shot.description %></h3>
+                    <p class="line2">Angle: <%= shot.angle %></p>
+                    <p class="line2">Shote size: <%= shot.shot_size %></p>
+                    <p class="line2">Movement: <%= shot.movement %></p>
+                    <p class="line2">Equipment: <%= shot.equipment %></p>
                   </div>
 
 
                   <div class="col">
-                    <h3 class="line2 animated fadeInRight" >Status</h3>
+                    <h3 class="line2" >Status</h3>
 
                   </div>
                   <% end %>
@@ -68,7 +68,7 @@
                         <%= form_tag results_path, method: :get do %>
                           <%= hidden_field_tag(:shotlist_tag_list, shotlist.shotlist_tag_list) %>
 
-                          <%= submit_tag "Find matches", class: "btn btn-navbar2 line2 animated fadeInRight" %>
+                          <%= submit_tag "Find matches", class: "btn btn-navbar2 line2" %>
 
                     <% end %>
                     </div>

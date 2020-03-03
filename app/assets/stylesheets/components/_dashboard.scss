@@ -14,8 +14,9 @@ hr{
   background-color:white;
   color:#5464f7;
   position: absolute;
-  right: 20vw;
+  right: 8vw;
   top:30vh;
+  z-index: 3;
 }
 #name_user {
   position:absolute;
@@ -186,16 +187,21 @@ padding-left:0;
   background-color:#5464f7;
   color:white;
   margin: none;
+  z-index:2;
 }
 .line_dashboard{
   justify-content: space-between;
 }
 .line2{
-  display:none;
-  transition: display 1s;
+  visibility: hidden;
+    transition: all 0.5s ease-in-out;
+}
+.lineblock{
+  visibility: hidden;
+    transition: all 0.5s ease-in-out;
 }
 .line2appear{
-  display:block;
+  visibility:visible;
 }
 
 // .dashboard-projet h2 {
