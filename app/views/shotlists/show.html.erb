@@ -3,49 +3,85 @@
 
 <div class="header-portfolio">
   <h2 style="color: white; text-align: center; position: relative; top: 16vh;">Your project's description</h2>
+  <div style="text-align: center;">
+    <% if current_user.photo.present? %>
+      <%= cl_image_tag current_user.photo.key, height: 40, width: 30, class: "avatar-show" %>
+    <% end %>
+  </div>
 </div>
 
-<div class="container" style="margin-bottom: 100px;">
-  <div class="row">
-    <div class="col-lg-10 shotlist-view" style="margin: auto;">
-      <% if current_user.photo.present? %>
-        <%= cl_image_tag current_user.photo.key, height: 40, width: 30, class: "avatar-show" %>
-      <% end %>
+<div class="container" style="margin-bottom: 100px; margin-top: 50px">
     <% @shotlist.shots.each do |shot| %>
-      <h3><%= @shotlist.title.capitalize %></h3>
-      <h3><%= @shotlist.description.capitalize%>h3>
-        <hr>
-        <h3>Details of the scene</h3>
-        <div style="display: flex;">
-          <%= image_tag ('description.png'), height: 60, width: 60 %>
-          <p>Description: <%= shot.description %></p>
-        </div>
-        <% if shot.location.present? %>
-          <p >Location: <%= shot.location %></p>
-        <% end %>
-
-        <div style="display: flex;">
-          <%= image_tag ('angle.png'), height: 60, width: 60 %>
-          <p>Angle: <%= shot.angle %></p>
-        </div>
-
-        <div style="display: flex;">
-          <%= image_tag ('size.png'), height: 60, width: 60 %>
-          <p>Shot size: <%= shot.shot_size %></p>
-        </div>
-
-        <div style="display: flex;">
-          <%= image_tag ('movement.png'), height: 60, width: 60 %>
-          <p>Movement: <%= shot.movement %></p>
-        </div>
-
-        <div style="display: flex;">
-          <%= image_tag ('camera.png'), height: 60, width: 60 %>
-          <p>Equipment: <%= shot.equipment %></p>
-        </div>
-      <% end %>
+    <div style="text-align: center;">
+      <h2 style="margin-left:0vw;"><%= @shotlist.title.capitalize %></h2>
+      <h3 style="margin-left:0vw;"><%= @shotlist.description.capitalize%><h3>
     </div>
-  </div>
+      <hr>
+      <h3>Details of the scene</h3>
+      <div class="row">
+        <div class="col-4">
+            <div class="card-content">
+              <div class="card-icon card-info">
+                <i><%= image_tag ('description.png'), height: 60, width: 60 %></i>
+              </div>
+              <div class="text-area card-info"><b>Description: </b> <%= shot.description %>.
+              </div>
+            </div>
+        </div>
+
+        <div class="col-4">
+          <div class="card-content">
+            <div class="card-icon card-info">
+              <i><%= image_tag ('angle.png'), height: 60, width: 60 %></i>
+            </div>
+            <div class="text-area card-info"><b>Angle: </b> <%= shot.angle %>.
+            </div>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div class="card-content">
+            <div class="card-icon card-info">
+              <i><%= image_tag ('size.png'), height: 60, width: 60 %></i>
+            </div>
+            <div class="text-area card-info"><b>Size: </b> <%= shot.shot_size %>.
+            </div>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div class="card-content">
+            <div class="card-icon card-info">
+              <i><%= image_tag ('movement.png'), height: 60, width: 60 %></i>
+            </div>
+            <div class="text-area card-info"><b>Movement: </b> <%= shot.movement %>.
+            </div>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div class="card-content">
+            <div class="card-icon card-info">
+              <i><%= image_tag ('camera.png'), height: 60, width: 60 %></i>
+            </div>
+            <div class="text-area card-info"><b>Equipment: </b> <%= shot.equipment %>.
+            </div>
+          </div>
+        </div>
+
+        <div class="col-4">
+            <div class="card-content">
+              <div class="card-icon card-info">
+                <i><%= image_tag ('localization.png'), height: 60, width: 60 %></i>
+              </div>
+              <div class="text-area card-info"><b>Localization: </b> <%= shot.location %>.
+              </div>
+            </div>
+          <% end %>
+        </div>
+
+</div>
+
 </div>
 
 
