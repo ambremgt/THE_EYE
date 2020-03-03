@@ -10,6 +10,7 @@ class ShotlistsController < ApplicationController
   def create
     @shotlist = Shotlist.new(shotlist_params)
     @shotlist.user = current_user
+
     if @shotlist.save
       redirect_to new_shotlist_shot_path(@shotlist)
     else

@@ -1,49 +1,44 @@
-<div class="chatroom container" style="margin-top: 100px">
 
-  <div class="chatroom-main">
-
+<div class="chatroom container" style="margin-top: 70px">
+  <div class="chatroom-main" style="width: 90%">
     <% other_chatter = current_user.other_chatter?(@chatroom) %>
     <div id="messages" data-chatroom-id="<%= @chatroom.id %>">
       <% @chatroom.messages.each do |message| %>
       <%= render "messages/message", message: message %>
       <% end %>
     </div>
-
     <div class="chatroom-input">
       <%= simple_form_for [ @chatroom, @message ], class: "form-inline" do |f| %>
         <%= f.input :content, label: false %>
 
-        <%= f.button :submit, "send", class: "btn btn-secondary form-group btn-send" %>
-      <% end %>
+
 
       <div class="shotlist-dropdown">
         <% if current_user.shotlists.present? %>
       <div class="dropup show">
         <a class="btn-attach dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-         <small> Share a shotlist with <%= other_chatter.first_name %></small>
+          <small> Share a project with <%= other_chatter.first_name %></small>
         </a>
-
         <div class="dropdown-menu card-trip" aria-labelledby="dropdownMenuLink">
-
           <ul class="shotlist-dropdown-list">
-            <li>My shotlists:</li>
+            <li>My project:</li>
             <% @current_user.shotlists.each do |shotlist| %>
             <li><%= link_to shotlist.title, shotlist_path(shotlist), class: "shotlist-link" %></li>
-
           <% end %>
-
-
           </ul>
-
         </div>
       </div>
       <% else %>
-          <%= link_to("create your first project", new_shotlist_path(@shotlist) , class: "btn btn-info btn-attach") %>
+          <%= link_to("Create your first project", new_shotlist_path(@shotlist) , class: "btn btn-attach") %>
       <% end %>
       </div>
 
-    </div>
 
+        <%= f.button :submit, "Send", class: "btn form-group btn-send" %>
+      <% end %>
+
+
+    </div>
   </div>
 
 
@@ -58,9 +53,12 @@
         <%= other_chatter.first_name %> <%= other_chatter.last_name %></h5>
       <% end %>
     <p><%= other_chatter.city %></p>
+
     <% other_chatter.interest_list.each do |interest| %>
       <small><%= interest %></small>
     <% end %>
+
+
 
 
  </div>

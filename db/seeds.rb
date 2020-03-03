@@ -185,6 +185,8 @@ arthur = User.new(
                     wallet: "50", language: "English",
                     password: "111113", password_confirmation: "111113"
                   )
+
+
 arthur.photo.attach(io: URI.open("https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"), filename: "samuel.png", content_type: 'image/png')
 arthur.interest_list.add(["Landscapes", "Urban", "Architecture", "Timelapse"])
 arthur.save!
@@ -254,6 +256,8 @@ assetsAgathe.save!
 assetsArthur = PortfolioAsset.new(user_id: arthur.id)
 assetsArthur.photos.attach(io: URI.open("https://images.pexels.com/photos/2726126/pexels-photo-2726126.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"), filename: "arthurcard.png", content_type: 'image/png')
 assetsArthur.save!
-#Create tags
+
+#Create Shotlist tags
+
 
 

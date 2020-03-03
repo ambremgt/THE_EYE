@@ -5,6 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   acts_as_taggable_on :interests
+  scope :filter_by_city, -> (city) { where city: city }
+
+
   INTERESTS = ["Landscapes", "Seascapes", "Architecture", "Timelapse", "Macro", "StopMotion", "Drone", "Trans-trav", "Urban", "Street", "City", "Mountains", "Nature", "GoPro", "4KVideoCamera", "Sliders", "Shotgun", "Documentary"]
   has_many :shotlists
   has_one_attached :photo
