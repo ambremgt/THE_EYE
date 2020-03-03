@@ -50,16 +50,20 @@
 
 </div>
 
-      <div class="texttyped" >
-        <h2 id="banner-typed-text">Community of Filmmakers</h2>
-              <% if user_signed_in? %>
-                <div class="start_button">
-                  <%= link_to "START", "/shotlists/new", class: "btn btn-navbar2" %>
-                <% else %>
-                  <%= link_to "Login", new_user_session_path, class: "btn btn-navbar2" %>
-                </div>
-                <% end %>
-        </div>
+<div class="texttyped" >
+  <h2 id="banner-typed-text">Community of Filmmakers</h2>
+  <% if user_signed_in? %>
+    <div class="start_button">
+      <%= link_to "START", "/shotlists/new", class: "btn btn-navbar2" %>
+    </div>
+  <% else %>
+      <div class="test">
+      <%= link_to "Login", new_user_session_path, class: "btn btn-navbar2" %>
+
+      </div>
+
+  <% end %>
+</div>
 
 
 
