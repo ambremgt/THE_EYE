@@ -4,7 +4,7 @@ class ShotlistsController < ApplicationController
   def new
     @shotlist = Shotlist.new
     @shotlist.user = current_user
-
+    @tags = Shotlist::TAGS
   end
 
   def create
