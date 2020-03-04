@@ -1,53 +1,67 @@
 
 <div class="row align-items-center m-0">
-  <div class="col bg-light text-center leftform">
+  <div class="col bg-light align-items-center leftform">
 
     <div  class="blocktoPic">
       <h2 class="fs-title">Add Shots to <br/><em><%= @shotlist.title %></em></h2>
-      <p class="text-center text-muted">Break down how you want to capture every individual shot in the scene one-by-one. Using your knowledge of shot sizes, shot types, and camera movements, consider how you want to capture each shot and fill in this shot form accordingly.</p>
+      <div class="blocktoPic-info">
+       <p class="text-muted">Break down how you want to capture every individual shot in the scene one-by-one. Using your knowledge of shot sizes, shot types, and camera movements, consider how you want to capture each shot and fill in this shot form accordingly.</p>
+      </div>
     </div>
 
     <div  class="blocktoPic d-none">
       <h2 class="fs-title">Choose Shot Size</h2>
-      <p class="text-center text-muted">Shot size means how much of the scene is included in the picture, and whether it mainly shows the setting, people in the setting, or details of faces and things.
+      <div class="blocktoPic-info">
+        <p class="text-muted">Shot size means how much of the scene is included in the picture, and whether it mainly shows the setting, people in the setting, or details of faces and things.
 
-It’s important to use different shot sizes in your movie. It’s a way of spelling things out, to make sure that people see exactly the things you want them to see. If you shoot everything in long shot (head to foot) people will probably miss details and expressions which would help them understand the story.</p>
-    <%= image_tag "size.png", alt: "size",height: 60, width: 60 %>
+  It’s important to use different shot sizes in your movie. It’s a way of spelling things out, to make sure that people see exactly the things you want them to see. If you shoot everything in long shot (head to foot) people will probably miss details and expressions which would help them understand the story.</p>
+      <%= image_tag "size.png", alt: "size",height: 80, width: 80 %>
+     </div>
     </div>
 
     <div  class="blocktoPic d-none">
       <h2 class="fs-title">Camera Movement</h2>
-      <p class="text-center text-muted">A shot list is a detailed list of every camera shot that needs to be captured in a scene of a video production. Created by the director and the cinematographer during preproduction, it outlines the precise specifics of every shot—such as the camera, shot size, and shot type—so the cinematographer and assistant director know exactly what needs to be captured to tell the story visually.</p>
-      <%= image_tag "movement.png", alt: "movement",height: 60, width: 60 %>
+      <div class="blocktoPic-info">
+        <p class="text-muted">A shot list is a detailed list of every camera shot that needs to be captured in a scene of a video production. Created by the director and the cinematographer during preproduction, it outlines the precise specifics of every shot—such as the camera, shot size, and shot type—so the cinematographer and assistant director know exactly what needs to be captured to tell the story visually.</p>
+        <%= image_tag "movement.png", alt: "movement",height: 80, width: 80 %>
+      </div>
     </div>
 
     <div  class="blocktoPic d-none">
       <h2 class="fs-title">Camera angle</h2>
-      <p class="text-center text-muted">A shot list is a detailed list of every camera shot that needs to be captured in a scene of a video production. Created by the director and the cinematographer during preproduction, it outlines the precise specifics of every shot—such as the camera, shot size, and shot type—so the cinematographer and assistant director know exactly what needs to be captured to tell the story visually.</p>
-      <%= image_tag "angle.png", alt: "angle",height: 60, width: 60 %>
+      <div class="blocktoPic-info">
+        <p class="text-center text-muted">A shot list is a detailed list of every camera shot that needs to be captured in a scene of a video production. Created by the director and the cinematographer during preproduction, it outlines the precise specifics of every shot—such as the camera, shot size, and shot type—so the cinematographer and assistant director know exactly what needs to be captured to tell the story visually.</p>
+        <%= image_tag "angle.png", alt: "angle",height: 80, width: 80 %>
+      </div>
     </div>
 
     <div  class="blocktoPic d-none">
       <h2 class="fs-title">Your equipment</h2>
-      <p class="text-center text-muted">A shot list is a detailed list of every camera shot that needs to be captured in a scene of a video production. Created by the director and the cinematographer during preproduction, it outlines the precise specifics of every shot—such as the camera, shot size, and shot type—so the cinematographer and assistant director know exactly what needs to be captured to tell the story visually.</p>
-      <%= image_tag "camera.png", alt: "camera",height: 60, width: 60 %>
+      <div class="blocktoPic-info">
+        <p class="text-center text-muted">A shot list is a detailed list of every camera shot that needs to be captured in a scene of a video production. Created by the director and the cinematographer during preproduction, it outlines the precise specifics of every shot—such as the camera, shot size, and shot type—so the cinematographer and assistant director know exactly what needs to be captured to tell the story visually.</p>
+        <%= image_tag "camera.png", alt: "camera",height: 80, width: 80 %>
+      </div>
     </div>
 
 </div>
 
-<div class="col-md-8 col-md-offset-3 mt-5 align-items-center">
+<div class="col-md-8 col-md-offset-3 align-items-center">
   <div class="multiformcustom align-items-center">
 <!-- <div class="col-md-10 col-md-offset-3 position-relative"> -->
       <!-- progressbar -->
-    <ul id="progressbar" class="d-flex p-2">
-      <li class="active">Shot details</li>
-      <li>Shot size</li>
-      <li>Movement</li>
-      <li>Angle</li>
-      <li>Equipment</li>
-    </ul>
+    <div class="multiform-progress">
+      <ul id="progressbar" class="d-flex p-2">
+        <li class="active">Shot details</li>
+        <li>Shot size</li>
+        <li>Movement</li>
+        <li>Angle</li>
+        <li>Equipment</li>
+      </ul>
+      <hr style="background-color: lightgrey">
+    </div>
 
     <%= simple_form_for [@shotlist, @shot] do |f| %>
+    <div class="multiform-content">
       <%= f.error_notification %>
       <fieldset class="blocktoIt">
         <h3 class="fs-subtitle">What's going on in this shot? Add a short description of the action and/or dialogue.</h3>
@@ -85,102 +99,101 @@ It’s important to use different shot sizes in your movie. It’s a way of spel
         </fieldset>
       </fieldset>
 
-        <fieldset class="blocktoIt d-none">
-          <h3 class="fs-subtitle">Select camera movement</h3>
-          <fieldset class="form-group check_boxes optional shot_movement">
-            <legend class="col-form-label pt-0" style="display: none">Movement</legend>
-              <div class="category-choices">
-                <div class="container-fluid">
-                  <div class="row no-gutters d-flex justify-content-between">
-                      <div class="col-lg-4 align-items-center">
-                        <input class="form-check-input check_boxes optional" type="checkbox" value="Pan/tilt" name="shot[movement]" id="shot_movement_pantilt" hidden>
-                        <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shot_movement_pantilt">Pan/tilt</label>
+      <fieldset class="blocktoIt d-none">
+        <h3 class="fs-subtitle">Select camera movement</h3>
+        <fieldset class="form-group check_boxes optional shot_movement">
+          <div class="category-choices">
+            <div class="category-choices-grid">
+              <div class="form-check">
+                <input class="form-check-input check_boxes optional" type="checkbox" value="Pan/tilt" name="shot[movement]" id="shot_movement_pantilt" hidden>
+                <label class="category-choice form-check-label collection_check_boxes" for="shot_movement_pantilt">Pan/tilt</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input check_boxes optional" type="checkbox" value="Crane shot" name="shot[movement]" id="shot_movement_crane_shot" hidden>
+                <label class="category-choice form-check-label collection_check_boxes" for="shot_movement_crane_shot">Crane shot</label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input check_boxes optional" type="checkbox" value="Zoom" name="shot[movement]" id="shot_movement_zoom" hidden>
+                <label class="category-choice form-check-label collection_check_boxes" for="shot_movement_zoom">Zoom</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input check_boxes optional" type="checkbox" value="Random motion" name="shot[movement]" id="shot_movement_random_motion" hidden>
+                <label class="category-choice form-check-label collection_check_boxes" for="shot_movement_random_motion">Random motion</label>
+              </div>
+              <div class="form-check">
+                  <input class="form-check-input check_boxes optional" type="checkbox" value="360-degree motion" name="shot[movement]" id="shot_movement_360-degree_motion" hidden>
+                  <label class="category-choice form-check-label collection_check_boxes" for="shot_movement_360-degree_motion">360-degree motion</label>
+              </div>
+              <div class="form-check">
 
 
-                        <input class="form-check-input check_boxes optional" type="checkbox" value="Crane shot" name="shot[movement]" id="shot_movement_crane_shot" hidden>
-                        <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shot_movement_crane_shot">Crane shot</label>
-                      </div>
+                  <input class="form-check-input check_boxes optional" type="checkbox" value="Compound motion" name="shot[movement]" id="shot_movement_compound_motion" hidden>
+                  <label class="category-choice form-check-label collection_check_boxes" for="shot_movement_compound_motion">Compound motion</label>
+              </div>
+              <div class="form-check">
 
-                      <div class="col-4 align-items-center">
-                        <input class="form-check-input check_boxes optional" type="checkbox" value="Zoom" name="shot[movement]" id="shot_movement_zoom" hidden>
-                        <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shot_movement_zoom">Zoom</label>
-
-                        <input class="form-check-input check_boxes optional" type="checkbox" value="Random motion" name="shot[movement]" id="shot_movement_random_motion" hidden>
-                        <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shot_movement_random_motion">Random motion</label>
-
-                          <input class="form-check-input check_boxes optional" type="checkbox" value="360-degree motion" name="shot[movement]" id="shot_movement_360-degree_motion" hidden>
-                          <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shot_movement_360-degree_motion">360-degree motion</label>
-                      </div>
-
-                      <div class="col-4 align-items-center">
-                          <input class="form-check-input check_boxes optional" type="checkbox" value="Compound motion" name="shot[movement]" id="shot_movement_compound_motion" hidden>
-                          <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shot_movement_compound_motion">Compound motion</label>
-
-
-                          <input class="form-check-input check_boxes optional" type="checkbox" value="Dolly zoom" name="shot[movement]" id="shot_movement_dolly_zoom" hidden>
-                          <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shot_movement_dolly_zoom">Dolly zoom</label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-              </fieldset>
-            </fieldset>
-
-            <fieldset class="blocktoIt d-none">
-
-                <h3 class="fs-subtitle">Select Shot Angle</h3>
-                <fieldset class="form-group check_boxes optional shot_angle">
-                  <legend class="col-form-label pt-0" style="display:none">Angle</legend>
-                    <div class="category-choices">
-                      <div class="row d-flex justify-content-between">
-
-
-                        <input class="form-check-input check_boxes optional" type="checkbox" value="Eye level" name="shot[angle]" id="shot_angle_eye_level" hidden>
-                        <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shot_angle_eye_level">Eye level</label>
-
-
-                        <input class="form-check-input check_boxes optional" type="checkbox" value="Low angle" name="shot[angle]" id="shot_angle_low_angle" hidden>
-                        <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shot_angle_low_angle">Low angle</label>
-
-
-                        <input class="form-check-input check_boxes optional" type="checkbox" value="High angle" name="shot[angle]" id="shot_angle_high_angle" hidden>
-                        <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shot_angle_high_angle">High angle</label>
-
-
-
-                        <input class="form-check-input check_boxes optional" type="checkbox" value="Dutch angle" name="shot[angle]" id="shot_angle_dutch_angle" hidden>
-                        <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shot_angle_dutch_angle">Dutch angle</label>
-
-
-                        <input class="form-check-input check_boxes optional" type="checkbox" value="Over-the-Shoulder" name="shot[angle]" id="shot_angle_over-the-shoulder" hidden>
-                        <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shot_angle_over-the-shoulder">Over-the-Shoulder</label>
-
-                      </div>
-                    </div>
-                </fieldset>
-
-      </fieldset>
-
-<fieldset class="blocktoIt d-none">
-          <h3 class="fs-subtitle">What equipment is needed for the shot?</h3>
-          <%= f.input :equipment, label: false %>
-        </fieldset>
-
-            <hr>
-
-          <div class="container">
-
-              <button type="button" id="prev" class="d-none btn btn-navbar2-transparent btn-lg" >Previous</button>
-              <button type="button" id="next" class="btn btn-navbar2">Next</button>
-              <%= f.submit "DONE", id: "sub", class: "submit btn btn-navbar2 d-none"%>
-
-              <% end %>
-          </div>
+                  <input class="form-check-input check_boxes optional" type="checkbox" value="Dolly zoom" name="shot[movement]" id="shot_movement_dolly_zoom" hidden>
+                  <label class="category-choice form-check-label collection_check_boxes" for="shot_movement_dolly_zoom">Dolly zoom</label>
+              </div>
             </div>
 
+          </div>
+
+            </fieldset>
+          </fieldset>
+
+          <fieldset class="blocktoIt d-none">
+
+            <h3 class="fs-subtitle">Select Shot Angle</h3>
+            <fieldset class="form-group check_boxes optional shot_angle">
+              <legend class="col-form-label pt-0" style="display:none">Angle</legend>
+                <div class="category-choices">
+                  <div class="row d-flex justify-content-between">
 
 
+                    <input class="form-check-input check_boxes optional" type="checkbox" value="Eye level" name="shot[angle]" id="shot_angle_eye_level" hidden>
+                    <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shot_angle_eye_level">Eye level</label>
+
+
+                    <input class="form-check-input check_boxes optional" type="checkbox" value="Low angle" name="shot[angle]" id="shot_angle_low_angle" hidden>
+                    <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shot_angle_low_angle">Low angle</label>
+
+
+                    <input class="form-check-input check_boxes optional" type="checkbox" value="High angle" name="shot[angle]" id="shot_angle_high_angle" hidden>
+                    <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shot_angle_high_angle">High angle</label>
+
+
+
+                    <input class="form-check-input check_boxes optional" type="checkbox" value="Dutch angle" name="shot[angle]" id="shot_angle_dutch_angle" hidden>
+                    <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shot_angle_dutch_angle">Dutch angle</label>
+
+
+                    <input class="form-check-input check_boxes optional" type="checkbox" value="Over-the-Shoulder" name="shot[angle]" id="shot_angle_over-the-shoulder" hidden>
+                    <label class="category-choice col-md-2 form-check-label collection_check_boxes" for="shot_angle_over-the-shoulder">Over-the-Shoulder</label>
+
+                  </div>
+                </div>
+            </fieldset>
+
+          </fieldset>
+
+          <fieldset class="blocktoIt d-none">
+            <h3 class="fs-subtitle">What equipment is needed for the shot?</h3>
+            <%= f.input :equipment, label: false %>
+          </fieldset>
     </div>
+    <div class="multiform-bottom">
+      <hr style="background-color: lightgrey">
+      <button type="button" id="prev" class="d-none btn btn-navbar2-transparent btn-lg" >Previous</button>
+      <button type="button" id="next" class="btn btn-navbar2">Next</button>
+      <%= f.submit "DONE", id: "sub", class: "submit btn btn-navbar2 d-none"%>
+    <% end %>
+    </div>
+  </div>
+
+
+
+</div>
 </div>
 
