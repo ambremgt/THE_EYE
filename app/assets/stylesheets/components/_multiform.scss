@@ -9,27 +9,23 @@
 //     margin-top: 30px;
 // }
 
-.pic::after{
-  content:"";
+.slideone{
 
-  background: linear-gradient(black,transparent,black),
-      url("https://i.pinimg.com/originals/11/81/bc/1181bc614be0666b45448b646fcbe908.jpg");
-      background-repeat: no-repeat;
-  background-size: cover;
-  opacity:0.6;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;
+}
+.slidetwo{
 
+}
+.slidetrois{
 
 }
 
 
 .leftform{
-  color:black;
+  background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+      url("https://i.pinimg.com/originals/11/81/bc/1181bc614be0666b45448b646fcbe908.jpg");
+      background-size:cover;
+  color:white;
+  text-shadow: 2px 2px 8px black;
   font-weight:500;
   height:100vh;
   display: block;
@@ -51,7 +47,7 @@
 
 }
 .blocktoPic-info{
-  padding: 3em 1em;
+  padding: 8em 1em;
   p {
     font-weight: 600;
     line-height: 2em;
@@ -63,7 +59,6 @@
 }
 
 .multiformcustom {
-
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -105,7 +100,7 @@
 
 .category-choices-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 1em;
 }
 
@@ -116,6 +111,7 @@
   text-align: center;
   border: 1px solid #5464f7;
   color: #5464f7;
+  text-shadow: 2px 2px 8px white;
   border-radius: 5px;
   opacity: 0.6;
   height: 50px;
@@ -203,7 +199,7 @@ textarea.form-control{
     padding-top: 2em;
     font-size: 24px;
     text-transform: uppercase;
-    color: #2C3E50;
+    color: white;
     margin-bottom: 2px;
     letter-spacing: 2px;
     font-weight: bold;
@@ -231,6 +227,7 @@ textarea.form-control{
     color: #5464f7;
     text-transform: uppercase;
     font-size: 20px;
+    font-weight:900;
     width: 33.33%;
     float: left;
     position: relative;
