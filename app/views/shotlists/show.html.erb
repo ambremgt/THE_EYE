@@ -1,8 +1,8 @@
 <% content_for :meta_title, "#{@shotlist.title}" %>
 <% content_for :meta_description, @shotlist.description %>
 
-<div class="header-show">
-  <h2 style="color: white; text-align: center; position: relative; top: 16vh;">Your project's description</h2>
+<div class="header-show" >
+  <h3 style="color: white; text-align: center; position: relative; top: 16vh; font-size: 24px;">Your project's description</h3>
     <% if current_user.photo.present? %>
       <%= cl_image_tag current_user.photo.key, height: 40, width: 30, class: "avatar-show" %>
     <% end %>
@@ -22,7 +22,8 @@
               <div class="card-icon card-info">
                 <i><%= image_tag ('description.png'), height: 60, width: 60 %></i>
               </div>
-              <div class="text-area card-info"><b>Description: </b> <%= shot.description %>.
+              <div class="text-area card-info"><p>Description: </p>
+                <%= shot.description %>
               </div>
             </div>
         </div>
@@ -32,7 +33,8 @@
             <div class="card-icon card-info">
               <i><%= image_tag ('angle.png'), height: 60, width: 60 %></i>
             </div>
-            <div class="text-area card-info"><b>Angle: </b> <%= shot.angle %>.
+            <div class="text-area card-info"><p>Angle: </p>
+              <p><%= shot.angle %></p>
             </div>
           </div>
         </div>
@@ -42,7 +44,8 @@
             <div class="card-icon card-info">
               <i><%= image_tag ('size.png'), height: 60, width: 60 %></i>
             </div>
-            <div class="text-area card-info"><b>Size: </b> <%= shot.shot_size %>.
+            <div class="text-area card-info"><p>Size: </p>
+              <p><%= shot.shot_size %></p>
             </div>
           </div>
         </div>
@@ -52,7 +55,8 @@
             <div class="card-icon card-info">
               <i><%= image_tag ('movement.png'), height: 60, width: 60 %></i>
             </div>
-            <div class="text-area card-info"><b>Movement: </b> <%= shot.movement %>.
+            <div class="text-area card-info"><p>Movement: </p>
+              <p><%= shot.movement %></p>
             </div>
           </div>
         </div>
@@ -62,7 +66,8 @@
             <div class="card-icon card-info">
               <i><%= image_tag ('camera.png'), height: 60, width: 60 %></i>
             </div>
-            <div class="text-area card-info"><b>Equipment: </b> <%= shot.equipment %>.
+            <div class="text-area card-info"><p>Equipment: </p>
+              <p><%= shot.equipment %></p>
             </div>
           </div>
         </div>
@@ -72,7 +77,8 @@
               <div class="card-icon card-info">
                 <i><%= image_tag ('localization.png'), height: 60, width: 60 %></i>
               </div>
-              <div class="text-area card-info"><b>Localization: </b> <%= shot.location %>.
+              <div class="text-area card-info"><p>Localization:</p>
+                <p><%= shot.location %></p>
               </div>
             </div>
           <% end %>
