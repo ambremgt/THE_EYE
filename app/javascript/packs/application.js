@@ -27,6 +27,8 @@ import { dashboardLine } from '../components/dashbordline';
 
 import { hiddenPoster } from '../components/video';
 
+import { searchInput } from '../components/search_input';
+
 // import { shotlistPreviewLink } from '../components/shotlist_preview_link';
 
 // import { video } from '../components/home';
@@ -50,12 +52,13 @@ document.addEventListener('turbolinks:load', () => {
   hiddenPoster();
 
 
+
   if (document.querySelector('.shotlist-link')) {
 
     attachShotlist();
   }
   if (document.querySelector('.category-choice')) {
-  activeCheck();
+    activeCheck();
 
   }
   if (document.querySelector('.blocktoIt')) {
@@ -66,6 +69,9 @@ document.addEventListener('turbolinks:load', () => {
   // }
   if (document.querySelector('.line2')){
     dashboardLine();
+  }
+  if (document.querySelector('#shot_location')) {
+    searchInput();
   }
 
 
