@@ -24,19 +24,19 @@ mohamed.photo.attach(io: URI.open("https://images.pexels.com/photos/1002406/pexe
 mohamed.interest_list.add(["Landscapes", "Seascapes", "Architecture", "Timelapse"])
 mohamed.save!
 
-sunyu = User.new(
-                  first_name: "Sunyu",
-                  last_name: "Kim",
-                  biography: "I am an interdisciplinary artist who has done installation, public art, media art and now animation. I am interested in documentary animation which uses cartoons and music to tell real stories.",
-                  email: "sunyu@video.com",
-                  city: "Seoul, South Korea",
+alex = User.new(
+                  first_name: "Alex",
+                  last_name: "Moretti",
+                  biography: "I am a documentary filmmaker, photographer and multimedia producer. She focuses on long-term projects covering human rights and conflict. She was a winner of the Prix Bayeux-Calvados for War Correspondents in 2014, Magnum Emergency Foundation grant recipient in 2013 and a winner of the PDN Photo Annual in 2012. She is the author of Grozny: Nine Cities (Dewi Lewis Publishing, 2018). She lives in Paris and works primarily in the Caucasus, Balkans, and Middle East.",
+                  email: "alex@video.com",
+                  city: "San Francisco, USA",
                   wallet: "50",
                   language: "English, Korean",
                   password: "123457", password_confirmation: "123457"
                   )
-sunyu.photo.attach(io: URI.open("https://images.pexels.com/photos/3062551/pexels-photo-3062551.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"), filename: "sunyu.png", content_type: 'image/png')
-sunyu.interest_list.add(["Architecture", "Timelapse", "Drone"])
-sunyu.save!
+alex.photo.attach(io: URI.open("https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"), filename: "sunyu.png", content_type: 'image/png')
+alex.interest_list.add(["Architecture", "Timelapse", "Drone"])
+alex.save!
 
 matheus = User.new(
                     first_name: "Matheus",
@@ -197,19 +197,19 @@ assetsMohamed.save!
 
 
 
-assetsSunyu = PortfolioAsset.new(user_id: sunyu.id)
-assetsSunyu.photos.attach(io: URI.open("https://images.pexels.com/photos/3768221/pexels-photo-3768221.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"), filename: "sunyucard.png", content_type: 'image/png')
-assetsSunyu.save!
+assetsAlex = PortfolioAsset.new(user_id: alex.id)
+assetsAlex.photos.attach(io: URI.open("https://images.pexels.com/photos/3768221/pexels-photo-3768221.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"), filename: "alexcard.png", content_type: 'image/png')
+assetsAlex.save!
 
-assetsSunyu1 = PortfolioAsset.new(user_id: sunyu.id, video_url: "14352658")
-assetsSunyu1.poster_picture.attach(io: URI.open("https://i.vimeocdn.com/video/84084640_450x250.webp"), filename: "video1.png", content_type: 'image/png')
-assetsSunyu1.save!
-assetsSunyu2 = PortfolioAsset.new(user_id: sunyu.id, video_url: "18554749")
-assetsSunyu2.poster_picture.attach(io: URI.open("https://i.vimeocdn.com/video/116825470_450x250.webp"), filename: "video2.png", content_type: 'image/png')
-assetsSunyu2.save!
-assetsSunyu3 = PortfolioAsset.new(user_id: sunyu.id, video_url: "239492916")
-assetsSunyu3.poster_picture.attach(io: URI.open("https://i.vimeocdn.com/video/663890158_450x250.webp"), filename: "video3.png", content_type: 'image/png')
-assetsSunyu3.save!
+assetsAlex1 = PortfolioAsset.new(user_id: alex.id, video_url: "14352658")
+assetsAlex1.poster_picture.attach(io: URI.open("https://i.vimeocdn.com/video/84084640_450x250.webp"), filename: "video1.png", content_type: 'image/png')
+assetsAlex1.save!
+assetsAlex2 = PortfolioAsset.new(user_id: alex.id, video_url: "18554749")
+assetsAlex2.poster_picture.attach(io: URI.open("https://i.vimeocdn.com/video/116825470_450x250.webp"), filename: "video2.png", content_type: 'image/png')
+assetsAlex2.save!
+assetsAlex3 = PortfolioAsset.new(user_id: alex.id, video_url: "239492916")
+assetsAlex3.poster_picture.attach(io: URI.open("https://i.vimeocdn.com/video/663890158_450x250.webp"), filename: "video3.png", content_type: 'image/png')
+assetsAlex3.save!
 
 
 
