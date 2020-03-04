@@ -75,12 +75,22 @@
               <div class="text-area card-info"><b>Localization: </b> <%= shot.location %>.
               </div>
             </div>
-          <% end %>
+          </div>
         </div>
 
-</div>
-
-</div>
+        <div class="row">
+          <div class="col-12">
+            <div class="search-form-control form-inline form-group">
+            <%= form_tag results_path, method: :get do %>
+              <%= hidden_field_tag(:shotlist_tag_list, @shotlist.shotlist_tag_list) %>
+              <%= hidden_field_tag(:location, shot.location) %>
+              <%= submit_tag "Find matches", class: "btn btn-light" %>
+            <% end %>
+            </div>
+          </div>
+        </div>
+    <% end %>
+    </div>
 
 
 
