@@ -1,18 +1,21 @@
+
+
 <div class="banner-index" style="background-image: url('https://images.pexels.com/photos/1500590/pexels-photo-1500590.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');">
 <h1>Welcome in Camea's filmmakers community.</h1>
 <br>
 <h2>They are waiting for collaboration!</h2>
+
 </div>
 
-<div style="background-color: white;  box-shadow: 0 0 15px rgba(0,0,0,0.2);">
-  <div style="text-align: center;padding: 20px;">
-  <% @filmmakers.first(2).each do |filmmaker| %>
-    <% filmmaker.interest_list.each do |tag| %>
+
+<div style="background: white">
+  <div class="navbarsticky-result">
+   <% @filmmakers.first(2).each do |filmmaker| %>
+     <% filmmaker.interest_list.each do |tag| %>
       <%= link_to tag, results_path(tag: tag), class: "btn-tag-result" %>
-    <% end %>
-  <% end %>
+     <% end %>
+   <% end %>
   </div>
-</div>
 
   <div class="container" style="margin-top: 50px; margin-bottom: 100px;">
 
@@ -74,4 +77,5 @@
       <% end %>
     </div>
   </div>
+</div>
 

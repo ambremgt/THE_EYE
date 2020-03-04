@@ -77,6 +77,9 @@ svg rect {
   text-align: center;
   max-height: 700px;
   margin: auto;
+  position:sticky;
+  top:0;
+  z-index:-2;
 }
 
 
