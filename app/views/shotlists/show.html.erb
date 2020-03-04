@@ -12,80 +12,78 @@
     <% end %>
   </div>
 </div>
-
     <div class="mt-4" style="text-align: center;">
       <h2 style="margin-left:0vw;"><%= @shotlist.title.capitalize %></h2>
       <h3 style="margin-left:0vw;"><%= @shotlist.description.capitalize%><h3>
     </div>
 
-<div class="container">
-
-  <div class="row" style="padding: 30px;">
-    <div class="col-4">
-        <div class="card-content">
-          <div class="card-icon card-info">
-            <i><%= image_tag ('descriptionwhite.png'), height: 60, width: 60 %></i>
+    <div class="about">
+       <a class="bg_links social portfolio" href="https://www.rafaelalucas.com" target="_blank">
+          <span class="icon"></span>
+       </a>
+       <a class="bg_links social dribbble" href="https://dribbble.com/rafaelalucas" target="_blank">
+          <span class="icon"></span>
+       </a>
+       <a class="bg_links social linkedin" href="https://www.linkedin.com/in/rafaelalucas/" target="_blank">
+          <span class="icon"></span>
+       </a>
+       <a class="bg_links logo"></a>
+    </div>
+       <div class="content">
+          <div class="card">
+                <div class="icon"><i><%= image_tag ('descriptionwhite.png'), height: 60, width: 60 %></i></div>
+                <p class="title"><%= shot.description %></p>
+                <p class="text">Description</p>
           </div>
-          <div class="text-area card-info"><p>Description: </p>
-            <%= shot.description %>
+
+          <div class="card">
+                <div class="icon"><i><%= image_tag ('anglewhite.png'), height: 60, width: 60 %></i></div>
+                <p class="title"><%= shot.angle %></p>
+                <p class="text">Angle</p>
           </div>
-        </div>
-    </div>
+          <div class="card">
 
-    <div class="col-4">
-      <div class="card-content">
-        <div class="card-icon card-info">
-          <i><%= image_tag ('anglewhite.png'), height: 60, width: 60 %></i>
-        </div>
-        <div class="text-area card-info"><p>Angle: </p>
-          <p><%= shot.angle %></p>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-4">
-      <div class="card-content">
-        <div class="card-icon card-info">
-          <i><%= image_tag ('sizewhite.png'), height: 60, width: 60 %></i>
-        </div>
-        <div class="text-area card-info"><p>Size: </p>
-          <p><%= shot.shot_size %></p>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-4">
-      <div class="card-content">
-        <div class="card-icon card-info">
-          <i><%= image_tag ('movementwhite.png'), height: 60, width: 60 %></i>
-        </div>
-        <div class="text-area card-info"><p>Movement: </p>
-          <p><%= shot.movement %></p>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-4">
-      <div class="card-content">
-        <div class="card-icon card-info">
-          <i><%= image_tag ('camerawhite.png'), height: 60, width: 60 %></i>
-        </div>
-        <div class="text-area card-info"><p>Equipment: </p>
-          <p><%= shot.equipment %></p>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-4">
-        <div class="card-content">
-          <div class="card-icon card-info">
-            <i><%= image_tag ('localizationwhite.png'), height: 60, width: 60 %></i>
+                <div class="icon"><i><%= image_tag ('sizewhite.png'), height: 60, width: 60 %></i></div>
+                <p class="title"><%= shot.shot_size %></p>
+                <p class="text">Size</p>
           </div>
-          <div class="text-area card-info"><p>Localization:</p>
-            <p><%= shot.location %></p>
+       </div>
+    </div>
+
+
+
+    <div class="about">
+       <a class="bg_links social portfolio" href="https://www.rafaelalucas.com" target="_blank">
+          <span class="icon"></span>
+       </a>
+       <a class="bg_links social dribbble" href="https://dribbble.com/rafaelalucas" target="_blank">
+          <span class="icon"></span>
+       </a>
+       <a class="bg_links social linkedin" href="https://www.linkedin.com/in/rafaelalucas/" target="_blank">
+          <span class="icon"></span>
+       </a>
+       <a class="bg_links logo"></a>
+    </div>
+
+
+       <div class="content">
+          <div class="card">
+                <div class="icon"><i><%= image_tag ('movementwhite.png'), height: 60, width: 60 %></i></div>
+                <p class="title"><%= shot.movement %></p>
+                <p class="text">Movement</p>
           </div>
-        </div>
-      </div>
+          <div class="card">
+                <div class="icon"><i><%= image_tag ('camerawhite.png'), height: 60, width: 60 %></i></div>
+                <p class="title"><%= shot.equipment %></p>
+                <p class="text">Equipment</p>
+          </div>
+          <div class="card">
+                <div class="icon"><i><%= image_tag ('localizationwhite.png'), height: 60, width: 60 %></i></div>
+                <p class="title"><%= shot.location %></p>
+                <p class="text">Localization</p>
+          </div>
+
+       </div>
     </div>
     <% end %>
 </div>
