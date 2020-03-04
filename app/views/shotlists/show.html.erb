@@ -78,8 +78,9 @@
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-12">
+
+        <div style="text-align: center;">
+            
             <div class="search-form-control form-inline form-group">
             <%= form_tag results_path, method: :get do %>
               <%= hidden_field_tag(:shotlist_tag_list, @shotlist.shotlist_tag_list) %>
@@ -87,10 +88,15 @@
               <%= submit_tag "Find matches", class: "btn btn-light" %>
             <% end %>
             </div>
+          
           </div>
-        </div>
     <% end %>
     </div>
+
+</div>
+
+
+</div>
 
 
 
