@@ -1,8 +1,9 @@
 .navbar-lewagon {
   color: white !important;
   justify-content: space-between;
-  background-color: transparent;
+  background-color: white;
   transition: 0.3s background-color ease;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -18,7 +19,7 @@
   font-size:1rem;
   font-weight: 600;
   font-size: 18px;
-  color: white;
+  color: black;
 }
 
 
@@ -209,10 +210,10 @@
 
 
 // JS
-.navbar-lewagon-white {
-  background-color: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  &.navbar-light .navbar-brand {
-    color: black;
-  }
-}
+// .navbar-lewagon-white {
+//   background-color: white;
+//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+//   &.navbar-light .navbar-brand {
+//     color: black;
+//   }
+// }

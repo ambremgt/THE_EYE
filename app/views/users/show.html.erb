@@ -27,20 +27,21 @@
   </div>
 </div>
 
-<div style="margin-left: 26px; margin-top: 120px;">
+<div style="margin-left: 26px; margin-top: 120px;margin-top: 140px;margin-bottom: 70px;">
   <% if current_user.interest_list.present?  %>
     <% current_user.interest_list.each do |tag| %>
       <%= link_to tag, results_path(tag: tag), class: "btn-tag-result" %></li>
     <% end %>
   <% end %>
 </div>
-<div class="mosaic">
-  <h3 style="text-align: left; margin-bottom: 20px;">Collaborations</h3>
-  <div class="row">
+
+
+  <h3>Collaborations</h3>
+  <div class="row" style="padding: 20px;">
     <% if @filmmaker.portfolio_assets %>
         <% @filmmaker.portfolio_assets.each do |asset| %>
         <% if asset.video_url.present? %>
-          <div class="col-4" style="margin-bottom: 10px;">
+          <div class="col-4">
             <div class="group">
               <iframe src="https://player.vimeo.com/video/<%= asset.video_url %>?autoplay=1&autopause=0&muted=1&title=0&byline=0&portrait=0&controls=0&loop=1" width="450" height="250" preload="auto" frameborder="0" allowfullscreen></iframe>
               <div class="poster" style="display:flex; background-image: url('<%= cl_image_path asset.poster_picture.key, height: 250, width: 450, crop: :fill %>');">
@@ -52,12 +53,12 @@
       <% end %>
     <% end %>
   </div>
-</div>
 
 
-<div class="col-11 ml-4" style="margin-bottom:100px;">
-  <h3 style="margin-bottom: 20px;">Biography</h3>
-  <div  class="container-portfolio">
+
+<div>
+  <h3 style="margin-top: 50px">Biography</h3>
+  <div class="container-portfolio">
     <p><%= @filmmaker.biography %></p>
   </div>
 </div>

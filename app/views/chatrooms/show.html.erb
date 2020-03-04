@@ -48,11 +48,11 @@
     <% if other_chatter.photo.present? %>
       <%= cl_image_tag other_chatter.photo.key, height: 120, width: 120, crop: :fill, class: "avatar-huge sidebar-avatar" %>
     <% end %>
-    <h5>
+    <h5 style="margin-left: 0vw;">
       <%= link_to(user_path(other_chatter)) do %>
         <%= other_chatter.first_name %> <%= other_chatter.last_name %></h5>
       <% end %>
-    <p><%= other_chatter.city %></p>
+    <p style="margin-left: 0vw;"><%= other_chatter.city %></p>
 
     <% other_chatter.interest_list.each do |interest| %>
       <small><%= interest %></small>

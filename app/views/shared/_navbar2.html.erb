@@ -20,6 +20,10 @@
           <%= link_to "Dashboard", "/dashboard", class: "btn btn-navbar2-transparent" %>
         </li>
 
+        <li class="nav-item">
+          <%= link_to "Add a project", "/shotlists/new", class: "btn btn-navbar2-transparent" %>
+        </li>
+
         <%# Notification center li %>
         <li class="nav-item" id="user-channel" data-user-id="<%= current_user.id %>">
           <div id="notif-counter" data-toggle="dropdown"
