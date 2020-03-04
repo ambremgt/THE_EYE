@@ -68,25 +68,22 @@
 
 // page results
 .btn-tag-result {
-  color: #727272;
-  padding: 8px;
+  color: lightgrey;
   background: transparent;
-  border: solid 1px #727272;
+  border: solid 1px lightgrey;
   -webkit-transition: background 0.3s ease;
   transition: background 0.3s ease;
   text-align: center;
-  font-size: 13px;
-  margin-left: 20px;
-  margin-right: 20px;
-  height: 25px;
+  font-size:12px;
+  padding:0.5rem 2rem;
   border-radius: 4px;
   text-decoration: none;
 }
 .btn-tag-result:hover {
   opacity: 1;
   text-decoration: none;
-  color: black;
-  border: solid 1px black;
+  color: #5464f7;
+  border: solid 1px #5464f7;
   transition: 0.4s;
 }
 
