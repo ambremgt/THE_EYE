@@ -25,7 +25,7 @@
         </a>
         <div class="dropdown-menu card-trip" aria-labelledby="dropdownMenuLink">
           <ul class="shotlist-dropdown-list">
-            <li>My project:</li>
+            <li>My projects:</li>
             <% @current_user.shotlists.each do |shotlist| %>
             <li><%= link_to shotlist.title, shotlist_path(shotlist), class: "shotlist-link" %></li>
           <% end %>
@@ -33,7 +33,7 @@
         </div>
       </div>
       <% else %>
-          <%= link_to("Create your first project", new_shotlist_path(@shotlist) , class: "btn btn-attach") %>
+          <%= link_to("Create your first project", new_shotlist_path(@shotlist) , class: "shotlist-link") %>
       <% end %>
       </div>
 

@@ -1,6 +1,5 @@
 
 .message-container {
-  border: 1px solid $gray-500;
   border-radius: 5px;
   padding: 12px 18px;
   margin: 20px auto;
@@ -10,10 +9,14 @@
 
 .outgoing-msg {
   margin-right: 0px;
+  background-color: rgba(84, 100, 246, 0.9);
+  border: none;
+  color: white;
+
 }
 .incoming-msg {
   margin-left: 0px;
-
+  background-color: rgba(173, 181, 189, .5);
 }
 
 .author {
