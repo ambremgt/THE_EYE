@@ -17,13 +17,14 @@
   <div class="container" style="margin-top: 50px; margin-bottom: 100px;">
 
     <p style="margin-bottom: 40px; font-size: 21px; font-weight: 500;">
-      Filmmakers associated to
+
       <% if params[:query].present? %>
-        "<%= params[:query] %>"
+       Filmmakers associated to "<%= params[:query] %>"
       <% elsif params[:tag].present? %>
-        "<%= params[:tag] %>"
+        Filmmakers associated to "<%= params[:tag] %>"
        <% elsif params[:shotlist_tag_list].present? %>
-        "<%= params[:shotlist_tag_list] %>"
+        Filmmakers associated to "<%= params[:shotlist_tag_list] %>"
+      <% else %>
 
       <% end %>
       <% if params[:location].present? %>
