@@ -80,15 +80,15 @@
 
 
         <div style="text-align: center;">
-            
-            <div class="search-form-control form-inline form-group">
+
+
             <%= form_tag results_path, method: :get do %>
               <%= hidden_field_tag(:shotlist_tag_list, @shotlist.shotlist_tag_list) %>
               <%= hidden_field_tag(:location, shot.location) %>
-              <%= submit_tag "Find matches", class: "btn btn-light" %>
+              <%= submit_tag "Find matches", class: "btn btn-navbar2 mt-5" %>
             <% end %>
-            </div>
-          
+
+
           </div>
     <% end %>
     </div>
