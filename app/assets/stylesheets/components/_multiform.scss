@@ -9,26 +9,53 @@
 //     margin-top: 30px;
 // }
 
-.leftform{
-  height:100vh;
-  display: block;
-  align-items:center;
-  text-align: center;
-    justify-content: space-between;
+.pic::after{
+  content:"";
+
+  background: linear-gradient(black,transparent,black),
+      url("https://i.pinimg.com/originals/11/81/bc/1181bc614be0666b45448b646fcbe908.jpg");
+      background-repeat: no-repeat;
+  background-size: cover;
+  opacity:0.6;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+
+
 }
-.blocktoIt{
-  margin-top:2vh;
+
+
+.leftform{
+  color:black;
+  font-weight:500;
+  height:100vh;
   display: block;
   align-items:center;
   text-align: center;
     justify-content: space-between;
 
 }
+
+
+.blocktoIt{
+  margin-top:2vh;
+  display: block;
+  align-items:center;
+  text-align: center;
+  justify-content: space-between;
+  font-weight:600;
+
+
+}
 .blocktoPic-info{
   padding: 3em 1em;
   p {
+    font-weight: 600;
     line-height: 2em;
-    text-align: justify;
+    text-align: left;
   }
   p:last-child {
     margin-top: 3em;
@@ -36,6 +63,7 @@
 }
 
 .multiformcustom {
+
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -90,7 +118,8 @@
   color: #5464f7;
   border-radius: 5px;
   opacity: 0.6;
-  height: 90px;
+  height: 50px;
+  width: 140px;
   &:hover {
     opacity: 1;
     cursor: pointer;
@@ -201,7 +230,7 @@ textarea.form-control{
     list-style-type: none;
     color: #5464f7;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 20px;
     width: 33.33%;
     float: left;
     position: relative;
@@ -232,7 +261,7 @@ textarea.form-control{
     background: #white;
     position: absolute;
     left: -50%;
-    top: 9px;
+    top: 14px;
     z-index: -1; /*put it behind the numbers*/
 }
 
