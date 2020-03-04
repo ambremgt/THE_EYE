@@ -1,21 +1,16 @@
 <% content_for :meta_title, "#{@shotlist.title}" %>
 <% content_for :meta_description, @shotlist.description %>
 
-<div class="header-show" >
-  <h3 style="color: white; text-align: center; position: relative; top: 16vh; font-size: 24px;">Your project's description</h3>
-  <% @shotlist.shots.each do |shot| %>
-  <div style="text-align: center; position: relative; top: 16vh; font-size: 24px;">
-    <%= form_tag results_path, method: :get do %>
-      <%= hidden_field_tag(:shotlist_tag_list, @shotlist.shotlist_tag_list) %>
-      <%= hidden_field_tag(:location, shot.location) %>
-      <%= submit_tag "Find matches", class: "btn btn-show-list" %>
+  <div style="text-align: center; margin-top:100px;">
+    <h2><%= @shotlist.title.capitalize %></h2>
+    <h3><%= @shotlist.description.capitalize%><h3>
+    <% @shotlist.shots.each do |shot| %>
+      <%= form_tag results_path, method: :get do %>
+        <%= hidden_field_tag(:shotlist_tag_list, @shotlist.shotlist_tag_list) %>
+        <%= hidden_field_tag(:location, shot.location) %>
+        <%= submit_tag "Find matches", class: "btn btn-CTA" %>
     <% end %>
   </div>
-</div>
-    <div class="mt-4" style="text-align: center;">
-      <h2 style="margin-left:0vw;"><%= @shotlist.title.capitalize %></h2>
-      <h3 style="margin-left:0vw;"><%= @shotlist.description.capitalize%><h3>
-    </div>
 
     <div class="about">
        <a class="bg_links social portfolio" href="https://www.rafaelalucas.com" target="_blank">
@@ -48,9 +43,6 @@
                 <p class="text">Size</p>
           </div>
        </div>
-    </div>
-
-
 
     <div class="about">
        <a class="bg_links social portfolio" href="https://www.rafaelalucas.com" target="_blank">
@@ -64,8 +56,6 @@
        </a>
        <a class="bg_links logo"></a>
     </div>
-
-
        <div class="content">
           <div class="card">
                 <div class="icon"><i><%= image_tag ('movementwhite.png'), height: 60, width: 60 %></i></div>
@@ -82,15 +72,13 @@
                 <p class="title"><%= shot.location %></p>
                 <p class="text">Localization</p>
           </div>
-
        </div>
     </div>
     <% end %>
-</div>
-
+  </div>
   </div>
 </div>
-
+</div>
 
 
 
