@@ -14,7 +14,17 @@
       <h2 style="margin-left:0vw;"><%= @shotlist.title.capitalize %></h2>
       <h3 style="margin-left:0vw;"><%= @shotlist.description.capitalize%><h3>
     </div>
+
+        <div style="text-align: right;">
+            <%= form_tag results_path, method: :get do %>
+              <%= hidden_field_tag(:shotlist_tag_list, @shotlist.shotlist_tag_list) %>
+              <%= hidden_field_tag(:location, shot.location) %>
+              <%= submit_tag "Find matches", class: "btn btn-navbar2" %>
+            <% end %>
+          </div>
       <hr>
+
+
       <h3>Details of the scene</h3>
       <div class="row">
         <div class="col-4">
@@ -85,17 +95,7 @@
         </div>
 
 
-        <div style="text-align: center;">
 
-
-            <%= form_tag results_path, method: :get do %>
-              <%= hidden_field_tag(:shotlist_tag_list, @shotlist.shotlist_tag_list) %>
-              <%= hidden_field_tag(:location, shot.location) %>
-              <%= submit_tag "Find matches", class: "btn btn-navbar2 mt-5" %>
-            <% end %>
-
-
-          </div>
     <% end %>
     </div>
 

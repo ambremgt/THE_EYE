@@ -40,7 +40,7 @@
             <% if filmmaker.portfolio_assets %>
               <% filmmaker.portfolio_assets.each do |asset| %>
                 <% asset.photos.each do |photo| %>
-                  <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+                  <%= cl_image_tag photo.key, height: 300, width: 400, class: 'image-card'%>
                 <% end %>
               <% end %>
             <div class="card-trip-infos">
