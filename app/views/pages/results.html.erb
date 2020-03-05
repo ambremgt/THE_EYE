@@ -51,13 +51,13 @@
               <% end %>
             <div class="card-trip-infos">
               <div>
-                <h2 style="margin-bottom: 8px;"><%= filmmaker.first_name%> <%= filmmaker.last_name %></h2>
-                <div style="display: flex;margin-bottom: 5px">
+                <h2 style="margin-bottom: 10px;"><%= filmmaker.first_name%> <%= filmmaker.last_name %></h2>
+                <div style="display: flex;">
                   <p class="fas fa-map-marker-alt"></p>
-                  <p style="margin-left: 10px;"><%= filmmaker.city %></p>
+                  <p class="location"><%= filmmaker.city %></p>
                 </div>
                 <% if filmmaker.biography %>
-                <p style="margin-bottom: 5px;"><%= filmmaker.biography.split(' ').slice(0,12).join(' ')%>...</p>
+                <p class="biography"><%= filmmaker.biography.split(' ').slice(0,12).join(' ')%>...</p>
                 <% end %>
                 <div style="text-align: left;">
                 <% if filmmaker.interest_list.present?  %>
