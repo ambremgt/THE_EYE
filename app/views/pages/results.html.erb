@@ -1,6 +1,7 @@
 
 
-<div class="banner-index" style="background-image: url('https://images.pexels.com/photos/1500590/pexels-photo-1500590.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');">
+<div class="banner-index">
+<iframe src="https://player.vimeo.com/video/<%= asset.video_url %>?autoplay=1&autopause=0&muted=1&title=0&byline=0&portrait=0&controls=0&loop=1" width="450" height="250" preload="auto" frameborder="0" allowfullscreen></iframe>
 <h1>Welcome in Camea's filmmakers community.</h1>
 <br>
 <h2>They are waiting for collaboration!</h2>
@@ -19,7 +20,7 @@
 
   <div class="container" style="margin-top: 50px; margin-bottom: 100px;">
 
-    <p style="margin-bottom: 40px; font-size: 21px; font-weight: 500;">
+    <p style="margin-bottom: 40px; font-size: 21px; font-weight: 500;margin-right: 10px;">
 
       <% if params[:query].present? %>
        Filmmakers associated to "<%= params[:query] %>"
