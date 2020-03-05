@@ -108,17 +108,17 @@
 
 // BUTTONS NAVBAR 2
 .dashboard-link {
-  color: black;
+  color: #191818;
   font-weight: 440;
   font-size: 13px;
-  padding-right: 5px;
-  padding-left: 25px;
-  padding-top: 7px;
-  padding-bottom: 7px;
-  margin: 10px;
-  margin-right: 0px;
-  border-radius: 3px;
+  margin-top: 12px;
   box-sizing: border-box;
+  margin-right: 8px;
+  margin-left: 3px;
+}
+.dashboard-link:hover {
+  color: #5464f7;
+  transition: 0.4s;
 }
 
 .btn-navbar2{
