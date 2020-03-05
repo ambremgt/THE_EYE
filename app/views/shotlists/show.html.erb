@@ -67,9 +67,10 @@
                 <p class="title"><%= shot.equipment %></p>
                 <p class="text">Equipment</p>
           </div>
+
           <div class="card">
                 <div class="icon"><i><%= image_tag ('localizationwhite.png'), height: 60, width: 60 %></i></div>
-                <p class="title"><%= shot.location %></p>
+                <p class="title"><%= shot.location.split(', ').slice(0,2).join(', ') %></p>
                 <p class="text">Localization</p>
           </div>
        </div>

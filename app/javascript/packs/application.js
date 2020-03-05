@@ -27,6 +27,9 @@ import { dashboardLine } from '../components/dashbordline';
 
 import { hiddenPoster } from '../components/video';
 
+// Algolia autocomplete
+import { initAutocomplete } from '../plugins/init_autocomplete';
+
 // import { shotlistPreviewLink } from '../components/shotlist_preview_link';
 
 // import { video } from '../components/home';
@@ -48,6 +51,8 @@ document.addEventListener('turbolinks:load', () => {
   initUpdateNavbarOnScroll();
   initUpdateFooterOnScroll();
   hiddenPoster();
+  initAutocomplete();
+
 
 
   if (document.querySelector('.shotlist-link')) {
@@ -55,7 +60,7 @@ document.addEventListener('turbolinks:load', () => {
     attachShotlist();
   }
   if (document.querySelector('.category-choice')) {
-  activeCheck();
+    activeCheck();
 
   }
   if (document.querySelector('.blocktoIt')) {
@@ -67,6 +72,7 @@ document.addEventListener('turbolinks:load', () => {
   if (document.querySelector('.line2')){
     dashboardLine();
   }
+
 
 
 });
