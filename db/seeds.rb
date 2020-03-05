@@ -33,7 +33,7 @@ mohamed = User.new(
                     last_name: "Almari",
                     biography: "Hi, my names Mo. Im 22 years old from the bay area. My passion is cinema. I love shooting landscapes, seascapes, and architecture. Being able to capture the beauty of this world, and sharing that with you is my goal here. I have recently started to put my artwork to life by creating prints for people to purchase and enjoy. By doing this, I will be able to up my photography game and hopefully take better pictures for you and many people like you to enjoy.",
                     email: "mohamed@video.com",
-                    city: "San Francisco, United States of America",
+                    city: "San Francisco, California, United States of America",
                     wallet: "50", language: "English",
                     password: "123456", password_confirmation: "123456"
                   )
