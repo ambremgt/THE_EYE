@@ -3,7 +3,7 @@ import places from 'places.js';
 const initAutocomplete = () => {
   const addressInput = document.getElementById('shot_location');
   if (addressInput) {
-    places({ container: addressInput });
+    places({ container: addressInput});
   }
 };
 

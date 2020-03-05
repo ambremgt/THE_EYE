@@ -1,39 +1,30 @@
 <!-- MultiStep Form -->
-  <div class="row d-flex m-0 align-items-center">
-    <div class="col leftform align-items-center">
-    <div class="pic"></div>
-      <div  class="blocktoPic">
-        <h2 class="fs-title animated fadeIn">Create your shotlist</h2>
-        <div class="blocktoPic-info animated fadeIn">
-          <p class="animated fadeIn">A <strong>shot list</strong> is a detailed list of <strong>every camera shot</strong> that needs to be captured in a scene of a video production. Created by the director and the cinematographer during preproduction, it outlines the precise specifics of every shot—such as <strong>the camera</strong>, shot <strong>size</strong>, and shot <strong>type</strong> so the cinematographer and assistant director know <strong>exactly</strong> what needs to be captured to tell the story visually.</p>
-          <p class="animated fadeIn delay-2s">It determines what equipment the camera crew needs, what lighting setups need to be created, call times for the actors, and what locations, set pieces, and props need to be ready.</p>
-        </div>
-      </div>
+<div class="row d-flex m-0 align-items-center">
+  <!-- LEFT SIDEBAR -->
+  <div class="col leftform align-items-center">
 
-      <div class="blocktoPic d-none">
-        <h2 class="fs-title">Create your shotlist</h2>
-        <div class="blocktoPic-info">
-          <p >A <strong>shot list</strong> is a detailed list of <strong>every camera shot</strong> that needs to be captured in a scene of a video production. Created by the director and the cinematographer during preproduction, it outlines the precise specifics of every shot—such as <strong>the camera</strong>, shot <strong>size</strong>, and shot <strong>type</strong> so the cinematographer and assistant director know <strong>exactly</strong> what needs to be captured to tell the story visually.</p>
-          <p >It determines what equipment the camera crew needs, what lighting setups need to be created, call times for the actors, and what locations, set pieces, and props need to be ready.</p>
-        </div>
-
-      </div>
-
-      <div class="blocktoPic d-none">
-        <h2 class="fs-title">Create your shotlist</h2>
-        <div class="blocktoPic-info">
-          <p >A <strong>shot list</strong> is a detailed list of <strong>every camera shot</strong> that needs to be captured in a scene of a video production. Created by the director and the cinematographer during preproduction, it outlines the precise specifics of every shot—such as <strong>the camera</strong>, shot <strong>size</strong>, and shot <strong>type</strong> so the cinematographer and assistant director know <strong>exactly</strong> what needs to be captured to tell the story visually.</p>
-          <p >It determines what equipment the camera crew needs, what lighting setups need to be created, call times for the actors, and what locations, set pieces, and props need to be ready.</p>
-        </div>
-
-      </div>
-
+    <div  class="blocktoPic">
+      <h2 class="fs-title animated fadeIn">Create your shotlist</h2>
+        <%= render partial: 'shotlist_text' %>
     </div>
 
-    <div class="col-md-8 col-md-offset-3 align-items-center">
+    <div class="blocktoPic d-none">
+      <h2 class="fs-title">Create your shotlist</h2>
+      <%= render partial: 'shotlist_text' %>
+    </div>
 
-      <div class="multiformcustom align-items-center">
+    <div class="blocktoPic d-none">
+      <h2 class="fs-title">Create your shotlist</h2>
+      <%= render partial: 'shotlist_text' %>
+    </div>
 
+  </div>
+  <!-- end LEFT SIDEBAR -->
+
+  <!-- FORM CENTER -->
+
+  <div class="col-md-8 col-md-offset-3 align-items-center">
+    <div class="multiformcustom align-items-center">
         <!-- progressbar -->
         <div class="multiform-progress">
           <ul id="progressbar">
@@ -44,56 +35,56 @@
           <hr style="background-color: lightgrey">
         </div>
 
-
         <%= simple_form_for(@shotlist) do |f| %>
-          <div class="multiform-content">
-            <%= f.error_notification %>
-            <!-- fieldsets -->
-            <fieldset class="blocktoIt">
-              <h1 class="fs-subtitle">Give your film a title</h1>
-              <%= f.input :title,label: false, placeholder: "Wayne's World seems a cool title, isn't it?", class: "inp" %>
-            </fieldset>
+        <div class="multiform-content">
+          <%= f.error_notification %>
+          <!-- fieldsets -->
+          <fieldset class="blocktoIt">
+            <h1 class="fs-subtitle">Give your film a title</h1>
+            <%= f.input :title,label: false, placeholder: "Wayne's World seems a cool title, isn't it?", class: "inp" %>
+          </fieldset>
 
-            <fieldset class="blocktoIt d-none">
-              <h1 class="fs-subtitle">What is your film about?</h1>
-              <%= f.input :description, label: false, placeholder: "It's party time excellent", class: "inp" %>
-            </fieldset>
+          <fieldset class="blocktoIt d-none">
+            <h1 class="fs-subtitle">What is your film about?</h1>
+            <%= f.input :description, label: false, placeholder: "It's party time excellent", class: "inp" %>
+          </fieldset>
 
-            <fieldset class="blocktoIt d-none">
-              <h1 class="fs-subtitle">Select tag that correspond to your project:</h1>
+          <fieldset class="blocktoIt d-none">
+            <h1 class="fs-subtitle">Select tag that correspond to your project:</h1>
 
-              <fieldset class="form-group check_boxes optional shotlist_shotlist_tag_list">
-                <div class="category-choices">
-                  <input type="hidden" name="shotlist[shotlist_tag_list][]" value="">
-                  <div class="category-choices-grid">
-                    <% @tags.each do |tag| %>
-                      <div class="form-check">
-                        <input class="form-check-input check_boxes optional" type="checkbox" value="<%= tag %>" name="shotlist[shotlist_tag_list][]" id="shotlist_shotlist_tag_list_<%= tag %>" hidden >
-                        <label class="category-choice form-check-label collection_check_boxes" for="shotlist_shotlist_tag_list_<%= tag %>"><%= tag %></label>
-                      </div>
+            <fieldset class="form-group check_boxes optional shotlist_shotlist_tag_list">
+              <div class="category-choices">
+                <input type="hidden" name="shotlist[shotlist_tag_list][]" value="">
+                <div class="category-choices-grid">
+                  <% @tags.each do |tag| %>
+                    <div class="form-check">
+                      <input class="form-check-input check_boxes optional" type="checkbox" value="<%= tag %>" name="shotlist[shotlist_tag_list][]" id="shotlist_shotlist_tag_list_<%= tag %>" hidden >
+                      <label class="category-choice form-check-label collection_check_boxes" for="shotlist_shotlist_tag_list_<%= tag %>"><%= tag %></label>
+                    </div>
 
-                    <% end %>
-                  </div>
+                  <% end %>
                 </div>
-              </fieldset>
+              </div>
             </fieldset>
-          </div>
+          </fieldset>
+        </div>
 
-          <div class="multiform-bottom">
-            <hr style="background-color: lightgrey">
+        <div class="multiform-bottom">
+          <hr style="background-color: lightgrey">
 
-            <button type="button" id="prev" class="d-none btn btn-navbar2-transparent btn-lg" >Previous</button>
-            <button type="button" id="next" class="btn btn-navbar2">Next</button>
-            <%= f.button :submit ,"Next", id: "sub", class: "submit btn btn-navbar2 d-none"%>
-          </div>
+          <button type="button" id="prev" class="d-none btn btn-navbar2-transparent btn-lg" >Previous</button>
+          <button type="button" id="next" class="btn btn-navbar2">Next</button>
+          <%= f.button :submit ,"Next", id: "sub", class: "submit btn btn-navbar2 d-none"%>
+        </div>
 
-        <% end %>
+      <% end %>
 
-        <!-- link to designify.me code snippets -->
-        <!-- /.link to designify.me code snippets -->
-      </div>
+      <!-- link to designify.me code snippets -->
+      <!-- /.link to designify.me code snippets -->
     </div>
   </div>
+  <!-- end FORM CENTER -->
+</div>
 
 <!-- /.MultiStep Form -->
 
