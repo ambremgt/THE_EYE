@@ -65,9 +65,6 @@ svg rect {
 
 
 
-// _____banner dashboard
-
-
 .banner-index {
   background-size: cover;
   background-position: center;
@@ -91,8 +88,13 @@ svg rect {
   .background-texture {
     z-index: -1;
   }
-
 }
+
+.banner-index-video {
+  animation-duration: 2s;
+  background-image: black;
+}
+
 
 .banner-index-title {
   margin: auto;
