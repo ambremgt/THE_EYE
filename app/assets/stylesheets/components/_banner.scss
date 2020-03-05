@@ -69,14 +69,15 @@ svg rect {
 
 
 .banner-index {
-  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
   background-size: cover;
   background-position: center;
-  height: 50vh;
-  padding: 150px 0;
+  height: 65vh;
   text-align: center;
   max-height: 700px;
   margin: auto;
+  position:sticky;
+  top:0;
+  z-index:-2;
 }
 
 
