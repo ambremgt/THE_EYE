@@ -1,5 +1,4 @@
-<% content_for :meta_title, "#{@shotlist.title}" %>
-<% content_for :meta_description, @shotlist.description %>
+
 
   <div style="text-align: center; margin-top:100px;">
     <h2><%= @shotlist.title.capitalize %></h2>
@@ -10,79 +9,80 @@
         <%= hidden_field_tag(:location, shot.location) %>
         <%= submit_tag "Find matches", class: "btn btn-CTA" %>
     <% end %>
+
   </div>
 
-    <div class="about">
-       <a class="bg_links social portfolio" href="https://www.rafaelalucas.com" target="_blank">
-          <span class="icon"></span>
-       </a>
-       <a class="bg_links social dribbble" href="https://dribbble.com/rafaelalucas" target="_blank">
-          <span class="icon"></span>
-       </a>
-       <a class="bg_links social linkedin" href="https://www.linkedin.com/in/rafaelalucas/" target="_blank">
-          <span class="icon"></span>
-       </a>
-       <a class="bg_links logo"></a>
+
+    <div class="container">
+
+      <div id="showlisting">
+        <label id="label-show">
+        <input type="checkbox" id="input-show" />
+        <div class="cardshow">
+          <div class="front poster">
+            <%= image_tag ('descriptionwhite.png'), height: 60, width: 60 %>
+            <%= shot.description %>
+          </div>
+
+            <div class="back"><iframe src="https://player.vimeo.com/video/137878878?autoplay=1&autopause=0&muted=1&title=0&byline=0&portrait=0&controls=0&loop=1" width="500" height="350" preload="auto" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        </label>
+
+        <label id="label-show">
+        <input type="checkbox"  id="input-show" />
+         <div class="cardshow">
+          <div class="front poster">
+            <%= image_tag ('anglewhite.png'), height: 60, width: 60 %>
+            Angle : <%= shot.angle %>
+          </div>
+            <div class="back"><iframe src="https://player.vimeo.com/video/72859928?autoplay=1&autopause=0&muted=1&title=0&byline=0&portrait=0&controls=0&loop=1" width="500" height="350" preload="auto" frameborder="0" allowfullscreen></iframe>
+            </div>
+         </div>
+        </label>
+        <label id="label-show">
+          <input type="checkbox" id="input-show" />
+            <div class="cardshow">
+              <div class="front poster">
+                <%= image_tag ('sizewhite.png'), height: 60, width: 60 %>
+                Size : <%= shot.shot_size %>
+              </div>
+              <div class="back"><iframe src="https://player.vimeo.com/video/104089713?autoplay=1&autopause=0&muted=1&title=0&byline=0&portrait=0&controls=0&loop=1" width="600" height="350" preload="auto" frameborder="0" allowfullscreen></iframe>
+              </div>
+            </div>
+        </label>
+        <label id="label-show">
+          <input type="checkbox" id="input-show" />
+            <div class="cardshow">
+              <div class="front poster"><%= image_tag ('movementwhite.png'), height: 60, width: 60 %>
+                Moove : <%= shot.movement %>
+              </div>
+                <div class="back"><iframe src="https://player.vimeo.com/video/159575697?autoplay=1&autopause=0&muted=1&title=0&byline=0&portrait=0&controls=0&loop=1" width="600" height="350" preload="auto" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </label>
+        <label id="label-show">
+          <input type="checkbox" id="input-show" />
+            <div class="cardshow">
+              <div class="front poster"><%= image_tag ('camerawhite.png'), height: 60, width: 60 %>
+                Require : <%= shot.equipment %>
+              </div>
+                <div class="back"><iframe src="https://player.vimeo.com/video/12732570?autoplay=1&autopause=0&muted=1&title=0&byline=0&portrait=0&controls=0&loop=1" width="600" height="350" preload="auto" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </label>
+<label id="label-show">
+    <input type="checkbox" id="input-show" />
+    <div class="cardshow">
+        <div class="front poster"><%= image_tag ('localizationwhite.png'), height: 60, width: 60 %>
+          <%= shot.location.split(', ').slice(0,2).join(', ') %>
+        </div>
+          <div class="back"><iframe src="https://player.vimeo.com/video/111467200?autoplay=1&autopause=0&muted=1&title=0&byline=0&portrait=0&controls=0&loop=1" width="600" height="350" preload="auto" frameborder="0" allowfullscreen></iframe>
+          </div>
     </div>
-       <div class="content">
-          <div class="card">
-                <div class="icon"><i><%= image_tag ('descriptionwhite.png'), height: 60, width: 60 %></i></div>
-                <p class="title"><%= shot.description %></p>
-                <p class="text">Description</p>
-          </div>
+</label>
 
-          <div class="card">
-                <div class="icon"><i><%= image_tag ('anglewhite.png'), height: 60, width: 60 %></i></div>
-                <p class="title"><%= shot.angle %></p>
-                <p class="text">Angle</p>
-          </div>
-          <div class="card">
-
-                <div class="icon"><i><%= image_tag ('sizewhite.png'), height: 60, width: 60 %></i></div>
-                <p class="title"><%= shot.shot_size %></p>
-                <p class="text">Size</p>
-          </div>
-       </div>
-
-    <div class="about">
-       <a class="bg_links social portfolio" href="https://www.rafaelalucas.com" target="_blank">
-          <span class="icon"></span>
-       </a>
-       <a class="bg_links social dribbble" href="https://dribbble.com/rafaelalucas" target="_blank">
-          <span class="icon"></span>
-       </a>
-       <a class="bg_links social linkedin" href="https://www.linkedin.com/in/rafaelalucas/" target="_blank">
-          <span class="icon"></span>
-       </a>
-       <a class="bg_links logo"></a>
     </div>
-       <div class="content" style="margin-bottom: 100px;">
-          <div class="card">
-                <div class="icon"><i><%= image_tag ('movementwhite.png'), height: 60, width: 60 %></i></div>
-                <p class="title"><%= shot.movement %></p>
-                <p class="text">Movement</p>
-          </div>
-          <div class="card">
-                <div class="icon"><i><%= image_tag ('camerawhite.png'), height: 60, width: 60 %></i></div>
-                <p class="title"><%= shot.equipment %></p>
-                <p class="text">Equipment</p>
-          </div>
-
-          <div class="card">
-                <div class="icon"><i><%= image_tag ('localizationwhite.png'), height: 60, width: 60 %></i></div>
-                <p class="title"><%= shot.location.split(', ').slice(0,2).join(', ') %></p>
-                <p class="text">Localization</p>
-          </div>
-       </div>
     </div>
     <% end %>
-  </div>
-  </div>
-</div>
-</div>
-
-
-
-
-
 
