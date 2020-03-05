@@ -249,7 +249,9 @@
   max-width: 300px;
   min-width: 200px;
   height: 250px;
-  background-color: #f2f2f3;
+  background: linear-gradient(rgb(17, 12, 34),rgba(0,0,0,0.8)),
+   url("https://lh3.googleusercontent.com/proxy/csAGpfRnHr_1EuiG03TYexG0ilahJjabLHx-AB24DNKlpQ8keQZG7X_nJ15tfw6qUTAUFurX5miEDoKs2RUWgaowh_l6");
+   background-size:cover;
   margin: 10px;
   border-radius: 10px;
   font-size: 16px;
