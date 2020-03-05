@@ -2,8 +2,8 @@
 #showlisting{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1em;
-  margin:14.5rem;
+  grid-gap: 2em;
+  margin:9.5rem 13.5rem 14.5rem 13.5rem;
 
 }
 .title{
@@ -48,7 +48,7 @@
         position: absolute;
         height: 100%;
         width: 100%;
-        background: linear-gradient(black,rgba(0,0,0,0.8));
+        background: linear-gradient(black,rgba(0,0,123,0.8));
         text-align: center;
         line-height: 200px;
         -webkit-backface-visibility: hidden;
@@ -58,7 +58,7 @@
 
     .cardshow .back {
         background: white;
-        box-shadow: 1px 1px 16px grey;
+
         color: black;
         -webkit-transform: rotateX(180deg);
         transform: rotateX(180deg);
