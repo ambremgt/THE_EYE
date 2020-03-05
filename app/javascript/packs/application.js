@@ -51,8 +51,11 @@ document.addEventListener('turbolinks:load', () => {
   initUpdateNavbarOnScroll();
   initUpdateFooterOnScroll();
   hiddenPoster();
-  initAutocomplete();
 
+if (document.querySelector('.shot_location')) {
+
+    initAutocomplete();
+  }
 
 
   if (document.querySelector('.shotlist-link')) {
