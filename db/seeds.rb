@@ -47,7 +47,7 @@ alex = User.new(
                   last_name: "Moretti",
                   biography: "I am a documentary filmmaker, photographer and multimedia producer. She focuses on long-term projects covering human rights and conflict. She was a winner of the Prix Bayeux-Calvados for War Correspondents in 2014, Magnum Emergency Foundation grant recipient in 2013 and a winner of the PDN Photo Annual in 2012. She is the author of Grozny: Nine Cities (Dewi Lewis Publishing, 2018). She lives in Paris and works primarily in the Caucasus, Balkans, and Middle East.",
                   email: "alex@video.com",
-                  city: "San Francisco, USA",
+                  city: "San Francisco, California, United States of America",
                   wallet: "50",
                   language: "English, Korean",
                   password: "123457", password_confirmation: "123457"
@@ -173,7 +173,7 @@ samuel = User.new(
                     last_name: "Collins",
                     biography: "Hi, my names Samuel. Im 22 years old from the bay area. My passion is cinema. I love shooting landscapes, seascapes, and architecture. Being able to capture the beauty of this world, and sharing that with you is my goal here. I have recently started to put my artwork to life by creating prints for people to purchase and enjoy. By doing this, I will be able to up my photography game and hopefully take better pictures for you and many people like you to enjoy.",
                     email: "samuel@video.com",
-                    city: "San Francisco, United States of America",
+                    city: "San Francisco, California, United States of America",
                     wallet: "50", language: "English",
                     password: "111111", password_confirmation: "111111"
                   )
@@ -186,7 +186,7 @@ agathe = User.new(
                     last_name: "Dollee",
                     biography: "I'm a documentarian and video journalist based in San P. I've been working to produce high-quality video for the past seven years focusing on conflict and social movements. My work has taken me across the globe including the Middle East, Africa, Latin America, Europe, and all over the US. I like to find stories not yet told, and at the very least exploring new dimensions. The subjects must have social relevancy and not only draw attention to the subject, but also highlight how those affected are responding, reacting, and challenging their conditions. I don't like to sensationalize a story. I seek to analyze its roots and look at the broader implications of whatever conflict I may be addressing. I believe that video is one the most effective and dynamic mediums to transmit information, and I attempt to utilize it to its full potential. I'm proud of what I've produced and am anxious to pursue new opportunities to create new works with Storyhunter.",
                     email: "agathe@video.com",
-                    city: "San Francisco, United States of America",
+                    city: "San Francisco, California, United States of America",
                     wallet: "50", language: "English",
                     password: "111112", password_confirmation: "111112"
                   )
@@ -199,7 +199,7 @@ arthur = User.new(
                     last_name: "Dollee",
                     biography: "Hi, my names Arthur. Im 22 years old from the bay area. My passion is cinema. I love shooting landscapes, seascapes, and architecture. Being able to capture the beauty of this world, and sharing that with you is my goal here. I have recently started to put my artwork to life by creating prints for people to purchase and enjoy. By doing this, I will be able to up my photography game and hopefully take better pictures for you and many people like you to enjoy.",
                     email: "arthur@video.com",
-                    city: "San Francisco, United States of America",
+                    city: "San Francisco, California, United States of America",
                     wallet: "50", language: "English",
                     password: "111113", password_confirmation: "111113"
                   )

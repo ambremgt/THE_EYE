@@ -27,7 +27,8 @@ import { dashboardLine } from '../components/dashbordline';
 
 import { hiddenPoster } from '../components/video';
 
-import { searchInput } from '../components/search_input';
+// Algolia autocomplete
+import { initAutocomplete } from '../plugins/init_autocomplete';
 
 // import { shotlistPreviewLink } from '../components/shotlist_preview_link';
 
@@ -50,6 +51,7 @@ document.addEventListener('turbolinks:load', () => {
   initUpdateNavbarOnScroll();
   initUpdateFooterOnScroll();
   hiddenPoster();
+  initAutocomplete();
 
 
 
@@ -70,9 +72,7 @@ document.addEventListener('turbolinks:load', () => {
   if (document.querySelector('.line2')){
     dashboardLine();
   }
-  if (document.querySelector('#shot_location')) {
-    searchInput();
-  }
+
 
 
 });
