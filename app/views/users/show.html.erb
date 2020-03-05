@@ -17,7 +17,7 @@
         <div class="taglist">
           <% if @filmmaker.interest_list.present?  %>
             <% @filmmaker.interest_list.each do |tag| %>
-              <p style="margin-right: 10px;"><%= link_to tag, results_path(tag: tag), class: "btn-tag-result" %></li></p>
+              <p style="margin-right: 10px;"><%= link_to tag, results_path(tag: tag), class: "btn-tag-show-user" %></li></p>
             <% end %>
           <% end %>
         </div>
