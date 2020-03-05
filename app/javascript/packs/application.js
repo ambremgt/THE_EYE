@@ -17,8 +17,8 @@ require("channels")
 // const imagePath = (name) => images(name, true)
 import "bootstrap";
 
-import { initUpdateNavbarOnScroll } from '../components/navbar';
-import { initUpdateFooterOnScroll } from '../components/footer';
+// import { initUpdateNavbarOnScroll } from '../components/navbar';
+// import { initUpdateFooterOnScroll } from '../components/footer';
 import { multiForm } from '../components/multiform';
 import { activeCheck } from '../components/checkbox';
 import { attachShotlist } from '../components/attach_shotlist';
@@ -48,8 +48,8 @@ import { loadDynamicBannerText } from '../components/banner';
 
 document.addEventListener('turbolinks:load', () => {
   // video();
-  initUpdateNavbarOnScroll();
-  initUpdateFooterOnScroll();
+  // initUpdateNavbarOnScroll();
+  // initUpdateFooterOnScroll();
   hiddenPoster();
 
 if (document.querySelector('.shot_location')) {
