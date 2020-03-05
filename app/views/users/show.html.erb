@@ -15,8 +15,8 @@
         <p style="margin-left: 10px;"><%= @filmmaker.city %></p>
         <p style="margin-left: 10px;">|  <%= @filmmaker.language %></p>
         <div class="taglist">
-          <% if current_user.interest_list.present?  %>
-            <% current_user.interest_list.each do |tag| %>
+          <% if @filmmaker.interest_list.present?  %>
+            <% @filmmaker.interest_list.each do |tag| %>
               <p style="margin-right: 10px;"><%= link_to tag, results_path(tag: tag), class: "btn-tag-result" %></li></p>
             <% end %>
           <% end %>
