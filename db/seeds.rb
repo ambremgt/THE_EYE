@@ -8,24 +8,7 @@ ActsAsTaggableOn::Tag.destroy_all
 
 User.destroy_all
 
-interest_list_items = ["Landscapes",
-                       "Seascapes",
-                      "Timelapse",
-                      "Macro",
-                      "StopMotion",
-                      "Architecture",
-                      "Drone",
-                      "Trans-trav",
-                      "Urban",
-                      "Street",
-                      "City",
-                      "Mountains",
-                       "Nature",
-                       "GoPro",
-                      "4KVideoCamera",
-                        "Sliders",
-                        "Shotgun",
-                        "Documentary"]
+interest_list_items = ["Landscapes", "Seascapes", "Architecture", "Timelapse", "Macro", "StopMotion", "Drone", "Trans-trav", "Urban", "Mountains", "Nature", "GoPro", "4K Video Camera", "Sliders", "Documentary"]
 
 #Create 10 users
 mohamed = User.new(
@@ -94,7 +77,7 @@ seth = User.new(
                 language: "English, Hungarian, Chinese",
                 password: "123401", password_confirmation: "123401")
 seth.photo.attach(io: URI.open("https://images.pexels.com/photos/2851474/pexels-photo-2851474.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"), filename: "seth.png", content_type: 'image/png')
-seth.interest_list.add(["Sliders", "Drone", "Shotgun", "Documentary"])
+seth.interest_list.add(["Sliders", "Drone", "Documentary"])
 
 seth.save!
 
@@ -108,7 +91,7 @@ olga = User.new(
                 language: "Bosnian, English, French",
                 password: "123402", password_confirmation: "123402")
 olga.photo.attach(io: URI.open("https://images.pexels.com/photos/2774165/pexels-photo-2774165.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"), filename: "olga.png", content_type: 'image/png')
-olga.interest_list.add(["Trans-trav", "Urban", "Street"])
+olga.interest_list.add(["Trans-trav", "Urban", "Nature"])
 
 olga.save!
 
@@ -122,7 +105,7 @@ archana = User.new(
                 language: "English, Hindi, Tamil",
                 password: "123403", password_confirmation: "123403")
 archana.photo.attach(io: URI.open("https://images.pexels.com/photos/1264210/pexels-photo-1264210.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"), filename: "archana.png", content_type: 'image/png')
-archana.interest_list.add(["Street", "Shotgun", "StopMotion"])
+archana.interest_list.add(["Urban", "StopMotion", "Nature"])
 
 
 archana.save!
@@ -165,7 +148,7 @@ joseph = User.new(
                 language: "Monténégrin English",
                 password: "123406", password_confirmation: "123406")
 joseph.photo.attach(io: URI.open("https://images.pexels.com/photos/381843/pexels-photo-381843.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"), filename: "joseph.png", content_type: 'image/png')
-joseph.interest_list.add(["Trans-trav", "Urban", "Street", "Architecture", "City"])
+joseph.interest_list.add(["Trans-trav", "Urban", "Architecture"])
 joseph.save!
 
 samuel = User.new(
