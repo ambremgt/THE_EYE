@@ -111,7 +111,7 @@ archana.interest_list.add(["Urban", "StopMotion", "Nature"])
 archana.save!
 
 nuria = User.new(
-                first_name: "Nuria",
+                first_name: "Ambre",
                 last_name: "Tesón",
                 biography: "Independent multi-media filmmaker and writer. I develop my filmmaker career in Press and TV. I've worked as a staff member at the Spanish newspaper EL PAÍS where I participated in several investigative coverages. I'm the co-author, with the photographer Miguel Ángel Sánchez, of El Alma del Mundo, (Lunwerg, 2012). This photographic and literary work has been exhibited in Cairo, Paris, Brussels, Dubai, Madrid...",
                 email: "nuria@video.com",
@@ -119,7 +119,7 @@ nuria = User.new(
                 wallet: "50",
                 language: " Sweden English",
                 password: "123404", password_confirmation: "123404")
-nuria.photo.attach(io: URI.open("https://images.pexels.com/photos/139829/pexels-photo-139829.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"), filename: "nuria.png", content_type: 'image/png')
+nuria.photo.attach(io: URI.open("https://ca.slack-edge.com/T02NE0241-USAECKP24-de73a0718af0-512"), filename: "nuria.png", content_type: 'image/png')
 nuria.interest_list.add(["Seascapes", "Architecture", "Mountains"])
 
 nuria.save!
