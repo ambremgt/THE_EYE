@@ -17,7 +17,7 @@
         <div class="taglist">
           <% if current_user.interest_list.present?  %>
             <% current_user.interest_list.each do |tag| %>
-              <p><%= link_to tag, results_path(tag: tag), class: "btn-tag-result" %></li></p>
+              <p style="margin-right: 10px;"><%= link_to tag, results_path(tag: tag), class: "btn-tag-result" %></li></p>
             <% end %>
           <% end %>
         </div>
@@ -28,7 +28,7 @@
 
           <%= form.submit "Contact", class: 'btn btn-navbar2' %>
         <% end %>
-        <a href="" class="btn-navbar2-transparent"><i class="fas fa-share fa-lg mr-2"></i>Share a project</a>
+        <a href="" class="btn-navbar2-transparent" style="text-decoration: none;"><i class="fas fa-share fa-lg mr-2"></i>Share a project</a>
       </div>
     </div>
   </div>
