@@ -50,17 +50,18 @@
   animation-delay: 2s;
 }
 .blocktoPic-info{
-  padding: 8em 1em;
+  padding: 2em;
   p {
+    font-size: 14px;
     animation-duration: 3s;
-   animation-delay: 1s;
+    animation-delay: 1s;
     font-weight: 600;
     line-height: 2em;
     text-align: left;
   }
-  p:last-child {
-    margin-top: 3em;
-  }
+  //p:last-child {
+  //  margin-top: 3em;
+  //}
 }
 
 .multiformcustom {
