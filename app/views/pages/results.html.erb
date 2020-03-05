@@ -31,13 +31,12 @@
        <% elsif params[:shotlist_tag_list].present? %>
         Filmmakers associated to "<%= params[:shotlist_tag_list] %>"
       <% else %>
-
       <% end %>
       <% if params[:location].present? %>
          in <%= params[:location] %>
            <% end %>
     </p>
-
+<%if @filmmakers.present? %>
     <div class="row">
       <% @filmmakers.each do |filmmaker| %>
       <div class="col-4">
@@ -79,6 +78,10 @@
       </div>
       <% end %>
     </div>
+    <% else %>
+    <div id="no-match">No match for this selection, sorry</div>
+    <%= render 'shared/footer' %>
+    <%end%>
   </div>
 </div>
 
