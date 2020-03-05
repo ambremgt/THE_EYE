@@ -156,6 +156,23 @@ textarea.form-control{
     margin-bottom: 20px;
     padding:1em 3em;
 }
+.fs-subtitle-sidebar {
+    text-align: left;
+    font-family: Poppins;
+    padding-top: 2em;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 2px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+.camera-movement p,
+.camera-angle p
+ {
+  line-height: 1.2;
+  font-size: 14px;
+}
 
 // /*progressbar*/
 #progressbar {
