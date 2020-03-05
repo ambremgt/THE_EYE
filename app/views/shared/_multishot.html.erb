@@ -2,49 +2,25 @@
 <div class="row align-items-center m-0">
   <div class="col bg-light align-items-center leftform">
 
+
     <div  class="blocktoPic">
-      <h2 class="fs-title animated fadeIn">Add Shots to <br/><em><%= @shotlist.title %></em></h2>
-      <div class="blocktoPic-info">
-       <p class="animated fadeIn">Break down how you want to capture every individual shot in the scene one-by-one. Using your knowledge of shot <strong>sizes</strong>, shot <strong>types</strong>, and <strong>camera movements</strong>, consider how you want to capture each shot and fill in this shot form accordingly.</p>
-      </div>
+      <%= render partial: 'shot_text_begin' %>
     </div>
 
     <div  class="blocktoPic d-none">
-      <h2 class="fs-title animated fadeIn">Choose Shot Size</h2>
-      <div class="blocktoPic-info">
-        <p class="animated fadeIn">Shot size means <strong>how much of the scene is included in the picture</strong>, and whether it mainly shows the setting, people in the setting, or details of faces and things.
-
-  It’s important to use different shot sizes in your movie. It’s a way of spelling things out, <strong>to make sure</strong> that <strong>people see</strong> exactly the <strong>things you want them to see</strong>. If you shoot everything in long shot (head to foot) people will probably miss details and expressions which would help them understand the story.</p>
-  <br>
-      <%= image_tag "sizewhite.png", alt: "size",height: 80, width: 80, class: "animated fadeIn image" %>
-     </div>
+       <%= render partial: 'shot_text_shotsize' %>
     </div>
 
     <div  class="blocktoPic d-none">
-      <h2 class="fs-title animated fadeIn">Camera Movement</h2>
-      <div class="blocktoPic-info">
-        <p class="animated fadeIn">A <strong>shot list</strong> is a detailed list of every camera shot that needs to be captured in a scene of a video production. Created by the director and the cinematographer during preproduction, it outlines the precise specifics of every shot—such as the camera, shot size, and shot type—so the cinematographer and assistant director know exactly what needs to be captured to tell the story visually.</p>
-        <br>
-        <%= image_tag "movementwhite.png", alt: "movement",height: 80, width: 80, class: "animated fadeIn image" %>
-      </div>
+       <%= render partial: 'shot_text_movement' %>
     </div>
 
     <div  class="blocktoPic d-none">
-      <h2 class="fs-title animated fadeIn">Camera angle</h2>
-      <div class="blocktoPic-info">
-        <p class="animated fadeIn">A shot list is a detailed list of every camera shot that needs to be captured in a scene of a video production. Created by the director and the cinematographer during preproduction, it outlines the precise specifics of every shot—such as the camera, shot size, and shot type—so the cinematographer and assistant director know exactly what needs to be captured to tell the story visually.</p>
-        <br>
-        <%= image_tag "anglewhite.png", alt: "angle",height: 80, width: 80, class: "animated fadeIn image" %>
-      </div>
+      <%= render partial: 'shot_text_angle' %>
     </div>
 
     <div  class="blocktoPic d-none">
-      <h2 class="fs-title fadeIn">Your equipment</h2>
-      <div class="blocktoPic-info">
-        <p class="animated fadeIn">A shot list is a detailed list of every camera shot that needs to be captured in a scene of a video production. Created by the director and the cinematographer during preproduction, it outlines the precise specifics of every shot—such as the camera, shot size, and shot type—so the cinematographer and assistant director know exactly what needs to be captured to tell the story visually.</p>
-        <br>
-        <%= image_tag "camerawhite.png", alt: "camera",height: 80, width: 80, class: "animated fadeIn image" %>
-      </div>
+      <%= render partial: 'shot_text_equipment' %>
     </div>
 
 </div>
