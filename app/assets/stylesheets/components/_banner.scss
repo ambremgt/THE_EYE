@@ -75,9 +75,28 @@ svg rect {
   text-align: center;
   max-height: 700px;
   margin: auto;
-  position:sticky;
-  top:0;
-  z-index:-2;
+  display: flex;
+  align-items: center;
+  .background-texture,
+  .banner-index-video {
+    position: absolute;
+    top:0;
+    bottom:0;
+    right: 0;
+    left:0;
+  }
+  .banner-index-video {
+    z-index: -2;
+  }
+  .background-texture {
+    z-index: -1;
+  }
+
+}
+
+.banner-index-title {
+  margin: auto;
+  text-shadow: 1px 1px 1px #828282;
 }
 
 
@@ -104,5 +123,4 @@ svg rect {
   font-family: 'poppins';
   margin-left: 50px;
 }
-
 
