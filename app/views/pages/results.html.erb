@@ -58,7 +58,7 @@
                   <p class="location"><%= filmmaker.city %></p>
                 </div>
                 <% if filmmaker.biography %>
-                <p class="biography"><%= filmmaker.biography.split(' ').slice(0,12).join(' ')%>...</p>
+                <p class="biography"><%= truncate(filmmaker.biography, :length => 90) %></p>
                 <% end %>
                 <div style="text-align: left;">
                 <% if filmmaker.interest_list.present?  %>
