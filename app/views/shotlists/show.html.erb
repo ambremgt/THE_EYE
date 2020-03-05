@@ -88,7 +88,7 @@
                 <i><%= image_tag ('localization.png'), height: 60, width: 60 %></i>
               </div>
               <div class="text-area card-info"><p>Localization:</p>
-                <p><%= shot.location %></p>
+                <p><%= shot.location.split(', ').slice(0,2).join(', ') %></p>
               </div>
             </div>
           </div>
