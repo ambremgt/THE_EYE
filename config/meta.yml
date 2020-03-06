@@ -1,3 +1,4 @@
 meta_product_name: "Camea"
-meta_title: "Camea - Product tagline"
-meta_description: "Relevant description"
+meta_title: "Camea - A Filmmakers Community"
+meta_description: "Collaborate with creators around the world"
+meta_image: "cover.png" # should exist in `app/assets/images/`
