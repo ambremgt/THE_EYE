@@ -13,7 +13,9 @@
   background-color: rgba(84, 100, 246, 0.9);
   border: none;
   color: white;
-
+    .message-content a{
+    color: white;
+  }
 }
 .incoming-msg {
   margin-left: 0px;
