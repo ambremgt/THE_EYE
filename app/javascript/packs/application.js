@@ -23,6 +23,7 @@ import { multiForm } from '../components/multiform';
 import { activeCheck } from '../components/checkbox';
 import { attachShotlist } from '../components/attach_shotlist';
 import { dashboardLine } from '../components/dashbordline';
+import { initBanner } from '../components/init_banner';
 
 
 import { hiddenPoster } from '../components/video';
@@ -33,7 +34,7 @@ import { initAutocomplete } from '../plugins/init_autocomplete';
 // import { shotlistPreviewLink } from '../components/shotlist_preview_link';
 
 // import { video } from '../components/home';
-import { loadDynamicBannerText } from '../components/banner';
+// import { loadDynamicBannerText } from '../components/banner';
 
 
 
@@ -50,6 +51,7 @@ document.addEventListener('turbolinks:load', () => {
   // video();
   // initUpdateNavbarOnScroll();
   // initUpdateFooterOnScroll();
+  // initBanner();
   hiddenPoster();
 
 if (document.querySelector('.shot_location')) {
