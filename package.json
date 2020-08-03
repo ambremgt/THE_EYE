@@ -1,8 +1,7 @@
 {
   "name": "THE_EYE",
   "private": true,
-  "scripts": {
-"start": "node index.js"},
+
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
